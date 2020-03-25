@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Thông điệp CT HĐQT';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_2.jpg')
+block main
+	include _templates/about/a-nav
+	include _templates/about/a-3.pug
+block scripts

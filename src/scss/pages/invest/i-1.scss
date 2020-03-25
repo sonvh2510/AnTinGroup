@@ -1,0 +1,139 @@
+.invest-fields__wrapper {
+	margin-bottom: -30px;
+}
+
+.invest-fields__item {
+	box-shadow: 0 3px 6px rgba(black, .15);
+	margin-bottom: 30px;
+
+	.item__field-name {
+		font-size: 14px;
+		color: map-get($mau, main);
+		text-transform: uppercase;
+	}
+
+	.item__number {
+		font-size: 30px;
+		color: rgba(#BBBBBB, .4);
+		display: flex;
+		align-items: center;
+
+		&:after {
+			content: '/';
+			font-size: 120%;
+			margin-top: 5px;
+		}
+	}
+
+	.item__text {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		margin-bottom: 15px;
+		font-size: 14px;
+		font-weight: 300;
+
+	}
+
+	.item__description {
+		-ms-flex-preferred-size: 0;
+		-ms-flex-positive: 1;
+		-webkit-box-flex: 1;
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+		padding: 10px;
+	}
+
+	.item__link {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.item__img {
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.invest-fields__item {
+		.item__img {
+			-ms-flex: 0 0 100%;
+			-webkit-box-flex: 0;
+			flex: 0 0 (5/8)*100%;
+			max-width: (5/8)*100%;
+		}
+
+		.item__field-name {
+			font-size: 16px;
+		}
+
+		.item__text {
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+
+		.item__number {
+			font-size: 48px;
+		}
+
+		.item__description {
+			padding: 0 15px;
+		}
+
+		.item__title {
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+
+		&:nth-child(2n) {
+			.item__img {
+				order: 2;
+			}
+
+			.item__description {
+				order: 1;
+				text-align: right;
+			}
+
+			.item__title {
+				justify-content: flex-end;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.invest-fields__item {
+		.item__field-name {
+			font-size: 18px;
+		}
+
+		.item__number {
+			font-size: 70px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.invest-fields__item {
+		.item__field-name {
+			font-size: 20px;
+		}
+
+		.item__description {
+			padding: 0 20px;
+		}
+
+		.item__text {
+			margin-bottom: 25px;
+			font-size: 18px;
+		}
+	}
+}

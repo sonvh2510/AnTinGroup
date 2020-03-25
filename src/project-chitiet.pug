@@ -1,0 +1,11 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Dự án chi tiết';
+	- let bodyClass = 'project-detail-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/project_2.jpg')
+block main
+	include _templates/project/p-2
+block scripts

@@ -1,0 +1,35 @@
+.index-partner {
+	.block__content-long {
+		padding: 0 35px;
+		position: relative;
+	}
+
+	.swiper-prev,
+	.swiper-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		&.swiper-button-disabled {
+			opacity: .3;
+		}
+	}
+
+	.swiper-prev {
+		left: 0;
+	}
+
+	.swiper-next {
+		right: 0;
+	}
+}
+
+.index-partner__item {
+	.item__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px;
+	}
+}

@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Về An Tín';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_1.jpg')
+block main
+	include _templates/about/a-1.pug
+	include _templates/about/a-2.pug
+block scripts

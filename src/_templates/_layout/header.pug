@@ -1,0 +1,41 @@
+header
+	.container-fluid.header__container
+		.row
+			.header__logo
+				a(href="/")
+					img(src="./assets/logo.svg")
+			.header__menu-toggle.mobile
+				.mdi.mdi-menu
+			.header__menu.d-f.fw-w
+				.header__menu-top.d-f.jc-fe.ai-c
+					nav.header__nav.d-f
+						.nav__item
+							a.nav__link(href="recruitment.html") Tuyển Dụng
+						.nav__item
+							a.nav__link(href="contact.html") Liên Hệ
+					nav.header__language.d-f
+						.language__item
+							a.language__link(href="#")
+								img.lazyload.blur-up(data-src="./assets/language/vi_VN.png")
+						.language__item
+							a.language__link(href="#")
+								img.lazyload.blur-up(data-src="./assets/language/en_US.png")
+					.header__search
+						form(action="")
+							input(type="text")
+							button.btn
+								img.svg(src="./assets/icons/icon_search.svg", alt="")
+				.header__menu-bottom
+					nav.header__main-nav.d-f.jc-fe
+						.nav__item
+							a.nav__link(href="index.html") Trang chủ
+						.nav__item
+							a.nav__link(href="about-veantin.html") Giới thiệu
+						.nav__item
+							a.nav__link(href="invest.html") Lĩnh vực đầu tư
+						.nav__item
+							a.nav__link(href="project.html") Dự án
+						.nav__item
+							a.nav__link(href="news.html") Tin tức - Sự kiện
+						.nav__item
+							a.nav__link(href="gallery.html") Thư viện

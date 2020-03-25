@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Công ty thành viên';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_5.jpg')
+block main
+	include _templates/about/a-nav
+	include _templates/about/a-6.pug
+block scripts

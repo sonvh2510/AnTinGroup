@@ -1,0 +1,38 @@
+.form__wrapper {
+	.row {
+		margin: 0 -8px;
+
+		[class^="col-"] {
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+	}
+}
+
+.form__group {
+	margin-top: 16px;
+}
+
+.form__button,
+.form__logo {
+	margin-top: 0;
+}
+
+.form__control {
+	height: 40px;
+	border: 0;
+	padding: 7px 15px;
+	font-size: 14px;
+	background-color: #EEEFEF;
+	width: 100%;
+
+	&::placeholder {
+		font-style: italic;
+		color: #707070;
+	}
+}
+
+.form__textarea {
+	height: 160px;
+	resize: none;
+}

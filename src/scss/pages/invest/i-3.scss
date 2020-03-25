@@ -1,0 +1,42 @@
+.invest-detail__content {
+	h1 {
+		font-size: 16px;
+		color: map-get($mau, main);
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 14px;
+		color: #707070;
+	}
+
+	img {
+		display: inline-block;
+	}
+}
+
+
+@media (min-width: 768px) {
+	.invest-detail__content {
+		h1 {
+			font-size: 20px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.invest-detail__content {
+		h1 {
+			font-size: 25px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+}

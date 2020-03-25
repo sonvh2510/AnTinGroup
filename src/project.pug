@@ -1,0 +1,11 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Dự án';
+	- let bodyClass = 'project-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/project_1.jpg')
+block main
+	include _templates/project/p-1
+block scripts

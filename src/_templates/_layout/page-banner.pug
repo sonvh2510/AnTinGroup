@@ -1,0 +1,14 @@
+mixin page-banner(imgUrl)
+	.page__banner.index__banner
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					img.ofcv(src=imgUrl, alt="")
+		.page__breadcrumb
+			.container
+				ol.breadcrumb__nav.lst-n
+					li.breadcrumb__item
+						a.breadcrumb__link(href="#") Trang chủ
+					li.breadcrumb__item
+						a.breadcrumb__link(href="#") Giới thiệu
+				h1.page__title Về An Tín

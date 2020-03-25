@@ -1,0 +1,176 @@
+.index-news {
+	background-color: #F1F1F1;
+	overflow: hidden;
+
+	.swiper-pagination {
+		position: static;
+		margin-top: 20px;
+		text-align: left;
+
+		.swiper-pagination-bullet {
+			width: 14px;
+			height: 14px;
+			background-color: #C8C9C9;
+			opacity: .4;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: #70AD3A;
+			border: 3px solid #C8C9C9;
+			opacity: 1;
+		}
+	}
+
+	.block__title {
+		margin-bottom: 30px;
+	}
+
+	.main-title {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+.index-news__nav {
+	padding: 0px 35px;
+	position: relative;
+	margin-left: auto;
+
+	.nav__link {
+		font-size: 14px;
+
+		&.active {
+			color: map-get($mau, main);
+			font-weight: 700;
+		}
+	}
+
+	.swiper-slide {
+		width: auto;
+		padding: 5px 15px;
+	}
+
+	.swiper-prev,
+	.swiper-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+
+		&.swiper-button-disabled {
+			opacity: .3;
+		}
+	}
+
+	.swiper-prev {
+		left: 0;
+	}
+
+	.swiper-next {
+		right: 0;
+	}
+}
+
+.index-news__item {
+	.item__link {
+		display: block;
+	}
+
+	.item__description {
+		background-color: white;
+		padding: 10px;
+	}
+
+	.item__title {
+		font-size: 14px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+}
+
+@media (min-width: 576px) {
+	.index-news {
+		.block__title {
+			display: block;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.index-news__nav {
+		.nav__link {
+			font-size: 16px;
+		}
+	}
+
+	.index-news__item {
+		.item__title {
+			font-size: 16px;
+		}
+
+		.item__description {
+			padding: 15px;
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.index-news {
+		.block__title {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 375px;
+			margin: 0 auto;
+		}
+
+		.main-title {
+			padding-right: 15px;
+			position: relative;
+
+			&:after {
+				position: absolute;
+				width: 1px;
+				top: 0%;
+				height: 200px;
+				transform: translateY(-10%) rotate(35deg);
+				right: 0;
+				transform-origin: 50% 50%;
+				background: #707070;
+				content: "";
+			}
+		}
+	}
+
+	.index-news__nav {
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 0 30px;
+		text-align: right;
+
+		.nav__link {
+			display: block;
+			padding: 5px 0;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.index-news__nav {
+		.nav__link {
+			font-size: 18px;
+		}
+	}
+
+	.index-news__item {
+		.item__title {
+			font-size: 18px;
+		}
+	}
+}

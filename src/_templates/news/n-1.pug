@@ -1,0 +1,31 @@
+.news.pd-70
+	.container
+		.row
+			.col-lg
+				h2.main-title.cl-main.mobile.mb-40 Tin tức
+				.news-list.row
+					-for(i=1;i<7;i++)
+						.col-md-6
+							.news__item
+								a.item__link(href="news-chitiet.html")
+									.item__img
+										img.lazyload.blur-up(data-src="./assets/news/news_"+i+".jpg")
+										.item__title
+											h4 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac
+									.item__description
+										time.item__time 29/02/2020 
+										p.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+				.pagination__container
+					+pagination
+			.col-md-auto.news-hot__col
+				h2.main-title.cl-main.mb-40 Tin mới
+				.news-hot
+					.row
+						-for(i=1;i<7;i++)
+							.col-6.col-md-4.col-lg-12
+								.news-hot__item
+									a.item__link(href="news-chitiet.html")
+										.item__img
+											img.lazyload.blur-up(data-src="./assets/news/news_"+i+".jpg")
+										.item__description
+											h4.item__title An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac

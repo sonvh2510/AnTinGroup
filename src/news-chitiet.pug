@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Chi tiết tin';
+	- let bodyClass = 'news-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_3.jpg')
+block main
+	include _templates/news/n-nav
+	include _templates/news/n-2
+block scripts

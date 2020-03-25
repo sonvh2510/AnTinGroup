@@ -1,0 +1,26 @@
+.news-detail__content {
+	@extend .invest-detail__content;
+
+	time {
+		font-size: 14px;
+		font-weight: 700;
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+
+@media (min-width: 768px) {
+	.news-detail__content {
+		time {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.news-detail__content {
+		time {
+			font-size: 18px;
+		}
+	}
+}

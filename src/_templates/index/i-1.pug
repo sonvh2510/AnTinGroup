@@ -1,0 +1,82 @@
+- let biFields = ['Bất động sản', 'Giáo dục', 'Hàng không', 'Du lịch']
+
+.index-business-investment
+	.bi__contents
+		.bi__content-wrapper
+			.bi__logo
+				img(src="./assets/logo.svg")
+			.bi__sentences
+				p.fs-i
+					b Phụng sự khách hàng, phụng sự Tổ quốc 
+					| và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới
+			.bi__author
+				h3
+					span TS Nguyễn Đức Thọ
+				p
+					b CHỦ TỊCH HĐQT - TGĐ
+	.bi__fields
+		.row.no-gutters
+			.col-sm-20.desktop
+				.bi__field-item--title
+					.item__img
+						img.lazyload.ofcv(data-src="./assets/invest/invest_index_title.jpg", alt="")
+					.item__description
+						h3.item__title Lĩnh vực 
+							br
+							| đầu tư
+			.col-sm-80
+				.swiper-container
+					.swiper-prev.fcc
+						img.svg(src="./assets/icons/swiper_prev_1.svg")
+					.swiper-next.fcc
+						img.svg(src="./assets/icons/swiper_next_1.svg")
+					.swiper-wrapper
+						-for(i=1;i<5;i++)
+							- let imgUrl = `./assets/invest/invest_index_${i}.jpg`
+								.swiper-slide
+									.bi__field-item
+										a.item__link(href="#")
+											.item__img
+												img.lazyload.ofcv(data-src=imgUrl, alt="")
+											.item__description
+												h4.item__number= `0${i}`
+												h3.item__title= biFields[i-1]
+												p.item__viewmore Xem thêm
+													img.svg(src="./assets/icons/arrow_right_no_outline.svg")
+	//- .bi__statistic
+	//- 	.container-fluid
+	//- 		.row
+	//- 			.col-6.col-md-3
+	//- 				figure.bi__statistic-item.count__item
+	//- 					.item__img(data-size="1")
+	//- 						img.lazyload(data-src="./assets/icons/humans.svg")
+	//- 					figcaption.item__description
+	//- 						span.item__number(data-count="300")
+	//- 						span Nhân viên
+	//- 			.col-6.col-md-3
+	//- 				figure.bi__statistic-item.count__item
+	//- 					.item__img(data-size="1")
+	//- 						img.lazyload(data-src="./assets/icons/branch_domestics.svg")
+	//- 					figcaption.item__description
+	//- 						span.item__number(data-count="14")
+	//- 						span Chi nhánh
+	//- 						br
+	//- 						span trong nước
+	//- 			.col-6.col-md-3
+	//- 				figure.bi__statistic-item.count__item
+	//- 					.item__img(data-size="1")
+	//- 						img.lazyload(data-src="./assets/icons/branch_internationals.svg")
+	//- 					figcaption.item__description
+	//- 						span.item__number(data-count="3")
+	//- 						span Chi nhánh
+	//- 						br
+	//- 						span ngoài nước
+	//- 			.col-6.col-md-3
+	//- 				figure.bi__statistic-item.count__item
+	//- 					.item__img(data-size="1")
+	//- 						img.lazyload(data-src="./assets/icons/activities_fields.svg")
+	//- 					figcaption.item__description
+	//- 						span.item__number(data-count="8")
+	//- 						span Lĩnh vực
+	//- 						br
+	//- 						span hoạt động

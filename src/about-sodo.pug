@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Sơ đồ tổ chức';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_4.jpg')
+block main
+	include _templates/about/a-nav
+	include _templates/about/a-5.pug
+block scripts

@@ -1,0 +1,599 @@
+.index-business-investment {
+	// background-image: url(../assets/index/index_background_1.jpg);
+	// background-size: cover;
+	// background-position: 50% 0;
+	// background-repeat: no-repeat;
+	padding-bottom: 30px;
+}
+
+.bi__contents {
+	padding: 30px 10px;
+	background-color: white;
+}
+
+.bi__content-wrapper {
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #F0F1F1;
+	border-radius: 5px;
+	position: relative;
+
+	&:before {
+		content: "";
+		background-image: url(../assets/icons/quote_right.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.bi__logo {
+	margin: 0 auto;
+	margin-bottom: 20px;
+	max-width: 60px;
+}
+
+.bi__sentences {
+	font-size: 16px;
+	font-weight: 300;
+
+	b {
+		color: map-get($mau, main);
+	}
+}
+
+.bi__author {
+	margin-top: 15px;
+	font-size: 15px;
+
+	h3 {
+		font-weight: 500;
+		font-size: inherit;
+		display: inline-block;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '';
+			width: 30px;
+			height: 1px;
+			background-color: black;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:before {
+			right: 100%;
+			margin-right: 10px;
+		}
+
+		&:after {
+			left: 100%;
+			margin-left: 10px;
+		}
+	}
+
+	p {
+		margin-top: 5px;
+	}
+
+	b {
+		color: map-get($mau, main);
+	}
+}
+
+.bi__fields {
+	overflow: hidden;
+	background-color: rgba(black, .8);
+
+	.col-sm-20 {
+		display: none;
+	}
+
+	.swiper-prev,
+	.swiper-next {
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: map-get($mau, main);
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+
+		svg {
+			path {
+				fill: white;
+			}
+		}
+	}
+
+	.swiper-prev {
+		left: 0;
+	}
+
+	.swiper-next {
+		right: 0;
+	}
+
+	.swiper-button-disabled {
+		opacity: .5;
+	}
+}
+
+.bi__field-item {
+	.item__link {
+		display: block;
+		position: relative;
+	}
+
+	.item__img {
+		position: relative;
+
+		&:before {
+			content: "";
+			background: linear-gradient(0deg, rgba(112, 173, 58, 0.5) 0%, rgba(112, 173, 58, 0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70ad3a", endColorstr="#70ad3a", GradientType=1);
+			transition: all .3s ease;
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	.item__description {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 5px;
+	}
+
+	.item__title {
+		font-size: 16px;
+		color: white;
+		transition: all .3s ease;
+	}
+
+	.item__number {
+		font-size: 20px;
+		color: white;
+		display: flex;
+		align-items: center;
+		line-height: 1.1;
+
+		&:after {
+			content: '/';
+			font-size: 120%;
+		}
+	}
+
+	.item__viewmore {
+		color: white;
+		font-style: italic;
+		text-transform: uppercase;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		margin-top: 7px;
+		font-size: 12px;
+
+		svg {
+			margin-left: 5px;
+			width: 10px;
+			height: 10px;
+
+			path {
+				fill: white
+			}
+		}
+	}
+}
+
+.bi__field-item--title {
+	height: 100%;
+
+	.item__img {
+		height: 100%;
+	}
+}
+
+.bi__statistic {
+	background-color: rgba(black, .8);
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.bi__statistic-item {
+	text-align: center;
+	margin-top: 20px;
+
+	.item__img {
+		margin: 0 auto 30px auto;
+
+		img,
+		svg {
+			width: 100%;
+			height: 100%;
+			max-width: 35px;
+			max-height: 35px;
+		}
+	}
+
+	.item__description {
+
+		span {
+			font-size: 16px;
+			text-transform: uppercase;
+
+			&:not(.item__number) {
+				color: white
+			}
+
+			&.item__number {
+				color: map-get($mau, main);
+			}
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.bi__fields {
+		.col-sm-20 {
+			display: block;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.index-business-investment {
+		padding-bottom: 45px;
+	}
+
+	.bi__content-wrapper {
+		padding: 30px 55px;
+		max-width: 650px;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			background-color: map-get($mau, main);
+		}
+
+		&:before {
+			height: 1px;
+			left: 0;
+			bottom: -10px;
+			right: -10px;
+			transform: translateX(10px);
+
+		}
+
+		&:after {
+			width: 1px;
+			top: 0;
+			right: -10px;
+			bottom: -10px;
+			transform: translateY(10px);
+		}
+	}
+
+	.bi__logo {
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+		max-width: 70px;
+		margin: 0;
+	}
+
+	.bi__contents {
+		padding: 60px 10px;
+	}
+
+	.bi__sentences {
+		font-size: 18px;
+	}
+
+	.bi__author {
+		font-size: 16px;
+		margin-top: 20px;
+	}
+
+	.bi__field-item {
+		.item__description {
+			padding: 10px 15px;
+		}
+
+		.item__title {
+			font-size: 20px;
+		}
+
+		.item__number {
+			font-size: 24px;
+		}
+
+		.item__viewmore {
+			font-size: 14px;
+		}
+	}
+
+	.bi__field-item--title {
+		position: relative;
+
+		.item__description {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.item__title {
+			font-size: 22px;
+			color: white;
+			text-transform: uppercase;
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				height: 100px;
+				background: white;
+				width: 1px;
+				top: 50%;
+				transform: translateY(-50%) rotate(30deg);
+				transform-origin: 50% 50%;
+			}
+		}
+	}
+
+	.bi__statistic {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+
+	.bi__statistic-item {
+		margin-top: 0;
+
+		.item__img {
+
+			img,
+			svg {
+				max-width: 50px;
+				max-height: 50px;
+			}
+		}
+
+		.item__description {
+
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.bi__content-wrapper {
+		padding: 50px 135px;
+		max-width: 850px;
+	}
+
+	.bi__sentences {
+		font-size: 20px;
+	}
+
+	.bi__author {
+		font-size: 17px;
+		margin-top: 25px;
+
+		p {
+			margin-top: 10px;
+		}
+	}
+
+	.bi__logo {
+		bottom: 40px;
+		left: 40px;
+		max-width: 85px;
+	}
+
+	.bi__fields {
+		padding: 0px;
+	}
+
+	.bi__field-item {
+		.item__description {
+			padding: 10px;
+		}
+
+		.item__number {
+			font-size: 28px;
+			color: white;
+		}
+
+		.item__img {
+			&:before {
+				opacity: 0;
+				height: 100%;
+			}
+		}
+
+		.item__title {
+			color: map-get($mau, main);
+		}
+
+		&:hover {
+			.item__title {
+				color: white;
+			}
+
+			.item__img {
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.bi__field-item--title {
+		.item__title {
+			font-size: 27px;
+		}
+	}
+
+	.bi__statistic-item {
+
+		.item__img {
+
+			img,
+			svg {
+				max-width: 65px;
+				max-height: 65px;
+			}
+		}
+
+		.item__description {
+
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.index-business-investment {
+		padding-bottom: 60px;
+	}
+
+	.bi__content-wrapper {
+		padding: 70px 185px;
+		max-width: 1050px;
+	}
+
+	.bi__logo {
+		bottom: 50px;
+		left: 50px;
+		max-width: 100px;
+	}
+
+	.bi__contents {
+		padding: 120px 0;
+	}
+
+	.bi__sentences {
+		font-size: 22px;
+	}
+
+	.bi__author {
+		font-size: 18px;
+		margin-top: 30px;
+	}
+
+	.bi__field-item {
+		.item__description {
+			padding: 12px 18px;
+		}
+
+		.item__title {
+			font-size: 24px;
+		}
+
+		.item__number {
+			font-size: 32px;
+		}
+	}
+
+	.bi__field-item--title {
+		.item__title {
+			font-size: 32px;
+		}
+
+		.item__viewmore {
+			font-size: 16px;
+		}
+	}
+
+	.bi__statistic {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.bi__statistic-item {
+
+		.item__img {
+
+			img,
+			svg {
+				max-width: 80px;
+				max-height: 80px;
+			}
+		}
+
+		.item__description {
+
+			span {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.bi__content-wrapper {
+		padding: 70px 200px;
+		max-width: 1200px;
+	}
+
+	.bi__field-item {
+		.item__description {
+			padding: 15px 20px;
+		}
+
+		.item__number {
+			font-size: 36px;
+		}
+	}
+
+	.bi__statistic-item {
+
+		.item__img {
+
+			img,
+			svg {
+				max-width: 100px;
+				max-height: 100px;
+			}
+		}
+
+		.item__description {
+
+			span {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1600px) {
+	.bi__field-item {
+		.item__number {
+			font-size: 40px;
+		}
+	}
+}

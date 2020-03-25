@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Ban lãnh đạo';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_3.jpg')
+block main
+	include _templates/about/a-nav
+	include _templates/about/a-4
+block scripts

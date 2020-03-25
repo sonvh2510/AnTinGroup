@@ -1,0 +1,61 @@
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	padding: 0;
+}
+
+.btn__viewmore {
+	border: 1px solid map-get($mau, main);
+	font-size: 11px;
+	text-transform: uppercase;
+	height: 30px;
+	min-width: 110px;
+	border-radius: 15px;
+	font-weight: 700;
+	font-style: italic;
+	color: map-get($mau, main);
+	cursor: pointer;
+
+	&:after {
+		content: "";
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 12px;
+		max-width: 12px;
+		height: 12px;
+		margin-left: 8px;
+		background-image: url(../assets/icons/arrow_right_no_outline.svg);
+		background-repeat: no-repeat;
+		background-size: 12px;
+		background-position: center;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 12px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 13px;
+	}
+}
+
+
+.btn__submit {
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	border-radius: 8px;
+	background-color: map-get($mau, main);
+	height: 36px;
+	padding: 0 32px;
+
+	@media (min-width: 768px) {
+		font-size: 17px;
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 20px;
+	}
+}

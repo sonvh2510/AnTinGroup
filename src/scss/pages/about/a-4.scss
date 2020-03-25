@@ -1,0 +1,316 @@
+.about__staffs {
+	background-image: url(../assets/about/about_background_5.jpg);
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+
+	h2 {
+		color: map-get($mau, main);
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		&:before {
+			width: 55px;
+		}
+
+		+p {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.about__staffs-content {
+	padding: 10px;
+	background-color: rgba(#707070, .3);
+	border-radius: 5px;
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		bottom: 0;
+		right: 20px;
+		transform: translateY(50%);
+		background-image: url(../assets/icons/quote_right.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.about__staffs-img {
+	img {
+		max-width: 350px;
+	}
+}
+
+.about__staffs-slider {
+	.block__title {
+		margin-bottom: 15px;
+	}
+}
+
+.about__staffs-slider__wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	position: relative;
+
+	.swiper__prev,
+	.swiper__next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+
+	.swiper__prev {
+		left: 0
+	}
+
+	.swiper__next {
+		right: 0
+	}
+
+	.swiper-slide {
+		transition: all .3s ease;
+		transform: scale(0.9);
+
+		.item__img {
+			background-color: black;
+
+			img {
+				opacity: 0.4;
+				width: 100%;
+				transition: all .3s ease;
+			}
+		}
+	}
+
+	.swiper-slide-active {
+		transform: scale(1);
+
+		.item__img {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.staff__item {
+	.item__description {
+		text-align: center;
+		padding-top: 5px;
+
+		h4 {
+			font-size: 14px;
+			color: map-get($mau, main);
+		}
+
+		p {
+			font-size: 12px;
+		}
+	}
+}
+
+.about__ceos-slider {
+	background-image: url(../assets/about/about_background_6.jpg);
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+
+	.main-title {
+		&:before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.block__title {
+		margin-bottom: 15px;
+	}
+}
+
+.about__ceos-slider__wrapper {
+	margin: 0 auto;
+	padding: 0 50px;
+	max-width: 450px;
+	width: 100%;
+	position: relative;
+
+	.swiper__prev,
+	.swiper__next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		border-radius: 50%;
+		background-color: map-get($mau, main);
+
+		svg {
+
+			path:nth-child(1),
+			path:nth-child(2) {
+				fill: white;
+			}
+		}
+	}
+
+	.swiper__prev {
+		left: 0
+	}
+
+	.swiper__next {
+		right: 0
+	}
+}
+
+.ceo__item {
+	.item__img {
+		border-radius: 50%;
+		width: 205px;
+		height: 205px;
+		overflow: hidden;
+		margin: 0 auto;
+		border: 3px solid map-get($mau, main);
+	}
+
+	.item__description {
+		text-align: center;
+		padding-top: 5px;
+
+		h4 {
+			font-size: 14px;
+			color: map-get($mau, main);
+		}
+
+		p {
+			font-size: 12px;
+			color: white;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.about__staffs {
+		h2 {
+			+p {
+				margin-bottom: 45px;
+			}
+		}
+	}
+
+	.about__staffs-slider {
+		.block__title {
+			margin-bottom: 30px;
+		}
+	}
+
+	.about__staffs-slider__wrapper {
+		padding: 0 65px;
+	}
+
+	.staff__item {
+		.item__description {
+			h4 {
+				font-size: 16px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+
+	.about__ceos-slider {
+		.block__title {
+			margin-bottom: 35px;
+		}
+	}
+
+	.about__ceos-slider__wrapper {
+		max-width: 500px;
+	}
+
+	.ceo__item {
+		.item__img {
+			width: 220px;
+			height: 220px;
+		}
+
+		.item__description {
+			h4 {
+				font-size: 16px;
+			}
+
+			p {
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.about__staffs-content {
+		padding: 15px;
+	}
+
+	.about__staffs-slider {
+		.block__title {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about__staffs {
+		h2 {
+			+p {
+				margin-bottom: 70px;
+			}
+		}
+	}
+
+	.about__staffs-slider {
+		.block__title {
+			margin-bottom: 60px;
+		}
+	}
+
+	.about__staffs-slider__wrapper {
+		padding: 0 80px;
+	}
+
+	.staff__item {
+		.item__description {
+			h4 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.about__ceos-slider {
+		.block__title {
+			margin-bottom: 55px;
+		}
+	}
+
+	.ceo__item {
+		.item__description {
+			h4 {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}

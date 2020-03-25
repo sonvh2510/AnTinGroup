@@ -1,0 +1,11 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Lĩnh vực đầu tư - Chi tiết';
+	- let bodyClass = 'invest-detail-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/invest_2.jpg')
+block main
+	include _templates/invest/i-3
+block scripts

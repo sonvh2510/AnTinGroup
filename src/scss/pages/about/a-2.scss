@@ -1,0 +1,325 @@
+.values-strategy {
+	height: 120px;
+	background-image: url(../assets/about/about_background_2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	.container,
+	.row {
+		height: 100%;
+		align-items: center;
+	}
+}
+
+.values-strategy__item {
+	.item__link {
+		display: block;
+		position: relative;
+		margin-top: 10px;
+	}
+
+	.item__description {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		justify-content: center;
+		position: static;
+		background-color: transparent;
+	}
+
+	.item__title {
+		line-height: 1.1;
+	}
+
+	.item__field-name {
+		font-size: 14px;
+		color: map-get($mau, main);
+		text-transform: uppercase;
+	}
+
+	.item__number {
+		font-size: 30px;
+		color: white;
+		display: flex;
+		align-items: center;
+
+		&:after {
+			content: '/';
+			font-size: 120%;
+			margin-top: 5px;
+		}
+	}
+}
+
+.about__values {
+	.bi__author {
+		display: flex;
+		align-items: center;
+
+		.logo {
+			display: inline-block;
+			opacity: .25;
+			margin-right: auto;
+			max-width: 70px;
+		}
+
+		h3 {
+			color: #707070;
+			margin-right: 40px;
+			text-transform: initial;
+			font-weight: 700;
+		}
+	}
+}
+
+.about__values-content {
+	padding: 30px 0;
+
+	.content {
+		@extend .scrollbar;
+		height: 100%;
+		padding: 0 10px;
+	}
+}
+
+.about__strategy-content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 30px 0;
+
+	.content {
+		padding: 0 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.values-strategy {
+		height: 180px;
+	}
+
+	.about__values-content {
+		position: absolute;
+		left: 0;
+		top: 30px;
+		bottom: 30px;
+		width: 100%;
+		padding: 20px 20px;
+		background-color: rgba(white, .8);
+		border-radius: 5px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			top: 0;
+			left: 20px;
+			transform: translateY(-50%);
+			background-image: url(../assets/icons/quote_left.svg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.content {
+			font-size: 15px;
+
+			h2,
+			h3 {
+				text-align: right;
+			}
+		}
+	}
+
+	.about__strategy-background {
+		background-image: url(../assets/about/about_background_3.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		img {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.about__strategy-content {
+		background-image: url(../assets/about/about_background_4.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: static;
+		padding: 0;
+
+		.content {
+			padding: 20px;
+			background-color: rgba(black, .8);
+			color: white;
+		}
+	}
+
+	.values-strategy__item {
+		.item__description {
+			padding: 10px 15px;
+		}
+
+		.item__field-name {
+			font-size: 17px;
+		}
+
+		.item__number {
+			font-size: 48px;
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.values-strategy {
+		height: 240px;
+	}
+
+	.about__values {
+
+		.bi__author {
+			.logo {
+				max-width: 85px;
+			}
+		}
+	}
+
+	.about__values-content {
+		top: 60px;
+		bottom: 60px;
+		left: -30%;
+
+		&:before {
+			width: 60px;
+			height: 60px;
+			left: 40px;
+		}
+	}
+
+	.about__strategy {
+		padding-bottom: 50px;
+	}
+
+	.about__strategy-background {
+		height: 400px;
+		overflow: hidden;
+
+		img {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	.about__strategy-content {
+		max-width: 950px;
+		margin-top: -275px;
+	}
+
+	.values-strategy__item {
+		.item__field-name {
+			font-size: 20px;
+		}
+
+		.item__description {
+			padding: 10px;
+		}
+
+		.item__number {
+			font-size: 70px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.values-strategy {
+		height: 280px;
+	}
+
+	.about__values-content {
+		top: 90px;
+		bottom: 90px;
+		padding: 30px 40px;
+
+		&:before {
+			width: 70px;
+			height: 70px;
+			left: 60px;
+		}
+	}
+
+	.about__strategy {
+		padding-bottom: 70px;
+	}
+
+	.about__strategy-content {
+		padding: 0;
+		max-width: 1100px;
+		margin-top: -400px;
+
+		.content {
+			padding: 40px;
+		}
+	}
+
+	.about__strategy-background {
+		height: 575px;
+	}
+
+	.values-strategy__item {
+		.item__description {
+			padding: 12px 18px;
+		}
+
+		.item__number {
+			font-size: 80px;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.values-strategy {
+		height: 350px;
+	}
+
+	.about__values-content {
+		top: 120px;
+		bottom: 120px;
+		padding: 30px 60px;
+
+		&:before {
+			width: 80px;
+			height: 80px;
+			left: 80px;
+		}
+	}
+
+	.about__strategy-content {
+		padding: 0;
+		max-width: 1350px;
+
+		.content {
+			padding: 60px;
+		}
+	}
+
+	.about__strategy-background {
+		height: 650px;
+	}
+
+	.values-strategy__item {
+		.item__description {
+			padding: 15px 20px;
+		}
+
+		.item__number {
+			font-size: 90px;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'AN TÍN - Trang chủ';
+	- let bodyClass = 'index-page';
+block loading
+	#loading-container
+		.loading-wrapper
+			#loading-logo
+				img(src="./assets/loading.gif")
+			.progress
+				#progress-bar
+			.progress-status
+				| Loading: 
+				span#progress-percentage 0
+				| %
+block banner,breadcrumb
+	include _templates/_layout/index-banner.pug
+block main
+	include _templates/index/i-1.pug
+	include _templates/index/i-2.pug
+	include _templates/index/i-3.pug
+	include _templates/index/i-4.pug
+	include _templates/index/i-5.pug
+block scripts

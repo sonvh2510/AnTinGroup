@@ -1,0 +1,12 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Cổ đông';
+	- let bodyClass = 'about-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_6.jpg')
+block main
+	include _templates/about/a-nav
+	include _templates/about/a-7
+block scripts

@@ -1,0 +1,11 @@
+extends _templates/_layout/layout.pug
+
+block var
+	- let title = 'Thư viện';
+	- let bodyClass = 'gallery-page';
+block loading
+block banner,breadcrumb
+	+page-banner('./assets/banners/about_5.jpg')
+block main
+	include _templates/gallery/g-1
+block scripts
