@@ -1,0 +1,172 @@
+.footer-top {
+	background-color: #2B4E0B;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	.container {
+		.row {
+			height: 100%;
+		}
+	}
+}
+
+.footer__logo {
+
+	svg,
+	img {
+		max-width: 160px;
+	}
+}
+
+.footer__address {
+	margin-top: 10px;
+	margin-bottom: 20px;
+
+	p {
+		font-size: 12px;
+		color: rgba(#D1D3D4, .75);
+
+		+p {
+			margin-top: 5px;
+		}
+	}
+}
+
+.footer__title {
+	color: map-get($mau, main);
+	margin-bottom: 25px;
+	font-size: 14px;
+}
+
+.footer__navigation {
+	list-style-type: none;
+	padding-left: 0;
+
+	.nav__link {
+		font-size: 12px;
+		color: rgba(#D1D3D4, .75);
+		display: block;
+		padding: 3px 0;
+	}
+}
+
+.footer__subscribe {
+
+	.subscribe__input {
+		position: relative;
+		margin-top: 15px;
+	}
+
+	input {
+		height: 44px;
+		background-color: rgba(#FFFFFF, .25);
+		padding: 7px 15px;
+		color: rgba(#D1D3D4, .75);
+		border: 0;
+		width: 100%;
+
+		&::placeholder {
+			color: rgba(#D1D3D4, .75);
+		}
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		right: 0;
+		font-size: 12px;
+		border: 0;
+		background-color: #70AD3A;
+		padding: 0 20px;
+		color: white;
+		text-transform: uppercase;
+	}
+}
+
+.subscribe__description {
+	font-size: 12px;
+	color: rgba(#D1D3D4, .75);
+}
+
+.footer__social {
+	display: flex;
+	margin-top: 25px;
+
+	.social__item {
+
+		svg {
+			path {
+				fill: rgba(#D1D3D4, .75);
+			}
+		}
+
+		+.social__item {
+			margin-left: 20px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.footer__title {
+		font-size: 15px;
+	}
+
+	.footer__navigation {
+		.nav__link {
+			font-size: 13px;
+		}
+	}
+
+	.subscribe__description {
+		font-size: 13px;
+	}
+
+	.footer__address {
+		p {
+			font-size: 13px;
+		}
+	}
+
+	.footer__subscribe {
+		button {
+			font-size: 13px;
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.footer__address {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer__title {
+		font-size: 16px;
+	}
+
+	.footer__navigation {
+		.nav__link {
+			font-size: 14px;
+		}
+	}
+
+	.subscribe__description {
+		font-size: 14px;
+	}
+
+	.footer__address {
+		p {
+			font-size: 14px;
+		}
+	}
+
+	.footer__subscribe {
+		button {
+			font-size: 14px;
+		}
+	}
+}
