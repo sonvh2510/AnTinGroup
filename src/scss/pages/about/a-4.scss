@@ -43,6 +43,7 @@
 .about__staffs-img {
 	img {
 		max-width: 350px;
+		width: 100%;
 	}
 }
 
@@ -106,12 +107,12 @@
 		padding-top: 5px;
 
 		h4 {
-			font-size: 14px;
+			font-size: 13px;
 			color: map-get($mau, main);
 		}
 
 		p {
-			font-size: 12px;
+			font-size: 11px;
 		}
 	}
 }
@@ -183,12 +184,12 @@
 		padding-top: 5px;
 
 		h4 {
-			font-size: 14px;
+			font-size: 13px;
 			color: map-get($mau, main);
 		}
 
 		p {
-			font-size: 12px;
+			font-size: 11px;
 			color: white;
 		}
 	}
@@ -216,11 +217,11 @@
 	.staff__item {
 		.item__description {
 			h4 {
-				font-size: 16px;
+				font-size: 15px;
 			}
 
 			p {
-				font-size: 13px;
+				font-size: 12px;
 			}
 		}
 	}
@@ -243,11 +244,11 @@
 
 		.item__description {
 			h4 {
-				font-size: 16px;
+				font-size: 15px;
 			}
 
 			p {
-				font-size: 13px;
+				font-size: 12px;
 			}
 		}
 	}
@@ -287,11 +288,11 @@
 	.staff__item {
 		.item__description {
 			h4 {
-				font-size: 18px;
+				font-size: 17px;
 			}
 
 			p {
-				font-size: 14px;
+				font-size: 13px;
 			}
 		}
 	}
@@ -305,11 +306,11 @@
 	.ceo__item {
 		.item__description {
 			h4 {
-				font-size: 18px;
+				font-size: 17px;
 			}
 
 			p {
-				font-size: 14px;
+				font-size: 13px;
 			}
 		}
 	}

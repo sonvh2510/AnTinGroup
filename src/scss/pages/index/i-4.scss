@@ -5,7 +5,7 @@
 	.swiper-pagination {
 		position: static;
 		margin-top: 20px;
-		text-align: left;
+		text-align: center;
 
 		.swiper-pagination-bullet {
 			width: 14px;
@@ -37,7 +37,7 @@
 	margin-left: auto;
 
 	.nav__link {
-		font-size: 14px;
+		font-size: 12px;
 
 		&.active {
 			color: map-get($mau, main);
@@ -52,6 +52,9 @@
 
 	.swiper-prev,
 	.swiper-next {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -84,7 +87,7 @@
 	}
 
 	.item__title {
-		font-size: 14px;
+		font-size: 13px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
@@ -104,13 +107,13 @@
 @media (min-width: 768px) {
 	.index-news__nav {
 		.nav__link {
-			font-size: 16px;
+			font-size: 13px;
 		}
 	}
 
 	.index-news__item {
 		.item__title {
-			font-size: 16px;
+			font-size: 14px;
 		}
 
 		.item__description {
@@ -144,6 +147,10 @@
 				content: "";
 			}
 		}
+
+		.swiper-pagination {
+			text-align: left;
+		}
 	}
 
 	.index-news__nav {
@@ -162,15 +169,9 @@
 }
 
 @media (min-width: 1200px) {
-	.index-news__nav {
-		.nav__link {
-			font-size: 18px;
-		}
-	}
-
 	.index-news__item {
 		.item__title {
-			font-size: 18px;
+			font-size: 15px;
 		}
 	}
 }

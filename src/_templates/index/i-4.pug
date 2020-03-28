@@ -3,14 +3,27 @@
 		.row.no-gutters
 			.col-lg-4
 				.block__title
-					h2.main-title.cl-black Tin tức
-					nav.index-news__nav
+					h2.main-title.cl-main Tin tức
+					nav.index-news__nav.desktop
 						.nav__item
-							a.nav__link(href="#") TIN AN TÍN GROUP
+							a.nav__link(href="/api/news.html") TIN AN TÍN GROUP
 						.nav__item.active
-							a.nav__link(href="#") THÔNG TIN BÁO CHÍ
+							a.nav__link(href="/api/news.html") THÔNG TIN BÁO CHÍ
 						.nav__item
-							a.nav__link(href="#") THÔNG TIN HỢP TÁC
+							a.nav__link(href="/api/news.html") THÔNG TIN HỢP TÁC
+					nav.index-news__nav.mobile
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									a.nav__link(href="/api/news.html") TIN AN TÍN GROUP
+								.swiper-slide
+									a.nav__link(href="/api/news.html") THÔNG TIN BÁO CHÍ
+								.swiper-slide
+									a.nav__link(href="/api/news.html") THÔNG TIN HỢP TÁC
+						.swiper-prev.fcc
+							img.svg(src="./assets/icons/swiper_prev_1.svg")
+						.swiper-next.fcc
+							img.svg(src="./assets/icons/swiper_next_1.svg")
 			.col-lg-8
 				.index-news__list
 					.swiper-container

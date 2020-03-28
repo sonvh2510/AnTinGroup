@@ -42,7 +42,7 @@
 .brand-positioning__item {
 	.item__number {
 		color: rgba(#707070, .5);
-		font-size: 80px;
+		font-size: 70px;
 		font-weight: 700;
 		-ms-flex: 0 0 100%;
 		-webkit-box-flex: 0;
@@ -54,7 +54,7 @@
 	.item__title {
 		color: map-get($mau, main);
 		text-transform: uppercase;
-		font-size: 16px;
+		font-size: 15px;
 		position: relative;
 		padding-bottom: 10px;
 
@@ -76,7 +76,7 @@
 		flex: 0 0 100%;
 		max-width: 100%;
 		margin-top: 10px;
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	.item__description {
@@ -93,7 +93,7 @@
 @media (min-width: 576px) {
 	.brand-positioning__item {
 		.item__number {
-			font-size: 90px;
+			font-size: 80px;
 		}
 	}
 }
@@ -107,27 +107,23 @@
 
 	.brand-positioning__item {
 		.item__title {
-			font-size: 20px;
+			font-size: 18px;
 		}
 
 		.item__number {
-			font-size: 100px;
+			font-size: 90px;
 		}
 	}
 }
 
 @media (min-width: 1025px) {
 	.brand-positioning__item {
-		.item__number {
-			font-size: 90px;
-		}
-
 		.item__text {
-			font-size: 16px;
+			font-size: 15px;
 		}
 
 		.item__number {
-			font-size: 110px;
+			font-size: 100px;
 		}
 	}
 }
@@ -141,17 +137,17 @@
 
 	.brand-positioning__item {
 		.item__title {
-			font-size: 24px;
+			font-size: 21px;
 			margin-top: -50px;
 			margin-bottom: 10px;
 		}
 
 		.item__text {
-			font-size: 18px;
+			font-size: 15px;
 		}
 
 		.item__number {
-			font-size: 120px;
+			font-size: 110px;
 		}
 	}
 }
@@ -159,7 +155,7 @@
 @media (min-width: 1440px) {
 	.brand-positioning__item {
 		.item__text {
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 }

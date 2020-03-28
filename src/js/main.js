@@ -6,7 +6,7 @@ import Swiper from "swiper";
 // import CountNumber from "./lib/CountNumber";
 // initialize
 const header = document.querySelector("header");
-const widgetSocial = document.querySelector(".widget__social");
+const widgetSocial = document.querySelector(".header__widget-social");
 const buttonToggleHeaderMenu = document.querySelector(".header__menu-toggle");
 const headerMenu = document.querySelector(".header__menu");
 
@@ -23,11 +23,15 @@ const setSizeByRatio = () => {
 
 const setSizeFullScreen = (slides) => {
 	const windowWidth = window.innerWidth;
-	const windowHeight = window.innerWidth > 1024 ? window.innerHeight : window.innerHeight / 2;
+	const windowHeight = window.innerHeight;
 	slides.forEach(slide => {
 		slide.style.display = "block";
 		slide.style.width = windowWidth + "px";
-		slide.style.height = windowHeight + "px";
+		if (window.innerWidth <= 1024) {
+			slide.style.height = windowHeight - 60 + "px";
+		} else {
+			slide.style.height = windowHeight + "px";
+		}
 	});
 };
 
@@ -47,28 +51,32 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	const banner1 = document.querySelector(".index__banner");
-	if (banner1) {
-		return new Swiper(".index__banner .swiper-container", {
-			slidesPerView: 1,
-			speed: 1100,
-			effect: "fade",
-			loop: true,
-			fadeEffect: {
-				crossFade: true,
+	const bannerElement = document.querySelector(".index__banner");
+	return new Swiper(".index__banner .swiper-container", {
+		slidesPerView: 1,
+		speed: 1600,
+		loop: !bannerElement.classList.contains("page__banner"),
+		simulateTouch: !bannerElement.classList.contains("page__banner"),
+		autoplay: {
+			disableOnInteraction: false,
+			delay: 4000,
+		},
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true,
+		},
+		on: {
+			init: function() {
+				const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
+				setSizeFullScreen(slides);
 			},
-			on: {
-				init: function() {
-					const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
-					setSizeFullScreen(slides);
-				},
-				resize: function() {
-					const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
-					setSizeFullScreen(slides);
-				}
+			resize: function() {
+				const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
+				setSizeFullScreen(slides);
 			}
-		});
-	}
+		}
+	});
+	// }
 };
 
 const addClassHeader = currentScrollPosition => {
@@ -77,22 +85,24 @@ const addClassHeader = currentScrollPosition => {
 	} else {
 		header.classList.remove("scrolled");
 	}
-	if (widgetSocial && currentScrollPosition > 0) {
-		widgetSocial.classList.add("scrolled");
-	} else {
-		widgetSocial.classList.remove("scrolled");
+	if (widgetSocial) {
+		if (currentScrollPosition > 0) {
+			widgetSocial.classList.add("scrolled");
+		} else {
+			widgetSocial.classList.remove("scrolled");
+		}
 	}
 };
 
 const indexProjectNavAjax = () => {
-	const items = Array.from(document.querySelectorAll(".index-project-nav .swiper-slide .nav-link"));
+	const items = Array.from(document.querySelectorAll(".index-project__nav .swiper-slide .nav-link"));
 	items.forEach(item => {
 		item.addEventListener("click", (e) => {
+			e.preventDefault();
 			items.forEach(item => {
 				item.classList.remove("active");
 			});
 			item.classList.add("active");
-			e.preventDefault();
 			const urlRequest = item.getAttribute("href");
 			const request = new XMLHttpRequest();
 			request.open("GET", urlRequest, true);
@@ -102,12 +112,10 @@ const indexProjectNavAjax = () => {
 					document.querySelector(".index-project .index-project-list").innerHTML = res.target.response;
 					indexProjectSlider();
 				}
-				if (res.target.status === 404) {
-					console.log(res.target.status);
-				}
 			};
 			request.onerror = (err) => {
 				console.log(err);
+				indexProjectSlider();
 			};
 		});
 	});
@@ -115,16 +123,16 @@ const indexProjectNavAjax = () => {
 
 const indexProjectNavSlider = () => {
 	indexProjectNavAjax();
-	const sliderInstance = new Swiper(".index-project-nav .swiper-container", {
+	const sliderInstance = new Swiper(".index-project__nav .swiper-container", {
 		slidesPerView: "auto",
 		simulateTouch: false,
 		navigation: {
-			prevEl: ".index-project-nav .swiper-prev",
-			nextEl: ".index-project-nav .swiper-next"
+			prevEl: ".index-project__nav .swiper-prev",
+			nextEl: ".index-project__nav .swiper-next"
 		},
 		on: {
 			init: function() {
-				document.querySelector(".index-project-nav .swiper-slide .nav-link").click();
+				document.querySelector(".index-project__nav .swiper-slide .nav-link").click();
 			}
 		}
 	});
@@ -156,7 +164,7 @@ const indexProjectSlider = () => {
 			}
 		}
 	});
-}
+};
 
 const indexBusinessInvestFieldsSlider = () => {
 	return new Swiper(".bi__fields .swiper-container", {
@@ -221,13 +229,39 @@ const indexPartnerSlider = () => {
 	});
 };
 
+const indexNewsNavAjax = () => {
+	const items = Array.from(document.querySelectorAll(".index-news__nav .nav__link"));
+	items.forEach(item => {
+		item.addEventListener("click", (e) => {
+			e.preventDefault();
+			items.forEach(item => {
+				item.classList.remove("active");
+			});
+			item.classList.add("active");
+			const urlRequest = item.getAttribute("href");
+			const request = new XMLHttpRequest();
+			request.open("GET", urlRequest, true);
+			request.send();
+			request.onload = res => {
+				if (res.target.status === 200) {
+					document.querySelector(".index-news__list").innerHTML = res.target.response;
+					indexNewsSlider();
+				}
+			};
+			request.onerror = (err) => {
+				indexNewsSlider();
+			};
+		});
+	});
+};
+
 const indexNewsSlider = () => {
-	return new Swiper(".index-news .swiper-container", {
+	return new Swiper(".index-news__list .swiper-container", {
 		slidesPerView: 1.5,
 		spaceBetween: 15,
 		loop: true,
 		pagination: {
-			el: ".index-news .swiper-pagination",
+			el: ".index-news__list .swiper-pagination",
 			type: "bullets",
 			clickable: true,
 		},
@@ -241,30 +275,21 @@ const indexNewsSlider = () => {
 		}
 	});
 };
-const indexChangeNewsNavToSlider = () => {
-	const indexNewsNav = document.querySelector(".index-news__nav");
-	if (window.innerWidth < 1025 && indexNewsNav) {
-		Array.from(indexNewsNav.querySelectorAll(".nav__item")).forEach(item => {
-			item.classList.remove("nav__item");
-			item.classList.add("swiper-slide");
-		});
-		const swiperSlidesHTML = indexNewsNav.innerHTML;
-		indexNewsNav.innerHTML = "<div class='swiper-container'><div class='swiper-wrapper'></div></div>";
-		indexNewsNav.querySelector(".swiper-wrapper").innerHTML = swiperSlidesHTML;
-		const swiperPrev = document.createElement("div");
-		const swiperNext = document.createElement("div");
-		swiperPrev.classList.add("swiper-prev");
-		swiperPrev.innerHTML = "<img class='svg' src='./assets/icons/swiper_prev_1.svg'>";
-		swiperNext.classList.add("swiper-next");
-		swiperNext.innerHTML = "<img class='svg' src='./assets/icons/swiper_next_1.svg'>";
-		indexNewsNav.appendChild(swiperPrev);
-		indexNewsNav.appendChild(swiperNext);
-		return new Swiper(".index-news__nav .swiper-container", {
+
+const indexNewsNavSlider = () => {
+	indexNewsNavAjax();
+	if (window.innerWidth < 1025) {
+		const slider = new Swiper(".index-news__nav .swiper-container", {
 			slidesPerView: "auto",
 			spaceBetween: 20,
 			navigation: {
 				prevEl: ".index-news__nav .swiper-prev",
-				nextEl: ".index-news__nav .swiper-next"
+				nextEl: ".index-news__nav .swiper-next",
+			},
+			on: {
+				init: function() {
+					document.querySelector(".index-news__nav .swiper-slide .nav__link").click();
+				}
 			}
 		});
 	}
@@ -427,9 +452,43 @@ const toggleHeaderMenuMobile = () => {
 		buttonToggleHeaderMenu.addEventListener("click", () => {
 			if (headerMenu) {
 				headerMenu.classList.toggle("active");
+				if (headerMenu.classList.contains("active")) {
+					document.body.style.overflow = "hidden";
+					document.body.style.height = window.innerHeight + "px";
+				} else {
+					document.body.removeAttribute("style");
+					const navItems = Array.from(document.querySelectorAll(".header__main-nav>.nav__item"));
+					navItems.forEach(item => {
+						item.classList.remove("active");
+					});
+				}
 			}
 		});
 	}
+};
+
+const pageNavToggle = () => {
+	const pageNavElement1 = $(".page__nav");
+	if (window.innerWidth <= 1024) {
+		pageNavElement1.find("h2").on("click", function() {
+			pageNavElement1.find(".nav__list").slideToggle();
+		});
+	}
+	const pageNavElement2 = $(".page__nav-2");
+	if (window.innerWidth <= 1024) {
+		pageNavElement2.find("h2").on("click", function() {
+			pageNavElement2.find(".nav__list").slideToggle();
+		});
+	}
+};
+
+const headerActiveSubmenu = () => {
+	const navItems = Array.from(document.querySelectorAll(".header__main-nav>.nav__item"));
+	navItems.forEach(item => {
+		item.addEventListener("click", () => {
+			item.classList.toggle("active");
+		});
+	});
 };
 
 // Call functons in events
@@ -438,7 +497,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	GetSVG();
 	Loading();
 	// Initialize Script
-	toggleHeaderMenuMobile();
 	// Set size 
 	setSizeByRatio();
 	setSize({
@@ -456,17 +514,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	setSizeProjectCategoryItem();
 	setPaddingTopNewsNav();
 	// Header
+	toggleHeaderMenuMobile();
 	addClassHeader(getScrollYPosition());
+	headerActiveSubmenu();
+	// PageNav
+	pageNavToggle();
 	// Banner
 	pageBanner();
 	// Slider
+	indexProjectSlider();
 	indexProjectNavSlider();
 	indexBusinessInvestFieldsSlider();
 	indexBrandPositioningSlider();
 	indexNewsSlider();
+	indexNewsNavSlider();
 	indexPartnerSlider();
 	aboutStaffsSlider();
-	indexChangeNewsNavToSlider();
 	gallerySlider();
 	// Ajax
 	// Other scripts

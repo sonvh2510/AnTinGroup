@@ -1,9 +1,22 @@
 header
 	.container-fluid.header__container
 		.row
-			.header__logo
+			.header__logo.desktop
 				a(href="/")
 					img(src="./assets/logo.svg")
+			nav.header__widget-social.d-f.ai-c
+				.widget__item
+					a.widget__link(href="#")
+						img.svg(src="./assets/icons/facebook.svg")
+				.widget__item
+					a.widget__link(href="#")
+						img.svg(src="./assets/icons/instagram.svg")
+				.widget__item
+					a.widget__link(href="#")
+						img.svg(src="./assets/icons/twitter.svg")
+				.widget__item
+					a.widget__link(href="#")
+						img.svg(src="./assets/icons/envelope.svg")
 			.header__menu-toggle.mobile
 				.mdi.mdi-menu
 			.header__menu.d-f.fw-w
@@ -31,6 +44,24 @@ header
 							a.nav__link(href="index.html") Trang chủ
 						.nav__item
 							a.nav__link(href="about-veantin.html") Giới thiệu
+							.nav__sub--toggle.mobile
+								span.lnr.lnr-chevron-right
+							.nav__sub
+								.nav__sub--close.mobile
+									span.lnr.lnr-chevron-left
+									span Quay lại
+								.nav__item
+									a.nav__link(href="about-thongdiep.html") Thông điệp CT HĐQT
+								.nav__item
+									a.nav__link(href="about-bld.html") Ban lãnh đạo
+								.nav__item
+									a.nav__link(href="about-sodo.html") Sơ đồ tổ chức
+								.nav__item
+									a.nav__link(href="about-thanhvien.html") Công ty thành viên
+								.nav__item
+									a.nav__link(href="about-khachhang.html") Khách hàng
+								.nav__item
+									a.nav__link(href="about-codong.html") Cổ đông
 						.nav__item
 							a.nav__link(href="invest.html") Lĩnh vực đầu tư
 						.nav__item

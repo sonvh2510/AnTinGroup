@@ -36,13 +36,13 @@
 	}
 
 	.item__field-name {
-		font-size: 14px;
+		font-size: 13px;
 		color: map-get($mau, main);
 		text-transform: uppercase;
 	}
 
 	.item__number {
-		font-size: 30px;
+		font-size: 28px;
 		color: white;
 		display: flex;
 		align-items: center;
@@ -50,7 +50,6 @@
 		&:after {
 			content: '/';
 			font-size: 120%;
-			margin-top: 5px;
 		}
 	}
 }
@@ -126,8 +125,6 @@
 		}
 
 		.content {
-			font-size: 15px;
-
 			h2,
 			h3 {
 				text-align: right;
@@ -168,11 +165,11 @@
 		}
 
 		.item__field-name {
-			font-size: 17px;
+			font-size: 16px;
 		}
 
 		.item__number {
-			font-size: 48px;
+			font-size: 45px;
 		}
 	}
 }
@@ -224,7 +221,7 @@
 
 	.values-strategy__item {
 		.item__field-name {
-			font-size: 20px;
+			font-size: 18px;
 		}
 
 		.item__description {
@@ -232,7 +229,7 @@
 		}
 
 		.item__number {
-			font-size: 70px;
+			font-size: 67px;
 		}
 	}
 }
@@ -278,7 +275,7 @@
 		}
 
 		.item__number {
-			font-size: 80px;
+			font-size: 77px;
 		}
 	}
 }
@@ -319,7 +316,7 @@
 		}
 
 		.item__number {
-			font-size: 90px;
+			font-size: 87px;
 		}
 	}
 }

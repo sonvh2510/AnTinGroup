@@ -43,11 +43,11 @@
 }
 
 .main-title {
-	font-size: 17px;
+	font-size: 18px;
 	text-transform: uppercase;
 
 	&.mb-40 {
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 
 	&.cl-white {
@@ -66,29 +66,29 @@
 		font-size: 22px;
 
 		&.mb-40 {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 		}
 	}
 
 	@media (min-width: 1025px) {
-		font-size: 27px;
+		font-size: 26px;
+
+		&.mb-40 {
+			margin-bottom: 20px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		font-size: 30px;
 
 		&.mb-40 {
 			margin-bottom: 25px;
 		}
 	}
 
-	@media (min-width: 1200px) {
-		font-size: 32px;
-
-		&.mb-40 {
-			margin-bottom: 30px;
-		}
-	}
-
 	@media (min-width: 1440px) {
 		&.mb-40 {
-			margin-bottom: 35px;
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -108,10 +108,10 @@
 }
 
 .pt-70 {
-	padding-top: 30px;
+	padding-top: 40px;
 
 	@media (min-width: 768px) {
-		padding-top: 50px;
+		padding-top: 55px;
 	}
 
 	@media (min-width: 1200px) {
@@ -120,10 +120,10 @@
 }
 
 .pb-70 {
-	padding-bottom: 30px;
+	padding-bottom: 40px;
 
 	@media (min-width: 768px) {
-		padding-bottom: 50px;
+		padding-bottom: 55px;
 	}
 
 	@media (min-width: 1200px) {
@@ -132,12 +132,12 @@
 }
 
 .pd-70 {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 
 	@media (min-width: 768px) {
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-top: 55px;
+		padding-bottom: 55px;
 	}
 
 	@media (min-width: 1200px) {
@@ -163,18 +163,27 @@
 
 .page__nav {
 	box-shadow: 0 3px 6px rgba(black, .15);
-	width: 250px;
-	margin-left: auto;
+	width: auto;
+	margin: 30px auto;
+	min-width: 250px;
 
 	.nav__list {
-		padding-left: 15px;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: white;
+		width: 100%;
+		box-shadow: 0 03px 6px rgba(black, .15);
+		z-index: 2;
+		padding: 0 20px;
 	}
 
 	.nav__link {
-		font-size: 14px;
+		font-size: 12px;
 		display: flex;
 		align-items: center;
-		height: 30px;
+		height: 40px;
 
 		&:before {
 			margin-right: 10px;
@@ -196,12 +205,34 @@
 
 	h2 {
 		color: map-get($mau, main);
-		font-size: 16px;
-		line-height: 46px;
-		padding: 0 40px;
+		font-size: 14px;
+		line-height: 42px;
+		padding: 0 20px;
+		position: relative;
+		text-transform: uppercase;
+
+		&:before {
+			@extend .mdi:before;
+			content: "\F035C";
+			position: absolute;
+			color: map-get($mau, main);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 24px;
+			right: 20px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		h2 {
+			font-size: 16px;
+		}
 	}
 
 	@media (min-width: 1025px) {
+		margin-left: auto;
+		width: 250px;
 		position: absolute;
 		top: -60px;
 		z-index: 2;
@@ -209,54 +240,62 @@
 		right: 10px;
 
 		h2 {
-			font-size: 18px;
-			line-height: 52px;
+			font-size: 15px;
+			line-height: 45px;
+			padding: 0 40px;
+
+			&:before {
+				content: none;
+			}
+		}
+
+		.nav__list {
+			position: static;
+			padding-left: 15px;
+			display: block !important;
 		}
 
 		.nav__link {
-			font-size: 16px;
+			font-size: 13px;
 			height: 35px;
 		}
 	}
 
 	@media (min-width: 1200px) {
 		h2 {
-			font-size: 19px;
-			line-height: 60px;
+			font-size: 16px;
+			line-height: 48px;
 		}
 
 		.nav__link {
-			font-size: 17px;
-			height: 40px;
-		}
-	}
-
-	@media (min-width: 1440px) {
-
-		h2 {
-			font-size: 20px;
-		}
-
-		.nav__link {
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 }
 
 .page__nav-2 {
+	max-width: 250px;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .15);
+
 	.nav__list {
-		padding-left: 0;
-		display: flex;
-		justify-content: space-between;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: white;
+		width: 100%;
+		box-shadow: 0 03px 6px rgba(black, .15);
+		z-index: 2;
+		padding: 0 20px;
 	}
 
 	.nav__link {
-		font-size: 14px;
-		font-weight: 700;
-		color: #707070;
-		text-transform: uppercase;
-		display: block;
-		text-align: center;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		height: 40px;
 	}
 
 	.nav__item {
@@ -267,42 +306,87 @@
 		flex-grow: 1;
 		max-width: 100%;
 		position: relative;
-		padding: 0 10px;
+
+		+.nav__item {
+			border-top: 1px solid rgba(139, 139, 139, .4);
+		}
 
 		&.active {
 			.nav__link {
 				color: map-get($mau, main);
 			}
 		}
+	}
 
-		+.nav__item {
-			&:before {
-				content: '/';
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				color: #D1D3D4;
-			}
+	h2 {
+		color: map-get($mau, main);
+		font-size: 14px;
+		line-height: 42px;
+		padding: 0 20px;
+		position: relative;
+
+		&:before {
+			@extend .mdi:before;
+			content: "\F035C";
+			position: absolute;
+			color: map-get($mau, main);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 24px;
+			right: 20px;
 		}
 	}
 
 	@media (min-width: 1025px) {
+		max-width: 100%;
+		box-shadow: none;
+
 		.nav__link {
-			font-size: 16px;
+			text-align: center;
+			font-size: 13px;
+			font-weight: 700;
+			color: #707070;
+			text-transform: uppercase;
+			display: block;
+			height: unset;
+		}
+
+		.nav__list {
+			padding-left: 0;
+			display: flex !important;
+			justify-content: space-between;
+			box-shadow: none;
+		}
+
+		.nav__item {
+			padding: 0 10px;
+
+			+.nav__item {
+				border-top: 0;
+
+				&:before {
+					content: '/';
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					color: #D1D3D4;
+				}
+			}
 		}
 	}
 
-	@media (min-width: 1439.98px) {
+	@media (min-width: 1200px) {
 		.nav__link {
-			font-size: 18px;
+			font-size: 15px;
 		}
 	}
 }
 
 .block__content {
 	text-align: justify;
-	font-size: 14px;
+	font-size: 13px;
 
 	h2 {
 		@extend .main-title;
@@ -314,7 +398,7 @@
 		text-transform: initial;
 		margin-bottom: 5px;
 		color: map-get($mau, main);
-		font-size: 16px;
+		font-size: 15px;
 		font-weight: 400;
 	}
 
@@ -323,7 +407,7 @@
 	}
 
 	@media (min-width: 768px) {
-		font-size: 15px;
+		font-size: 14px;
 
 		h2 {
 			margin-bottom: 7px;
@@ -331,12 +415,12 @@
 
 		h3 {
 			margin-bottom: 7px;
-			font-size: 17px;
+			font-size: 16px;
 		}
 	}
 
 	@media (min-width: 1200px) {
-		font-size: 16px;
+		font-size: 15px;
 
 		h2 {
 			margin-bottom: 9px;
@@ -344,7 +428,7 @@
 
 		h3 {
 			margin-bottom: 9px;
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 }

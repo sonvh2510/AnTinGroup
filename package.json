@@ -74,6 +74,7 @@
 		"@mdi/font": "^5.0.45",
 		"jquery": "^3.4.1",
 		"lazysizes": "^5.2.0",
+		"linearicons": "^1.0.2",
 		"object-fit-images": "^3.2.4",
 		"swiper": "^5.3.6"
 	}

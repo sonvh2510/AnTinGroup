@@ -10,11 +10,11 @@
 
 	.main-title {
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 }
 
-.index-project-nav {
+.index-project__nav {
 	padding: 0 35px;
 	position: relative;
 
@@ -43,7 +43,7 @@
 		padding: 5px 15px;
 
 		.nav-link {
-			font-size: 14px;
+			font-size: 12px;
 			text-transform: uppercase;
 
 			&.active {
@@ -86,7 +86,7 @@
 		overflow: hidden;
 		text-align: center;
 		text-transform: uppercase;
-		font-size: 14px;
+		font-size: 12px;
 		text-overflow: ellipsis;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -143,30 +143,22 @@
 }
 
 @media (min-width: 768px) {
-	.index-project-nav {
-		.swiper-slide {
-			.nav-link {
-				font-size: 15px;
-			}
-		}
-	}
-
 	.index-project-item {
 		.item__link {
 			box-shadow: 0px 3px 6px rgba(black, .15);
 		}
 
 		.item__description {
-			padding: 15px;
+			padding: 14px;
 		}
 
 		.item__title {
-			font-size: 15px;
+			font-size: 13px;
 		}
 	}
 
 	.index-project-titles {
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 
 		.main-title {
 			padding-right: 15px;
@@ -200,10 +192,10 @@
 		padding: 0 0;
 	}
 
-	.index-project-nav {
+	.index-project__nav {
 		.swiper-slide {
 			.nav-link {
-				font-size: 16px;
+				font-size: 13px;
 			}
 		}
 	}
@@ -214,47 +206,31 @@
 		}
 
 		.item__title {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 }
 
 @media (min-width: 1200px) {
-	.index-project-nav {
-		.swiper-slide {
-			.nav-link {
-				font-size: 17px;
-			}
-		}
-	}
-
 	.index-project-item {
 		.item__description {
 			padding: 15px 20px;
 		}
 
 		.item__title {
-			font-size: 17px;
+			font-size: 15px;
 		}
 	}
 }
 
 @media (min-width: 1440px) {
-	.index-project-nav {
-		.swiper-slide {
-			.nav-link {
-				font-size: 18px;
-			}
-		}
-	}
-
 	.index-project-item {
 		.item__title {
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
 
 	.index-project-titles {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
 }

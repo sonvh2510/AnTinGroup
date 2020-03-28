@@ -27,7 +27,7 @@
 
 		h4 {
 			color: white;
-			font-size: 15px;
+			font-size: 14px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			display: -webkit-box;
@@ -41,14 +41,14 @@
 	}
 
 	.item__time {
-		font-size: 12px;
+		font-size: 11px;
 		color: map-get($mau, main);
 		font-weight: 700;
 	}
 
 	.item__text {
 		font-weight: 300;
-		font-size: 14px;
+		font-size: 13px;
 		color: #707070;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -86,22 +86,22 @@
 	.news__item {
 		.item__title {
 			h4 {
-				font-size: 18px;
+				font-size: 16px;
 			}
 		}
 
 		.item__time {
-			font-size: 13px;
+			font-size: 12px;
 		}
 
 		.item__text {
-			font-size: 16px;
+			font-size: 15px;
 		}
 	}
 
 	.news-hot__item {
 		.item__title {
-			font-size: 16px;
+			font-size: 15px;
 		}
 	}
 }
@@ -116,22 +116,22 @@
 	.news__item {
 		.item__title {
 			h4 {
-				font-size: 21px;
+				font-size: 18px;
 			}
 		}
 
 		.item__time {
-			font-size: 14px;
+			font-size: 13px;
 		}
 
 		.item__text {
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 
 	.news-hot__item {
-		h4 {
-			font-size: 18px;
+		.item__title {
+			font-size: 16px;
 		}
 	}
 }

@@ -7,7 +7,7 @@
 }
 
 .pagination__link {
-	font-size: 12px;
+	font-size: 11px;
 	color: #707070;
 	font-weight: 700;
 	display: flex;
@@ -24,7 +24,7 @@
 
 	&.active {
 		.pagination__link {
-			font-size: 12px;
+			font-size: 11px;
 			color: white;
 			background-color: map-get($mau, main);
 		}
@@ -42,7 +42,7 @@
 
 @media (min-width: 768px) {
 	.pagination__link {
-		font-size: 14px;
+		font-size: 13px;
 	}
 }
 
@@ -58,12 +58,12 @@
 
 @media (min-width: 1200px) {
 	.pagination__link {
-		font-size: 16px;
+		font-size: 15px;
 	}
 }
 
 @media (min-width: 1440px) {
 	.pagination__link {
-		font-size: 18px;
+		font-size: 17px;
 	}
 }

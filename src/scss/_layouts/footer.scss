@@ -23,7 +23,7 @@
 	margin-bottom: 20px;
 
 	p {
-		font-size: 12px;
+		font-size: 11px;
 		color: rgba(#D1D3D4, .75);
 
 		+p {
@@ -35,7 +35,7 @@
 .footer__title {
 	color: map-get($mau, main);
 	margin-bottom: 25px;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .footer__navigation {
@@ -43,7 +43,7 @@
 	padding-left: 0;
 
 	.nav__link {
-		font-size: 12px;
+		font-size: 11px;
 		color: rgba(#D1D3D4, .75);
 		display: block;
 		padding: 3px 0;
@@ -75,7 +75,7 @@
 		top: 0;
 		height: 100%;
 		right: 0;
-		font-size: 12px;
+		font-size: 11px;
 		border: 0;
 		background-color: #70AD3A;
 		padding: 0 20px;
@@ -85,7 +85,7 @@
 }
 
 .subscribe__description {
-	font-size: 12px;
+	font-size: 11px;
 	color: rgba(#D1D3D4, .75);
 }
 
@@ -109,6 +109,42 @@
 
 @media (min-width: 768px) {
 	.footer__title {
+		font-size: 14px;
+	}
+
+	.footer__navigation {
+		.nav__link {
+			font-size: 12px;
+		}
+	}
+
+	.subscribe__description {
+		font-size: 12px;
+	}
+
+	.footer__address {
+		p {
+			font-size: 12px;
+		}
+	}
+
+	.footer__subscribe {
+		button {
+			font-size: 12px;
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+
+	.footer__address {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer__title {
 		font-size: 15px;
 	}
 
@@ -131,42 +167,6 @@
 	.footer__subscribe {
 		button {
 			font-size: 13px;
-		}
-	}
-}
-
-@media (min-width: 1025px) {
-
-	.footer__address {
-		margin-top: 20px;
-		margin-bottom: 0px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.footer__title {
-		font-size: 16px;
-	}
-
-	.footer__navigation {
-		.nav__link {
-			font-size: 14px;
-		}
-	}
-
-	.subscribe__description {
-		font-size: 14px;
-	}
-
-	.footer__address {
-		p {
-			font-size: 14px;
-		}
-	}
-
-	.footer__subscribe {
-		button {
-			font-size: 14px;
 		}
 	}
 }
