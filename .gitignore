@@ -1,2 +1,7 @@
-bower_components
-node_modules
+/obj
+/bin
+/packages
+/.vs
+/ViewsReadMe
+/bower_components
+/node_modules

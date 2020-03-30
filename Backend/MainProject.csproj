@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2A2D4DB-74EC-4278-BA5C-623299E8C1C3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MainProject</RootNamespace>
+    <AssemblyName>MainProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44341</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MainProject.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>App_Data\MainProject.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Core\Enums\TempResourceKeyCollection.cs" />
+    <Compile Include="Framework\Helpers\JsonHelper.cs" />
+    <Compile Include="Framework\Helpers\ResourceHelper.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Framework\Helpers\SettingHelper.cs" />
+    <Compile Include="Framework\Models\PagingModel.cs" />
+    <Compile Include="Framework\Models\PagingStyleModel.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\About\AboutViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Contact\ContactViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Gallery\GalleryViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Home\HomeViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\News\NewsListViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\News\NewsDetailViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\News\NewsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Files\HeaderMenu.txt" />
+    <Content Include="App_Data\Files\NewsCategory.txt" />
+    <Content Include="App_Data\MainProject.Core.dll" />
+    <Content Include="Content\resources\assets\about\about_1.jpg" />
+    <Content Include="Content\resources\assets\about\about_2.jpg" />
+    <Content Include="Content\resources\assets\about\about_3.jpg" />
+    <Content Include="Content\resources\assets\about\about_4.jpg" />
+    <Content Include="Content\resources\assets\about\about_5.png" />
+    <Content Include="Content\resources\assets\about\about_6.png" />
+    <Content Include="Content\resources\assets\about\about_background_1.jpg" />
+    <Content Include="Content\resources\assets\about\about_background_2.jpg" />
+    <Content Include="Content\resources\assets\about\about_background_3.jpg" />
+    <Content Include="Content\resources\assets\about\about_background_4.jpg" />
+    <Content Include="Content\resources\assets\about\about_background_5.jpg" />
+    <Content Include="Content\resources\assets\about\about_background_6.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_1.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_2.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_3.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_4.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_5.jpg" />
+    <Content Include="Content\resources\assets\about\about_member_6.jpg" />
+    <Content Include="Content\resources\assets\about\about_staff_1.png" />
+    <Content Include="Content\resources\assets\about\about_staff_2.jpg" />
+    <Content Include="Content\resources\assets\about\partners\cocacola.png" />
+    <Content Include="Content\resources\assets\about\partners\namesonholding.png" />
+    <Content Include="Content\resources\assets\about\partners\novaland.png" />
+    <Content Include="Content\resources\assets\about\partners\pvinvest.png" />
+    <Content Include="Content\resources\assets\about\partners\swancity.png" />
+    <Content Include="Content\resources\assets\about\partners\tanhoangminh.png" />
+    <Content Include="Content\resources\assets\about\partners\vinamilk.png" />
+    <Content Include="Content\resources\assets\banners\about_1.jpg" />
+    <Content Include="Content\resources\assets\banners\about_2.jpg" />
+    <Content Include="Content\resources\assets\banners\about_3.jpg" />
+    <Content Include="Content\resources\assets\banners\about_4.jpg" />
+    <Content Include="Content\resources\assets\banners\about_5.jpg" />
+    <Content Include="Content\resources\assets\banners\about_6.jpg" />
+    <Content Include="Content\resources\assets\banners\index_1.jpg" />
+    <Content Include="Content\resources\assets\banners\index_2.jpg" />
+    <Content Include="Content\resources\assets\banners\invest_1.jpg" />
+    <Content Include="Content\resources\assets\banners\invest_2.jpg" />
+    <Content Include="Content\resources\assets\banners\invest_3.jpg" />
+    <Content Include="Content\resources\assets\banners\project_1.jpg" />
+    <Content Include="Content\resources\assets\banners\project_2.jpg" />
+    <Content Include="Content\resources\assets\banners\project_3.jpg" />
+    <Content Include="Content\resources\assets\contact\contact_1.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_img_thumb_1.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_img_thumb_2.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_img_thumb_3.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_vid_thumb_1.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_vid_thumb_2.jpg" />
+    <Content Include="Content\resources\assets\gallery\gallery_vid_thumb_3.jpg" />
+    <Content Include="Content\resources\assets\icons\activities_fields.svg" />
+    <Content Include="Content\resources\assets\icons\antin_label.svg" />
+    <Content Include="Content\resources\assets\icons\arrow_left_2.svg" />
+    <Content Include="Content\resources\assets\icons\arrow_left_no_outline.svg" />
+    <Content Include="Content\resources\assets\icons\arrow_right_2.svg" />
+    <Content Include="Content\resources\assets\icons\arrow_right_no_outline.svg" />
+    <Content Include="Content\resources\assets\icons\arrow_up_2.svg" />
+    <Content Include="Content\resources\assets\icons\branch_domestics.svg" />
+    <Content Include="Content\resources\assets\icons\branch_internationals.svg" />
+    <Content Include="Content\resources\assets\icons\envelope.svg" />
+    <Content Include="Content\resources\assets\icons\envelope_2.svg" />
+    <Content Include="Content\resources\assets\icons\facebook.svg" />
+    <Content Include="Content\resources\assets\icons\humans.svg" />
+    <Content Include="Content\resources\assets\icons\icon_search.svg" />
+    <Content Include="Content\resources\assets\icons\instagram.svg" />
+    <Content Include="Content\resources\assets\icons\list_bullet.svg" />
+    <Content Include="Content\resources\assets\icons\marker.svg" />
+    <Content Include="Content\resources\assets\icons\phone.svg" />
+    <Content Include="Content\resources\assets\icons\quote_left.svg" />
+    <Content Include="Content\resources\assets\icons\quote_right.svg" />
+    <Content Include="Content\resources\assets\icons\swiper_next_1.svg" />
+    <Content Include="Content\resources\assets\icons\swiper_prev_1.svg" />
+    <Content Include="Content\resources\assets\icons\twitter.svg" />
+    <Content Include="Content\resources\assets\icons\video_play.svg" />
+    <Content Include="Content\resources\assets\icons\zalo.svg" />
+    <Content Include="Content\resources\assets\index\index_background_1.jpg" />
+    <Content Include="Content\resources\assets\index\index_field_1.jpg" />
+    <Content Include="Content\resources\assets\index\index_field_2.jpg" />
+    <Content Include="Content\resources\assets\index\index_field_3.jpg" />
+    <Content Include="Content\resources\assets\index\index_field_4.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_1.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_2.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_3.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_4.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_detail_1.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_detail_2.png" />
+    <Content Include="Content\resources\assets\invest\invest_index_1.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_index_2.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_index_3.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_index_4.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_index_title.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_1.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_2.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_3.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_4.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_5.jpg" />
+    <Content Include="Content\resources\assets\invest\invest_item_6.jpg" />
+    <Content Include="Content\resources\assets\language\en_US.png" />
+    <Content Include="Content\resources\assets\language\vi_VN.png" />
+    <Content Include="Content\resources\assets\loading.gif" />
+    <Content Include="Content\resources\assets\logo.svg" />
+    <Content Include="Content\resources\assets\logo_2.svg" />
+    <Content Include="Content\resources\assets\news\news_1.jpg" />
+    <Content Include="Content\resources\assets\news\news_2.jpg" />
+    <Content Include="Content\resources\assets\news\news_3.jpg" />
+    <Content Include="Content\resources\assets\news\news_4.jpg" />
+    <Content Include="Content\resources\assets\news\news_5.jpg" />
+    <Content Include="Content\resources\assets\news\news_6.jpg" />
+    <Content Include="Content\resources\assets\partner\partner_1.png" />
+    <Content Include="Content\resources\assets\partner\partner_2.png" />
+    <Content Include="Content\resources\assets\partner\partner_3.png" />
+    <Content Include="Content\resources\assets\partner\partner_4.png" />
+    <Content Include="Content\resources\assets\partner\partner_5.png" />
+    <Content Include="Content\resources\assets\partner\partner_6.png" />
+    <Content Include="Content\resources\assets\partner\partner_7.png" />
+    <Content Include="Content\resources\assets\project\index_project_1.jpg" />
+    <Content Include="Content\resources\assets\project\index_project_2.jpg" />
+    <Content Include="Content\resources\assets\project\index_project_3.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_1.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_2.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_3.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_4.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_5.jpg" />
+    <Content Include="Content\resources\assets\project\project_category_6.jpg" />
+    <Content Include="Content\resources\css\core.min.css" />
+    <Content Include="Content\resources\css\main.min.css" />
+    <Content Include="Content\resources\fonts\Linearicons-Free.svg" />
+    <Content Include="Content\resources\js\core.min.js" />
+    <Content Include="Content\resources\js\main.min.js" />
+    <Content Include="Content\resources\js\map.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\resources\css\core.min.css.map" />
+    <Content Include="Content\resources\css\main.min.css.map" />
+    <Content Include="Content\resources\fonts\Linearicons-Free.eot" />
+    <Content Include="Content\resources\fonts\Linearicons-Free.ttf" />
+    <Content Include="Content\resources\fonts\Linearicons-Free.woff" />
+    <Content Include="Content\resources\fonts\Linearicons-Free.woff2" />
+    <Content Include="Content\resources\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Content\resources\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Content\resources\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Content\resources\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Content\resources\js\core.min.js.map" />
+    <Content Include="Content\resources\js\main.min.js.map" />
+    <Content Include="Content\resources\js\map.min.js.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Breadcrumb.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Maintainance.cshtml" />
+    <Content Include="ViewsReadMe\_ViewStart.cshtml" />
+    <Content Include="ViewsReadMe\Home\Index.cshtml" />
+    <Content Include="ViewsReadMe\Shared\_Breadcrumb.cshtml" />
+    <Content Include="ViewsReadMe\Shared\_Layout.cshtml" />
+    <Content Include="ViewsReadMe\Shared\Error.cshtml" />
+    <Content Include="ViewsReadMe\Shared\Maintainance.cshtml" />
+    <Content Include="ViewsReadMe\Web.config" />
+    <Content Include="Views\Home\_Header.cshtml" />
+    <Content Include="Views\Home\_Footer.cshtml" />
+    <Content Include="ViewsReadMe\Home\_Footer.cshtml" />
+    <Content Include="ViewsReadMe\Home\_Header.cshtml" />
+    <Content Include="ViewsReadMe\Home\_Subscribe.cshtml" />
+    <Content Include="Views\Home\_Subscribe.cshtml" />
+    <Content Include="Views\About\ChairmainsLetter.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\_FormContact.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\_List.cshtml" />
+    <Content Include="Views\News\_Detail.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57741</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44341/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,18 @@
+﻿<div class="nav__item"><a class="nav__link" href="/">Trang chủ</a></div>
+<div class="nav__item">
+    <a class="nav__link" href="/About">Giới thiệu</a>
+    <div class="nav__sub--toggle mobile"><span class="lnr lnr-chevron-right"></span></div>
+    <div class="nav__sub">
+        <div class="nav__sub--close mobile"><span class="lnr lnr-chevron-left"></span><span>Quay lại</span></div>
+        <div class="nav__item"><a class="nav__link" href="about-thongdiep.html">Thông điệp CT HĐQT</a></div>
+        <div class="nav__item"><a class="nav__link" href="about-bld.html">Ban lãnh đạo</a></div>
+        <div class="nav__item"><a class="nav__link" href="about-sodo.html">Sơ đồ tổ chức</a></div>
+        <div class="nav__item"><a class="nav__link" href="about-thanhvien.html">Công ty thành viên</a></div>
+        <div class="nav__item"><a class="nav__link" href="about-khachhang.html">Khách hàng</a></div>
+        <div class="nav__item"><a class="nav__link" href="about-codong.html">Cổ đông</a></div>
+    </div>
+</div>
+<div class="nav__item"><a class="nav__link" href="/Invest">Lĩnh vực đầu tư</a></div>
+<div class="nav__item"><a class="nav__link" href="/Project">Dự án</a></div>
+<div class="nav__item"><a class="nav__link" href="/News">Tin tức - Sự kiện</a></div>
+<div class="nav__item"><a class="nav__link" href="/Gallery">Thư viện</a></div>

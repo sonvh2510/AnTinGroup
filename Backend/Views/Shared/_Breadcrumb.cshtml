@@ -1,0 +1,9 @@
+﻿@{
+    Layout = null;
+    bool isShow = ViewBag.ShowBreadCrumb ?? true;
+}
+
+@if (isShow)
+{
+    @Html.GenerateBreadCrumb(Request.RawUrl)
+}
