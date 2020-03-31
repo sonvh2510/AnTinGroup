@@ -119,8 +119,12 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\InvestController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Core\Enums\TempResourceKeyCollection.cs" />
+    <Compile Include="Core\NewCategory.cs" />
+    <Compile Include="Core\NewImage.cs" />
     <Compile Include="Framework\Helpers\JsonHelper.cs" />
     <Compile Include="Framework\Helpers\ResourceHelper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -136,13 +140,20 @@
     <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Gallery\GalleryViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Home\HomeViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\News\NewsListViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Invest\InvestListViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsDetailViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\Invest\InvestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Files\About_Menu.txt" />
+    <Content Include="App_Data\Files\About_AnTin.txt" />
+    <Content Include="App_Data\Files\About_Category.txt" />
+    <Content Include="App_Data\Files\About_Chart.txt" />
+    <Content Include="App_Data\Files\About_Message.txt" />
     <Content Include="App_Data\Files\HeaderMenu.txt" />
     <Content Include="App_Data\Files\NewsCategory.txt" />
+    <Content Include="App_Data\Files\NewsDetail.txt" />
     <Content Include="App_Data\MainProject.Core.dll" />
     <Content Include="Content\resources\assets\about\about_1.jpg" />
     <Content Include="Content\resources\assets\about\about_2.jpg" />
@@ -337,13 +348,26 @@
     <Content Include="ViewsReadMe\Home\_Header.cshtml" />
     <Content Include="ViewsReadMe\Home\_Subscribe.cshtml" />
     <Content Include="Views\Home\_Subscribe.cshtml" />
-    <Content Include="Views\About\ChairmainsLetter.cshtml" />
+    <Content Include="Views\About\Message.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\_FormContact.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\News\_List.cshtml" />
     <Content Include="Views\News\_Detail.cshtml" />
+    <Content Include="Views\News\_HotNews.cshtml" />
+    <Content Include="Views\News\_Category.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\_Detail.cshtml" />
+    <Content Include="Views\Invest\_List.cshtml" />
+    <Content Include="Views\Invest\Index.cshtml" />
+    <Content Include="Views\Invest\_Detail.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\BoardOfExecutive.cshtml" />
+    <Content Include="Views\About\OrganizationChart.cshtml" />
+    <Content Include="Views\About\Department.cshtml" />
+    <Content Include="Views\About\Customer.cshtml" />
+    <Content Include="Views\About\ShareHolder.cshtml" />
+    <Content Include="Views\About\_AboutMenu.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

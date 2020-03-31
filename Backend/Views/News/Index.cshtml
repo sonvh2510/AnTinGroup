@@ -2,19 +2,8 @@
 @model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
 
 
+@Html.Partial("_Category", new MainProject.SBussiness.LandingPage.Models.News.NewsViewModel())
 
-<div class="page__nav-container">
-	<div class="container">
-		<div class="row no-gutters">
-			<div class="col-lg-auto page__nav">
-				<h2>@Model.NewsCategoryTitle.Title</h2>
-				<ul class="nav__list lst-n">
-					@Html.Raw(Model.Category)
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="news pd-70">
 	<div class="container">
 		<div class="row">
@@ -56,26 +45,7 @@
 				</div>
 			</div>
 			<div class="col-md-auto news-hot__col">
-				<h2 class="main-title cl-main mb-40">@Html.GetResource(TempResourceKeyCollection.Hot_News)</h2>
-				<div class="news-hot">
-					<div class="row">
-						@foreach (var Item in Model.HotNewsItems)
-						{
-							<div class="col-6 col-md-4 col-lg-12">
-								<div class="news-hot__item">
-									<a class="item__link" href=@Item.ExternalUrl>
-										<div class="item__img">
-											<img class="lazyload blur-up" data-src=@Item.ImageDefault>
-										</div>
-										<div class="item__description">
-											<h4 class="item__title">@Item.Title</h4>
-										</div>
-									</a>
-								</div>
-							</div>
-						}
-					</div>
-				</div>
+				@Html.Partial("_HotNews", new MainProject.SBussiness.LandingPage.Models.News.NewsViewModel())
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,16 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
+
+
+<div class="page__nav-container">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-lg-auto page__nav">
+				<h2>@Html.GetResource(TempResourceKeyCollection.About)</h2>
+				<ul class="nav__list lst-n">
+					@Html.Raw(Model.AboutMenu)
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

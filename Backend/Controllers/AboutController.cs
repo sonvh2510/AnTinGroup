@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MainProject.SBussiness.LandingPage.Models.About;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,42 +7,42 @@ using System.Web.Mvc;
 
 namespace MainProject.Controllers
 {
-    public class AboutController : Controller
-    {
-        // GET: About
-        public ActionResult Index()
-        {
-            return View();
-        }
+	public class AboutController : Controller
+	{
+		// GET: About
+		public ActionResult Index()
+		{
+			return View(new AboutViewModel());
+		}
 
-        public ActionResult ChairmainsLetter()
-        {
-            return View();
-        }
+		public ActionResult AboutMessage()
+		{
+			return View("Message", new AboutViewModel());
+		}
 
-        public ActionResult BoardOfExecutive()
-        {
-            return View();
-        }
+		public ActionResult AboutBoardOfExecutive()
+		{
+			return View("BoardOfExecutive", new AboutViewModel());
+		}
 
-        public ActionResult OrganizationChart()
-        {
-            return View();
-        }
+		public ActionResult AboutOrganizationChart()
+		{
+			return View("OrganizationChart", new AboutViewModel());
+		}
 
-        public ActionResult Department()
-        {
-            return View();
-        }
+		public ActionResult AboutDepartment()
+		{
+			return View("Department", new AboutViewModel());
+		}
 
-        public ActionResult Customer()
-        {
-            return View();
-        }
+		public ActionResult AboutCustomer()
+		{
+			return View("Customer", new AboutViewModel());
+		}
 
-        public ActionResult ShareHolder()
-        {
-            return View();
-        }
-    }
+		public ActionResult AboutShareHolder()
+		{
+			return View("ShareHolder", new AboutViewModel());
+		}
+	}
 }

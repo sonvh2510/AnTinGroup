@@ -33,12 +33,12 @@
 							img.lazyload.blur-up(data-src="./assets/contact/contact_1.jpg")
 					.col-md-6.form__wrapper
 						h2.main-title.cl-main Liên hệ
-						form
+						form#form-contact(action="/test")
 							.row
 								.col-6.form__group
-									input.form__control(type="text" placeholder="Họ tên*")
+									input.form__control(type="text" placeholder="Họ tên*" name="Fullname")
 								.col-6.form__group
-									input.form__control(type="text" placeholder="Email*")
+									input.form__control(type="text" placeholder="Email*" name="Email")
 								.col-12.form__group
 									input.form__control(type="text" placeholder="Gửi tới phòng ban*")
 								.col-12.form__group

@@ -1,0 +1,27 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.Invest.InvestViewModel
+
+
+
+<div class="invest-fields pd-70">
+	<div class="container">
+		<div class="invest-fields__wrapper block__content-short">
+			@foreach (var Category in Model.Categories)
+			{
+				<div class="invest-fields__item">
+					<a class="item__link" href=@Category.ExternalUrl>
+						<div class="item__img"><img class="lazyload blur-up ofcv" data-src=@Category.ImageDefault></div>
+						<div class="item__description">
+							<h3 class="item__title d-f ai-c">
+								<b class="item__number">@Category.Order</b>
+								<span class="item__field-name">@Category.Title</span>
+							</h3>
+							<p class="item__text">@Category.Description</p><span class="btn btn__viewmore">@Html.GetResource(TempResourceKeyCollection.View_More)</span>
+						</div>
+					</a>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<div class="invest-page" id="js-page-verify" hidden></div>

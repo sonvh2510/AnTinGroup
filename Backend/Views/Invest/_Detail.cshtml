@@ -1,0 +1,16 @@
+﻿
+@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.News.NewsDetailViewModel
+
+
+<div class="project-detail pd-70">
+	<div class="container">
+		<div class="project-detail__wrapper block__content-short">
+			<div class="block__content project-detail__content">
+				<h1>@Model.Detail.Title</h1><br>
+				@Html.Raw(@Model.Detail.Body)
+			</div>
+		</div>
+	</div>
+</div>
+<div class="invest-detail-page" id="js-page-verify" hidden></div>
