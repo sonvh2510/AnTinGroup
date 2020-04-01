@@ -22,7 +22,10 @@
 	position: relative;
 
 	.swiper-slide {
-		height: 280px;
+		a {
+			height: 280px;
+			display: block;
+		}
 	}
 }
 
@@ -41,19 +44,19 @@
 	padding-bottom: 15px;
 }
 
-.breadcrumb {
+.breadcrumb__nav {
 	padding-left: 0;
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 10px;
 
-	a {
+	.breadcrumb__link {
 		font-size: 10px;
 		color: white;
 		text-transform: uppercase;
 	}
 
-	li {
+	.breadcrumb__item {
 		+.breadcrumb__item {
 			&:before {
 				content: '/';
@@ -84,7 +87,9 @@
 @media (min-width: 1025px) {
 	.page__banner {
 		.swiper-slide {
-			height: unset;
+			a {
+				height: unset;
+			}
 		}
 	}
 }
