@@ -51,9 +51,9 @@
 }
 
 .footer__subscribe {
+	position: relative;
 
 	.subscribe__input {
-		position: relative;
 		margin-top: 15px;
 	}
 
@@ -70,17 +70,18 @@
 		}
 	}
 
-	button {
+	.subscribe__button {
 		position: absolute;
+		height: 44px;
 		top: 0;
-		height: 100%;
 		right: 0;
-		font-size: 11px;
-		border: 0;
-		background-color: #70AD3A;
-		padding: 0 20px;
-		color: white;
+	}
+
+	.btn__submit {
+		border-radius: 0;
+		height: 100%;
 		text-transform: uppercase;
+		padding: 0 20px;
 	}
 }
 

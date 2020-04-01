@@ -36,3 +36,14 @@
 	height: 160px;
 	resize: none;
 }
+
+.field-validation-error {
+	@extend .mdi;
+	@extend .mdi-alert-circle-outline;
+	color: red;
+	font-size: 12px;
+
+	&:before {
+		margin-right: 7px;
+	}
+}

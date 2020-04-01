@@ -46,6 +46,10 @@
 	font-size: 18px;
 	text-transform: uppercase;
 
+	br {
+		display: none;
+	}
+
 	&.mb-40 {
 		margin-bottom: 10px;
 	}
@@ -72,6 +76,10 @@
 
 	@media (min-width: 1025px) {
 		font-size: 26px;
+
+		br {
+			display: inline;
+		}
 
 		&.mb-40 {
 			margin-bottom: 20px;

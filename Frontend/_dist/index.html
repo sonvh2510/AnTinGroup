@@ -88,12 +88,12 @@
 				<div class="bi__contents">
 					<div class="bi__content-wrapper">
 						<div class="bi__logo wow fadeInUp"><img src="./assets/logo.svg"></div>
-						<div class="bi__sentences wow fadeInUp">
-							<p class="fs-i"><b>Phụng sự khách hàng, phụng sự Tổ quốc </b>và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới</p>
+						<div class="bi__sentences wow fadeInUp fs-i">
+							<p><b>Phụng sự khách hàng, phụng sự Tổ quốc </b>và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới</p>
 						</div>
 						<div class="bi__author wow fadeInUp">
 							<h3><span>TS Nguyễn Đức Thọ</span></h3>
-							<p><b>CHỦ TỊCH HĐQT - TGĐ</b></p>
+							<p>CHỦ TỊCH HĐQT - TGĐ</p>
 						</div>
 					</div>
 				</div>
@@ -447,11 +447,15 @@
 								</div>
 								<div class="col-12 col-xl-4">
 									<h4 class="footer__title">ĐĂNG KÍ NHẬN TIN</h4>
-									<form class="footer__subscribe">
-										<p class="subscribe__description">Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách</p>
+									<div class="subscribe__description">
+										<p>Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách</p>
+									</div>
+									<form class="footer__subscribe form-ajax">
 										<div class="subscribe__input">
-											<input type="text" placeholder="Email">
-											<button>Xác nhận</button>
+											<input type="text" placeholder="Email" name="Email"><span class="field-validation-error">Email không hợp lệ</span>
+										</div>
+										<div class="subscribe__button">
+											<button class="btn btn__submit form-ajax__submit" data-url="/test">Xác nhận</button>
 										</div>
 									</form>
 									<div class="footer__social">

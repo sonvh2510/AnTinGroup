@@ -11,6 +11,63 @@ const headerMenu = document.querySelector(".header__menu");
 
 const getScrollYPosition = () => window.scrollY;
 
+const getFormData = Form => {
+	if (Form) {
+		const Data = new FormData();
+		Array.from(Form.querySelectorAll("[name]")).forEach(Field => {
+			const FieldName = Field.getAttribute("name");
+			const FieldValue = Field.value;
+			Data.append(FieldName, FieldValue);
+		});
+		return Data;
+	}
+	return;
+};
+const SubmitAjaxForm = () => {
+	const FormSelector = ".form-ajax";
+	const Forms = Array.from(document.querySelectorAll(FormSelector));
+	Forms.forEach(Form => {
+		const ButtonSubmit = Form.querySelector(".form-ajax__submit");
+		// $(Form).validate({
+		// 	rules: {
+		// 		Email: "required"
+		// 	}
+		// });
+		ButtonSubmit.addEventListener("click", (e) => {
+			e.preventDefault();
+			const UrlRequest = ButtonSubmit.getAttribute("data-url");
+			const Data = getFormData(Form);
+			if ($(Form).valid()) {
+				$.ajax({
+					url: UrlRequest,
+					data: Data,
+					type: "POST",
+					contentType: false,
+					processData: false,
+					beforeSend: function(res) {
+						ButtonSubmit.setAttribute("disabled", "disabled");
+					},
+					success: function(res) {
+						console.log(res);
+					},
+					complete: function(res) {
+						ButtonSubmit.removeAttribute("disabled");
+					}
+				});
+			}
+		});
+	});
+};
+
+const pageTitle = () => {
+	const breadcrumb = document.querySelector(".page__breadcrumb");
+	if (breadcrumb) {
+		const breadcrumbItems = Array.from(breadcrumb.querySelectorAll(".breadcrumb__link"));
+		const finalBreadcrumbItem = breadcrumbItems.pop();
+		breadcrumb.querySelector(".page__title").innerHTML = finalBreadcrumbItem.textContent;
+	}
+};
+
 const setSizeByRatio = () => {
 	const items = Array.from(document.querySelectorAll("[data-ratio]"));
 	items.forEach(item => {
@@ -50,12 +107,13 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	const bannerElement = document.querySelector(".page__banner");
-	return new Swiper(".page__banner .swiper-container", {
+	const bannerElement = Array.from(document.querySelector("#js-page-verify").classList);
+	let banner = new Swiper(".page__banner .swiper-container", {
 		slidesPerView: 1,
 		speed: 1600,
-		loop: !bannerElement.classList.contains("page__banner"),
-		simulateTouch: !bannerElement.classList.contains("page__banner"),
+		init: false,
+		loop: !bannerElement.includes("page__banner"),
+		simulateTouch: !bannerElement.includes("page__banner"),
 		autoplay: {
 			disableOnInteraction: false,
 			delay: 4000,
@@ -65,15 +123,8 @@ const pageBanner = () => {
 			crossFade: true,
 		},
 		on: {
-			init: function() {
-				const slides = Array.from(document.querySelectorAll(".page__banner"));
-				const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
-				if (pageClass.includes("index-page")) {
-					setSizeFullScreen(slides);
-				}
-			},
 			resize: function() {
-				const slides = Array.from(document.querySelectorAll(".page__banner"));
+				const slides = Array.from(document.querySelectorAll(".page__banner .swiper-slide a"));
 				const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
 				if (pageClass.includes("index-page")) {
 					setSizeFullScreen(slides);
@@ -81,7 +132,14 @@ const pageBanner = () => {
 			}
 		}
 	});
-	// }
+	banner.on("init", function() {
+		const slides = Array.from(document.querySelectorAll(".page__banner .swiper-slide a"));
+		const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
+		if (pageClass.includes("index-page")) {
+			setSizeFullScreen(slides);
+		}
+	});
+	banner.init();
 };
 
 const addClassHeader = currentScrollPosition => {
@@ -535,6 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	setSizeInvestItem();
 	setSizeProjectCategoryItem();
 	setPaddingTopNewsNav();
+	pageTitle();
 	// Header
 	toggleHeaderMenuMobile();
 	addClassHeader(getScrollYPosition());
@@ -554,6 +613,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	aboutStaffsSlider();
 	gallerySlider();
 	// Ajax
+	SubmitAjaxForm();
 	// Other scripts
 	// CountNumber({
 	// 	duration: 1500,

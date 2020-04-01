@@ -4,6 +4,12 @@
 	align-items: center;
 	border: 0;
 	padding: 0;
+	transition: all .1s ease;
+
+	&:disabled {
+		background-color: darken(white, 5%);
+		color: darken(white, 15%);
+	}
 }
 
 .btn__viewmore {

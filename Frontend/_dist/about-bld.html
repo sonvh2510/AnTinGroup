@@ -65,11 +65,11 @@
 				</div>
 			</div>
 		</header>
-		<div class="page__banner index__banner">
+		<div class="page__banner">
 			<div class="mobile logo"><a href="/"><img class="svg" src="./assets/logo.svg"/></a></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"><a><img class="ofcv" src="./assets/banners/about_3.jpg" alt=""/></a></div>
+					<div class="swiper-slide"><a href="#"><img class="ofcv" src="./assets/banners/about_3.jpg" alt=""/></a></div>
 				</div>
 			</div>
 			<div class="page__breadcrumb">
@@ -105,13 +105,15 @@
 					<div class="row ai-c">
 						<div class="col-xl-1"></div>
 						<div class="col-lg-5 col-xl-4 col-md-6 pd-70 wow fadeInLeft">
-							<h2 class="main-title tagline">TS Nguyễn Đức Thọ</h2>
-							<p>Chủ tịch HĐQT - TGĐ</p>
+							<div class="about__staffs-title">
+								<h3><span>TS Nguyễn Đức Thọ</span></h3>
+								<p>Chủ tịch HĐQT - TGĐ</p>
+							</div>
 							<div class="block__content about__staffs-content">
-								<p>"…Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam It has survived not only five centuries, but also the leap into."</p>
+								<p><b>Phụng sự khách hàng, phụng sự Tổ quốc </b>và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới</p>
 							</div>
 						</div>
-						<div class="col-lg-5 col-md-6 fadeInRight wow" data-wow-delay="0.2s">
+						<div class="col-lg-5 col-md-6 fadeInRight wow as-fe" data-wow-delay="0.2s">
 							<div class="about__staffs-img ta-c"><img class="lazyload blur-up" data-src="./assets/about/about_staff_1.png"></div>
 						</div>
 					</div>
@@ -260,11 +262,15 @@
 								</div>
 								<div class="col-12 col-xl-4">
 									<h4 class="footer__title">ĐĂNG KÍ NHẬN TIN</h4>
-									<form class="footer__subscribe">
-										<p class="subscribe__description">Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách</p>
+									<div class="subscribe__description">
+										<p>Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách</p>
+									</div>
+									<form class="footer__subscribe form-ajax">
 										<div class="subscribe__input">
-											<input type="text" placeholder="Email">
-											<button>Xác nhận</button>
+											<input type="text" placeholder="Email" name="Email"><span class="field-validation-error">Email không hợp lệ</span>
+										</div>
+										<div class="subscribe__button">
+											<button class="btn btn__submit form-ajax__submit" data-url="/test">Xác nhận</button>
 										</div>
 									</form>
 									<div class="footer__social">

@@ -58,11 +58,14 @@ footer
 									a.nav__link(href="#") Liên Hệ
 						.col-12.col-xl-4
 							h4.footer__title ĐĂNG KÍ NHẬN TIN
-							form.footer__subscribe
-								p.subscribe__description Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách
+							.subscribe__description
+								p Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách
+							form.footer__subscribe.form-ajax
 								.subscribe__input
-									input(type="text" placeholder="Email")
-									button Xác nhận
+									input(type="text" placeholder="Email" name="Email")
+									span.field-validation-error Email không hợp lệ
+								.subscribe__button
+									button.btn.btn__submit.form-ajax__submit(data-url="/test") Xác nhận
 							.footer__social
 								.social__item
 									a.social__link(href="#")
