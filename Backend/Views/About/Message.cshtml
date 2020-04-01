@@ -2,6 +2,6 @@
 @using MainProject.Core;
 @model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
 
-@Html.Partial("_AboutMenu", new MainProject.SBussiness.LandingPage.Models.About.AboutViewModel())
+@Html.Action("ShowMenu", "About")
 @Html.Raw(Model.AboutMessage.Content)
 <div class="about-page" id="js-page-verify" hidden></div>

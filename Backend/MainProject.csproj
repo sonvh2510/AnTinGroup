@@ -353,7 +353,6 @@
     <Content Include="Views\Home\_Subscribe.cshtml" />
     <Content Include="Views\About\Message.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
-    <Content Include="Views\Contact\_FormContact.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\_Detail.cshtml" />
@@ -370,7 +369,9 @@
     <Content Include="Views\About\Department.cshtml" />
     <Content Include="Views\About\Customer.cshtml" />
     <Content Include="Views\About\ShareHolder.cshtml" />
-    <Content Include="Views\About\_AboutMenu.cshtml" />
+    <Content Include="Views\About\_Menu.cshtml" />
+    <Content Include="Views\Home\_Project.cshtml" />
+    <Content Include="Views\Contact\_Form.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

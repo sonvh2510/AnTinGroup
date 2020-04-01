@@ -1,20 +1,20 @@
 ﻿@using MainProject.Core
 @model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
 
-@Html.Partial("_AboutMenu", new MainProject.SBussiness.LandingPage.Models.About.AboutViewModel())
+@Html.Action("ShowMenu", "About")
 <div class="about__company-members pd-70 ov-h">
 	<div class="container">
 		<div class="about__company-members-wrapper">
 			<div class="row">
-				@foreach (var Item in JsonHelper.Deserialize<List<NewImage>>(Model.AboutDepartment.Images))
-				{
+				@foreach (var item in JsonHelper.Deserialize<List<NewImage>>(Model.Category.Images) ?? new List<NewImage>())
+                {
 					<div class="col-sm-6 wow fadeInUp">
 						<div class="about__company-member__item">
-							<a class="item__link" href=@Item.ExternalUrl>
-								<div class="item__img"><img class="ofcv lazyload blur-up" data-src=@Item.ImageDefault></div>
+							<a class="item__link" href=@item.ExternalUrl>
+								<div class="item__img"><img class="ofcv lazyload blur-up" data-src=@item.ImageDefault></div>
 								<div class="item__description">
 									<div class="item__label"><img class="lazyload blur-up" data-src="/Content/resources/assets/icons/antin_label.svg"></div>
-									<h4 class="item__title tt-u">@Item.Name</h4>
+									<h4 class="item__title tt-u">@item.Name</h4>
 								</div>
 							</a>
 						</div>

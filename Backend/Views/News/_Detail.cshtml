@@ -10,10 +10,10 @@
 		<div class="row">
 			<div class="col-lg">
 				<div class="news-detail__content block__content">
-					<h1>@Model.Detail.Title</h1>
-					<time>@Model.Detail.Order.ToString("dd/MM/yyyy")</time>
+					<h1>@Model.Article.Title</h1>
+					<time>@Model.Article.Order.ToString("dd/MM/yyyy")</time>
 					<br>
-					@Html.Raw(@Model.Detail.Body)
+					@Html.Raw(Model.Article.Body)
 				</div>
 			</div>
 			<div class="col-md-auto news-hot__col">

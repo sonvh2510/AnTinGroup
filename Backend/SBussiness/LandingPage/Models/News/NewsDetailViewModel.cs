@@ -9,7 +9,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 {
 	public class NewsDetailViewModel
 	{
-		public Article Detail { get; set; } = new Article
+		public Article Article { get; set; } = new Article
 		{
 			Title = "An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
 			Order = new DateTime(2020, 02, 29),

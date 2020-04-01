@@ -41,5 +41,47 @@ namespace MainProject.Controllers
 		{
 			return PartialView("_Footer", new FooterViewModel());
 		}
+
+		public ActionResult GetProjects(long id)
+		{
+			return PartialView("_Project", new List<Article> {
+				new Article
+				{
+					Title = "Ajax 1 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_1.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 2 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_2.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 3 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_3.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 4 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_1.jpg"
+				},
+				new Article
+				{
+					Title = "5 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_2.jpg"
+				},
+				new Article
+				{
+					Title = "6 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/project/index_project_3.jpg"
+				}
+			});
+		}
 	}
 }

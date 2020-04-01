@@ -1,5 +1,5 @@
 ﻿@using MainProject.Core
-@model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
+@model string
 
 
 <div class="page__nav-container">
@@ -8,7 +8,7 @@
 			<div class="col-lg-auto page__nav wow fadeInUp">
 				<h2>@Html.GetResource(TempResourceKeyCollection.About)</h2>
 				<ul class="nav__list lst-n">
-					@Html.Raw(Model.AboutMenu)
+					@Html.Raw(Model)
 				</ul>
 			</div>
 		</div>
