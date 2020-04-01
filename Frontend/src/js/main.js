@@ -2,7 +2,6 @@
 import Cookie from "./lib/Cookie";
 import Loading from "./lib/Loading";
 import GetSVG from "./lib/GetSVG";
-import Swiper from "swiper";
 // import CountNumber from "./lib/CountNumber";
 // initialize
 const header = document.querySelector("header");
@@ -51,8 +50,8 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	const bannerElement = document.querySelector(".index__banner");
-	return new Swiper(".index__banner .swiper-container", {
+	const bannerElement = document.querySelector(".page__banner");
+	return new Swiper(".page__banner .swiper-container", {
 		slidesPerView: 1,
 		speed: 1600,
 		loop: !bannerElement.classList.contains("page__banner"),
@@ -67,12 +66,18 @@ const pageBanner = () => {
 		},
 		on: {
 			init: function() {
-				const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
-				setSizeFullScreen(slides);
+				const slides = Array.from(document.querySelectorAll(".page__banner"));
+				const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
+				if (pageClass.includes("index-page")) {
+					setSizeFullScreen(slides);
+				}
 			},
 			resize: function() {
-				const slides = Array.from(document.querySelectorAll(".index__banner .swiper-slide a"));
-				setSizeFullScreen(slides);
+				const slides = Array.from(document.querySelectorAll(".page__banner"));
+				const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
+				if (pageClass.includes("index-page")) {
+					setSizeFullScreen(slides);
+				}
 			}
 		}
 	});
