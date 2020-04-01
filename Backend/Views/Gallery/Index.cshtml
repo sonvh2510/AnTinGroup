@@ -1,10 +1,8 @@
-﻿
-@using MainProject.Core
+﻿@using MainProject.Core
 @model MainProject.SBussiness.LandingPage.Models.Gallery.GalleryViewModel
 
 
 <div class="gallery">
-
 	<div class="gallery-images pt-70">
 		<div class="container">
 			<div class="block__title">
@@ -20,12 +18,12 @@
 							<div class="swiper-slide" type="image">
 								<div class="gallery-images__item">
 									<div class="item__img">
-										<img src=@album.ResourcePath alt="">
+										<img src="@album.Path" alt="">
 									</div>
 									<div class="item__list">
 										@foreach (var image in album.Images)
 										{
-											<a href=@image.ImageDefault>
+											<a href="@image.ImageDefault">
 												<img src=@image.ImageDefault>
 											</a>
 										}
@@ -52,8 +50,8 @@
 						{
 							<div class="swiper-slide" type="video">
 								<div class="gallery-videos__item">
-									<a class="item__link" href=@album.ResourcePath>
-										<div class="item__img"><img src=@album.Image alt=""></div>
+									<a class="item__link" href="@album.Path">
+										<div class="item__img"><img src="@album.Image" alt=""></div>
 										<div class="item__play"><img class="svg" src="/Content/resources/assets/icons/video_play.svg"></div>
 									</a>
 									<div class="item__description">

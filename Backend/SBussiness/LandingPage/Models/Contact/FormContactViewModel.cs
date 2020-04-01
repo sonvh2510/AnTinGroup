@@ -9,11 +9,11 @@ namespace MainProject.SBussiness.LandingPage.Models.FormContactViewModel
 	public class ContactFormManagement
 	{
 		[Required]
-		public string Fullname { get; set; }
+		public string Name { get; set; }
 		[Required]
 		public string Email { get; set; }
 		[Required]
-		public string Department { get; set; }
+		public string Address { get; set; }
 		[Required]
 		public string Content { get; set; }
 	}
