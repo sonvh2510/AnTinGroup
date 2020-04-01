@@ -8,5 +8,7 @@ namespace MainProject.Core
 	public class NewCategory : Category
 	{
 		public string Images { get; set; }
+
+		public string Content { get; set; }
 	}
 }

@@ -52,3 +52,18 @@
 	</div>
 </div>
 <div class="contact-page" id="js-page-verify" hidden></div>
+
+@section scripts {
+    @{
+        string key = SettingHelper.GetValueSetting("SiteKeyRecaptcha");
+    }
+
+    <script src="https://www.google.com/recaptcha/api.js?render=@key"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('@key', { action: 'NatuFarm' }).then(function (token) {
+                document.getElementById("g-recaptcha-response").value = token;
+            });
+        });
+    </script>
+}

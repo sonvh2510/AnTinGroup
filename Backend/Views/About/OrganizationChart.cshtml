@@ -2,7 +2,7 @@
 @model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
 
 
-@Html.Partial("_AboutMenu", new MainProject.SBussiness.LandingPage.Models.About.AboutViewModel())
+@Html.Action("ShowMenu", "About")
 <div class="about__company-structures ov-h">
 	<div class="container">
 		<div class="about__company-structures-wrapper pt-70 block__content-long">

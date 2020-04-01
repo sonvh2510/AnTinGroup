@@ -51,7 +51,7 @@
                         {
 							<div class="swiper-slide">
 								<div class="bi__field-item">
-									<a class="item__link" href=@item.ExternalUrl>
+									<a class="item__link" href=@item.GetPrefixUrl()>
 										<div class="item__img"><img class="lazyload ofcv" data-src=@item.ImageDefault alt=""></div>
 										<div class="item__description">
 											<h4 class="item__number">@item.Order</h4>
@@ -89,7 +89,7 @@
 								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.ProjectCategory.Content))
                                 {
 									<div class="swiper-slide">
-										<a class="nav-link" href=@Item.ExternalUrl>@Item.Title</a>
+										<a class="nav-link" href="/Home/GetProjects?id=@Item.Id">@Item.Title</a>
 									</div>
 								}
 							</div>
@@ -100,19 +100,7 @@
 			<div class="index-project-list wow fadeInUp">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						@foreach (var Item in Model.Projects)
-						{
-							<div class="swiper-slide">
-								<div class="index-project-item">
-									<a class="item__link" href=@Item.ExternalUrl>
-										<div class="item__img ov-h"><img class="lazyload blur-up ofcv" data-src=@Item.ImageDefault alt=""></div>
-										<div class="item__description">
-											<h4 class="item__title">@Item.Title</h4>
-										</div>
-									</a>
-								</div>
-							</div>
-						}
+						@Html.Partial("_Project", Model.Projects)
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
@@ -158,14 +146,13 @@
 						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
                         {
 							<div class="nav__item">
-								<a class="nav__link" href=@Item.ExternalUrl>@Item.Title</a>
+								<a class="nav__link" href=@Item.GetPrefixUrl()>@Item.Title</a>
 							</div>
 						}
 					</nav>
 					<nav class="index-news__nav mobile wow fadeInUp">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-
 								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
                                 {
 									<div class="swiper-slide">
