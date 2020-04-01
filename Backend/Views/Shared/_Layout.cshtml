@@ -4,14 +4,12 @@
 	<title>@(ViewBag.MetaTitle ?? ViewBag.Title)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-
 	<link rel="shortcut icon" href="@ViewBag.Favicon">
 	<!-- SEO -->
 	<meta name="title" content="@Html.Raw(ViewBag.MetaTitle)" />
 	<meta name="keywords" content="@Html.Raw(ViewBag.MetaKeywords)">
 	<meta name="description" content="@Html.Raw(ViewBag.MetaDescription)">
 	<link rel="canonical" href="@ViewBag.Canonical">
-
 	<!-- Facebook Open Graph -->
 	<meta property="og:site_name" content="">
 	<meta property="og:type" content="@ViewBag.Type">
@@ -19,30 +17,25 @@
 	<meta property="og:description" content="@Html.Raw(ViewBag.MetaDescription)">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="@Html.Raw(ViewBag.MetaImage)">
+	<!-- CSS -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700&amp;display=swap&amp;subset=vietnamese">
 	<link href="/Content/resources/css/core.min.css" rel="stylesheet" />
 	<link href="/Content/resources/css/main.min.css" rel="stylesheet" />
-
 	@RenderSection("styles", required: false)
+	<!-- Javascript Libraries -->
 	<script src="/Content/resources/js/core.min.js"></script>
-	<!-- Put jquery here! -->
 </head>
 <body>
-
 	@Html.Action("ShowHeader", "Home")
-
-	@*@@Html.Partial("_Breadcrumb")*@
+	@Html.Partial("_Breadcrumb")
 	<main>
 		@RenderBody()
 	</main>
-
 	@Html.Action("ShowFooter", "Home")
-
 	@*@Scripts.Render("~/bundles/jquery")
 		@Scripts.Render("~/bundles/jqueryval")
 		@Scripts.Render("~/bundles/js")*@
 	<script src="/Content/resources/js/main.min.js"></script>
-
 	@RenderSection("scripts", required: false)
 </body>
 </html>

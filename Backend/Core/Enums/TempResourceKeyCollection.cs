@@ -12,6 +12,7 @@ namespace MainProject.Core.Enums
         Projects,
         View_More,
         About,
+        Subscribe_Text,
         //CurrencyFormat,
     }
 }

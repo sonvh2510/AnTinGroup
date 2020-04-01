@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using MainProject.Core;
+using MainProject.Framework.Models;
 
 namespace MainProject.SBussiness.LandingPage.Models.Invest
 {
@@ -41,5 +42,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Invest
 				Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
 			}
 		};
+
+		public PagingModel Pagingation { get; set; } = new PagingModel(100, 6, 17, "href=''");
 	}
 }

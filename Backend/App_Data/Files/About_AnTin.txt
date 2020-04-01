@@ -1,81 +1,81 @@
-﻿<div class="about__antin pd-70">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="block__content">
-								<div class="content">
-									<h2>AN TÍN GROUP</h2>
-									<h3>Thương trường là kho báu</h3>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
-									<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient mad montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, do you in a pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. who Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem mad Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ever since vel. Lorem Ipsum has been the industry's standard.</p>
-								</div>
-							</div>
+﻿<div class="about__antin pd-70 ov-h">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 wow fadeInUp">
+				<div class="block__content">
+					<div class="content">
+						<h2>AN TÍN GROUP</h2>
+						<h3>Thương trường là kho báu</h3>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
+						<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient mad montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, do you in a pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. who Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem mad Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s ever since vel. Lorem Ipsum has been the industry's standard.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 wow fadeInUp">
+				<div class="block__img" data-ratio="1.25"><img class="lazyload blur-up ofcv" data-src="/Content/resources/assets/about/about_1.jpg"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="about__declarations ov-h">
+	<div class="values-strategy">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 wow fadeInUp">
+					<div class="values-strategy__item">
+						<div class="item__description">
+							<h3 class="item__title d-f ai-c"><b class="item__number">01</b><span class="item__field-name">
+										Tuyên ngôn <br>giá trị</span></h3>
 						</div>
-						<div class="col-md-6">
-							<div class="block__img" data-ratio="1.25"><img class="lazyload blur-up ofcv" data-src="/Content/resources/assets/about/about_1.jpg"></div>
+					</div>
+				</div>
+				<div class="col-6 wow fadeInUp">
+					<div class="values-strategy__item">
+						<div class="item__description">
+							<h3 class="item__title d-f ai-c"><b class="item__number">02</b><span class="item__field-name">
+										Tuyên ngôn <br>chiến lược</span></h3>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="about__declarations">
-				<div class="values-strategy">
-					<div class="container">
-						<div class="row">
-							<div class="col-6">
-								<div class="values-strategy__item">
-									<div class="item__description">
-										<h3 class="item__title d-f ai-c"><b class="item__number">01</b><span class="item__field-name">
-												 Tuyên ngôn <br>giá trị</span></h3>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="values-strategy__item">
-									<div class="item__description">
-										<h3 class="item__title d-f ai-c"><b class="item__number">02</b><span class="item__field-name">
-												 Tuyên ngôn <br>chiến lược</span></h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="about__values">
-					<div class="row no-gutters">
-						<div class="col-md-6">
-							<div class="block__img about__values-img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_2.jpg"></div>
-						</div>
-						<div class="col-md-6">
-							<div class="block__content about__values-content">
-								<div class="content">
-									<h2>Tuyên ngôn giá trị</h2>
-									<h3>Lorem Ipsum is simply</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting industry. when an unknown </p><br>
-									<p>type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum made in only. Contrary to popular belief, Lorem Ipsum is not simply random text.Made of more, It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p><br>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting industry. when an unknown </p>
-									<p>type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
-									<div class="bi__author">
-										<div class="logo"><img class="lazyload blur-up" data-src="/Content/resources/assets/logo.svg"></div>
-										<h3>AN TÍN GROUP</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="about__strategy">
-					<div class="about__strategy-background"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_background_3.jpg"></div>
-					<div class="block__content about__strategy-content">
-						<div class="row no-gutters">
-							<div class="col-lg-6">
-								<div class="content">
-									<h2>tuyên ngôn chiến lược </h2>
-									<h3>MỤC TIÊU 2030</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting </p><br>
-									<p>industry, when an unknown printer took a galley when an unknown whentype and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum made in only. Contrary to popular belief, Lorem Ipsum is not simply random text.Made of more. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the</p>
-								</div>
-							</div>
+		</div>
+	</div>
+	<div class="about__values ov-h">
+		<div class="row no-gutters">
+			<div class="col-md-6 wow fadeInUp">
+				<div class="block__img about__values-img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_2.jpg"></div>
+			</div>
+			<div class="col-md-6 wow fadeInUp">
+				<div class="block__content about__values-content">
+					<div class="content">
+						<h2>Tuyên ngôn giá trị</h2>
+						<h3>Lorem Ipsum is simply</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting industry. when an unknown </p><br>
+						<p>type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum made in only. Contrary to popular belief, Lorem Ipsum is not simply random text.Made of more, It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p><br>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting industry. when an unknown </p>
+						<p>type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop</p>
+						<div class="bi__author">
+							<div class="logo"><img class="lazyload blur-up" data-src="/Content/resources/assets/logo.svg"></div>
+							<h3>AN TÍN GROUP</h3>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="about__strategy ov-h">
+		<div class="about__strategy-background"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_background_3.jpg"></div>
+		<div class="block__content about__strategy-content wow fadeInUp">
+			<div class="row no-gutters">
+				<div class="col-lg-6">
+					<div class="content wow fadeInUp" data-wow-delay="0.2s">
+						<h2>tuyên ngôn chiến lược </h2>
+						<h3>MỤC TIÊU 2030</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the industry's standard dummy text ever since the typesetting </p><br>
+						<p>industry, when an unknown printer took a galley when an unknown whentype and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum made in only. Contrary to popular belief, Lorem Ipsum is not simply random text.Made of more. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Made aLorem Ipsum has been the</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -34,15 +34,13 @@
 			</div>
 			<div class="pagination__wrapper">
 				<div class="pagination">
-					<ul class="pagination__list">
-						<li class="pagination__prev"><a class="pagination__link" href="#"><img class="svg" src="/Content/resources/assets/icons/arrow_left_no_outline.svg" /></a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-						<li class="pagination__item active"><a class="pagination__link" href="#">3</a></li>
-						<li class="pagination__dots"><a class="pagination__link" href="#">...</a></li>
-						<li class="pagination__item"><a class="pagination__link" href="#">126</a></li>
-						<li class="pagination__next"><a class="pagination__link" href="#"><img class="svg" src="/Content/resources/assets/icons/arrow_right_no_outline.svg" /></a></li>
-					</ul>
+					@Html.RenderPaging(Model.Pagingation, new MainProject.Framework.Models.PagingStyleModel
+					 {
+						 DivContainerStyle = "class=pagination__list",
+						 CurrentItemStyle = "class=pagination__item active",
+						 ItemStyle = "class=pagination__item",
+						 LinkStyle = "class=pagination__link"
+					 })
 				</div>
 			</div>
 		</div>

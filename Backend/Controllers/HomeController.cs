@@ -1,4 +1,5 @@
 ﻿using MainProject.SBussiness.LandingPage.Models.Home;
+using MainProject.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,20 @@ namespace MainProject.Controllers
 		// If you don't put the name in View() or PartialView() it'll return View named of Action.
 		public ActionResult Index()
 		{
+			ViewBag.ShowBreadCrumb = false;
+			ViewBag.Banners = new Banner[] {
+				new Banner
+				{
+					Link = "/#",
+					ResourcePath = "/Content/resources/assets/banners/index_1.jpg"
+				},
+				new Banner
+				{
+					Link = "/#",
+					ResourcePath = "/Content/resources/assets/banners/index_2.jpg"
+				}
+				
+			};
 			return View(new HomeViewModel());
 		}
 

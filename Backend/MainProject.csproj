@@ -146,14 +146,17 @@
     <Compile Include="SBussiness\LandingPage\Models\Invest\InvestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Files\News_Menu.txt" />
+    <Content Include="App_Data\Files\Invest_Menu.txt" />
     <Content Include="App_Data\Files\About_Menu.txt" />
     <Content Include="App_Data\Files\About_AnTin.txt" />
     <Content Include="App_Data\Files\About_Category.txt" />
     <Content Include="App_Data\Files\About_Chart.txt" />
     <Content Include="App_Data\Files\About_Message.txt" />
-    <Content Include="App_Data\Files\HeaderMenu.txt" />
-    <Content Include="App_Data\Files\NewsCategory.txt" />
-    <Content Include="App_Data\Files\NewsDetail.txt" />
+    <Content Include="App_Data\Files\Header_Menu.txt" />
+    <Content Include="App_Data\Files\News_Category.txt" />
+    <Content Include="App_Data\Files\News_Detail.txt" />
+    <Content Include="App_Data\Files\Project_Menu.txt" />
     <Content Include="App_Data\MainProject.Core.dll" />
     <Content Include="Content\resources\assets\about\about_1.jpg" />
     <Content Include="Content\resources\assets\about\about_2.jpg" />

@@ -8,7 +8,8 @@
 			object-fit: cover;
 		}
 	}
-	.logo{
+
+	.logo {
 		position: absolute;
 		left: 50%;
 		top: 20px;
@@ -40,19 +41,19 @@
 	padding-bottom: 15px;
 }
 
-.breadcrumb__nav {
+.breadcrumb {
 	padding-left: 0;
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 10px;
 
-	.breadcrumb__link {
+	a {
 		font-size: 10px;
 		color: white;
 		text-transform: uppercase;
 	}
 
-	.breadcrumb__item {
+	li {
 		+.breadcrumb__item {
 			&:before {
 				content: '/';

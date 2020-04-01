@@ -1,0 +1,6 @@
+﻿<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Bất động sản</a></div>
+<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Giáo dục</a></div>
+<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Hàng không</a></div>
+<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du lịch</a></div>
+<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du học</a></div>
+<div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Đào tạo</a></div>

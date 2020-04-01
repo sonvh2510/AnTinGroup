@@ -1,41 +1,41 @@
-﻿<div class="about__messages">
-				<div class="am__block-1">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="am__content block__content">
-									<h2>THÔNG ĐIỆP CT HĐQT</h2>
-									<h3>Cộng đồng hạnh phúc</h3>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
-									<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient made a montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque a eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo to  fringilla vel, aliquet nec, vulputate eget, arcu. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
-									<p>industry's standard dummy text ever since the 1500sLorem Ipsum is simply do dummy text of the printing and typesetting industry. Lorem Ipsum has been a the industry's standard dummy text ever since the 1500s, when an unknown an printer took a galley of type and scrambled.</p><br>
-									<p>It has survived not only five centuries, but also the leap into electronic made in typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
-								</div>
-							</div>
-							<div class="col-lg-4">
-								<div class="am__img block__img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_3.jpg"></div>
-							</div>
-						</div>
+﻿<div class="about__messages ov-h">
+	<div class="am__block-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 wow fadeInLeft">
+					<div class="am__content block__content">
+						<h2>THÔNG ĐIỆP CT HĐQT</h2>
+						<h3>Cộng đồng hạnh phúc</h3>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
+						<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient made a montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque a eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo to  fringilla vel, aliquet nec, vulputate eget, arcu. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+						<p>industry's standard dummy text ever since the 1500sLorem Ipsum is simply do dummy text of the printing and typesetting industry. Lorem Ipsum has been a the industry's standard dummy text ever since the 1500s, when an unknown an printer took a galley of type and scrambled.</p><br>
+						<p>It has survived not only five centuries, but also the leap into electronic made in typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
 					</div>
 				</div>
-				<div class="am__block-2 pd-70">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="am__img block__img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_4.jpg"></div>
-							</div>
-							<div class="col-lg-6">
-								<div class="am__content block__content">
-									<h2>THÔNG ĐIỆP CT HĐQT</h2>
-									<h3>Cộng đồng hạnh phúc</h3>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
-									<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient made a montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque a eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo to  fringilla vel, aliquet nec, vulputate eget, arcu. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
-									<p>industry's standard dummy text ever since the 1500sLorem Ipsum is simply do dummy text of the printing and typesetting industry. Lorem Ipsum has been a the industry's standard dummy text ever since the 1500s, when an unknown an printer took a galley of type and scrambled.</p><br>
-									<p>It has survived not only five centuries, but also the leap into electronic made in typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
-								</div>
-							</div>
-						</div>
+				<div class="col-lg-4 wow fadeInRight">
+					<div class="am__img block__img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_3.jpg"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="am__block-2 pd-70">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 wow fadeInLeft">
+					<div class="am__img block__img"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_4.jpg"></div>
+				</div>
+				<div class="col-lg-6 wow fadeInRight">
+					<div class="am__content block__content">
+						<h2>THÔNG ĐIỆP CT HĐQT</h2>
+						<h3>Cộng đồng hạnh phúc</h3>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.  Cum sociis natoque penatibus et magnis.</p><br>
+						<p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient made a montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque a eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo to  fringilla vel, aliquet nec, vulputate eget, arcu. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+						<p>industry's standard dummy text ever since the 1500sLorem Ipsum is simply do dummy text of the printing and typesetting industry. Lorem Ipsum has been a the industry's standard dummy text ever since the 1500s, when an unknown an printer took a galley of type and scrambled.</p><br>
+						<p>It has survived not only five centuries, but also the leap into electronic made in typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
 					</div>
 				</div>
 			</div>
-			<div class="about-page" id="js-page-verify" hidden></div>
+		</div>
+	</div>
+</div>
+<div class="about-page" id="js-page-verify" hidden></div>

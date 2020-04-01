@@ -16,6 +16,7 @@ namespace MainProject.Controllers
 		{
 			return View(new NewsViewModel()
 			{
+				Category = ResourceHelper.ReadFile("/App_Data/Files/Project_Menu.txt"),
 				NewsItems = new List<Article>
 				{
 

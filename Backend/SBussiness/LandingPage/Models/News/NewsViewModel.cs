@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using MainProject.Core;
 using MainProject.Framework.Helpers;
+using MainProject.Framework.Models;
 
 namespace MainProject.SBussiness.LandingPage.Models.News
 {
 	public class NewsViewModel
 	{
-		public string Category { get; set; } = ResourceHelper.ReadFile("/App_Data/Files/NewsCategory.txt");
+		public string Category { get; set; } = ResourceHelper.ReadFile("/App_Data/Files/News_Category.txt");
 
 		public Introduction NewsCategoryTitle { get; set; } = new Introduction
 		{
@@ -111,5 +112,7 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 				ExternalUrl = "/News/NewsDetail"
 			},
 		};
+
+		public PagingModel Pagingation { get; set; } = new PagingModel(100, 6, 2, "href=''");
 	}
 }

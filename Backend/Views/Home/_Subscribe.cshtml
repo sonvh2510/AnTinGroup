@@ -3,18 +3,18 @@
 
 @using (Ajax.BeginForm("Subscribe", "Home", new AjaxOptions() { HttpMethod = "POST", OnSuccess = "subscribeSuccess" }))
 {
-    <div class="form-group">
-        @Html.TextBoxFor(d => d.Email, new { placeholder="Enter your e-mail" })
-        @Html.ValidationMessageFor(d => d.Email)
-        <button>SUBSCRIBE</button>
-    </div>
+	<div class="subscribe__input">
+		@Html.TextBoxFor(d => d.Email, new { placeholder = "Email" })
+		@Html.ValidationMessageFor(d => d.Email)
+		<button>Xác nhận</button>
+	</div>
 }
 
 <script>
-    function subscribeSuccess(response) {
-        alert(response.Message);
-        if (response.Code == 200) {
-            window.location.href = window.location;
-        }
-    }
+	function subscribeSuccess(response) {
+		alert(response.Message);
+		if (response.Code == 200) {
+			window.location.href = window.location;
+		}
+	}
 </script>

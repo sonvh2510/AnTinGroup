@@ -1,0 +1,30 @@
+﻿<div class="nav__item"><a class="nav__link" href="/">Trang chủ</a></div>
+                        <div class="nav__item">
+                            <a class="nav__link" href="/About">Giới thiệu</a>
+                            <div class="nav__sub--toggle mobile"><span class="lnr lnr-chevron-right"></span></div>
+                            <div class="nav__sub">
+                                <div class="nav__sub--close mobile"><span class="lnr lnr-chevron-left"></span><span>Quay lại</span></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutMessage">Thông điệp CT HĐQT</a></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutBoardOfExecutive">Ban lãnh đạo</a></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutOrganizationChart">Sơ đồ tổ chức</a></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutDepartment">Công ty thành viên</a></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutCustomer">Khách hàng</a></div>
+                                <div class="nav__item"><a class="nav__link" href="/About/AboutShareHolder">Cổ đông</a></div>
+                            </div>
+                        </div>
+                        <div class="nav__item">
+                            <a class="nav__link" href="/Invest">Lĩnh vực đầu tư</a>
+                            <div class="nav__sub--toggle mobile"><span class="lnr lnr-chevron-right"></span></div>
+                            <div class="nav__sub">
+                                <div class="nav__sub--close mobile"><span class="lnr lnr-chevron-left"></span><span>Quay lại</span></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Bất động sản</a></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Giáo dục</a></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Hàng không</a></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du lịch</a></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du học</a></div>
+                                    <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Đào tạo</a></div>
+                            </div>
+                        </div>
+                        <div class="nav__item"><a class="nav__link" href="/Project">Dự án</a></div>
+                        <div class="nav__item"><a class="nav__link" href="/News">Tin tức - Sự kiện</a></div>
+                        <div class="nav__item"><a class="nav__link" href="/Gallery">Thư viện</a></div>

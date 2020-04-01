@@ -1,0 +1,7 @@
+﻿<li class="nav__item"><a class="nav__link" href="Project">Du lịch</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Bất động sản</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Hàng không</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Truyền thông</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Giáo dục</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Đầu tư</a></li>
+							<li class="nav__item"><a class="nav__link" href="Project">Công nghệ</a></li>

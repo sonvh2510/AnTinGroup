@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace MainProject.Framework.Models
 {
-    public class PagingStyleModel
-    {
-        public string ItemStyle { get; set; }
+	public class PagingStyleModel
+	{
+		public string ItemStyle { get; set; }
 
-        public string DivContainerStyle { get; set; }
+		public string DivContainerStyle { get; set; }
 
-        public string CurrentItemStyle { get; set; }
-    }
+		public string CurrentItemStyle { get; set; }
+
+		public string LinkStyle { get; set; }
+	}
 }
