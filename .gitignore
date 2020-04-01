@@ -1,13 +1,17 @@
+.vs
+obj
+bin
+packages
+ViewsReadMe
+
 Backend/obj
 Backend/bin
 Backend/packages
 Backend/.vs
 Backend/ViewsReadMe
 
-
-
+node_modules
+bower_components
 Frontend/bower_components
 Frontend/node_modules
-.vs/slnx.sqlite
-.vs/VSWorkspaceState.json
-.vs/AnTin/v16/.suo
+
