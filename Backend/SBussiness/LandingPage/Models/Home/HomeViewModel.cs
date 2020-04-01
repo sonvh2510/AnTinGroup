@@ -67,13 +67,13 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 
 	public class HomeViewModel
 	{
-		public Introduction Message { get; set; } = new Introduction
+		public Introduction Section1 { get; set; } = new Introduction
 		{
 			Content = "<p><b>Phụng sự khách hàng, phụng sự Tổ quốc </b>và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới</p>",
 			Title = "<h3>TS Nguyễn Đức Thọ</h3><p>Chủ tịch HĐQT - TGĐ</p>",
 		};
 
-		public Introduction InvestmentFields { get; set; } = new Introduction
+		public Introduction Section2 { get; set; } = new Introduction
 		{
 			Title = "Lĩnh vực <br>đầu tư",
 			Content = JsonHelper.Serialize(new List<Category>
@@ -110,7 +110,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 			)
 		};
 
-		public Introduction ProjectCategories { get; set; } = new Introduction
+		public Introduction ProjectCategory { get; set; } = new Introduction
 		{
 			Title = "Dự án",
 			Content = JsonHelper.Serialize(new List<Category>
@@ -189,7 +189,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 			}
 		};
 
-		public Introduction BrandPosition { get; set; } = new Introduction
+		public Introduction Section3 { get; set; } = new Introduction
 		{
 			Title = "Tuyên ngôn chiến lược",
 			Content = JsonHelper.Serialize(new List<Image>
@@ -227,7 +227,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 			})
 		};
 
-		public Introduction NewsCategories { get; set; } = new Introduction
+		public Introduction NewsCateogry { get; set; } = new Introduction
 		{
 			Title = "Tin tức",
 			Content = JsonHelper.Serialize(new List<Category>

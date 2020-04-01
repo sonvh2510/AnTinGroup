@@ -18,10 +18,10 @@
 		<div class="bi__content-wrapper">
 			<div class="bi__logo"><img src="/Content/resources/assets/logo.svg"></div>
 			<div class="bi__sentences wow fadeInUp">
-				@Html.Raw(Model.Message.Content)
+				@Html.Raw(Model.Section1.Content)
 			</div>
 			<div class="bi__author wow fadeInUp" data-wow-delay="0.2s">
-				@Html.Raw(Model.Message.Title)
+				@Html.Raw(Model.Section1.Title)
 			</div>
 		</div>
 	</div>
@@ -32,13 +32,13 @@
 					<div class="item__img"><img class="lazyload ofcv" data-src="/Content/resources/assets/invest/invest_index_title.jpg" alt=""></div>
 					<div class="item__description">
 						<h3 class="item__title">
-							@Html.Raw(Model.InvestmentFields.Title)
+							@Html.Raw(Model.Section2.Title)
 						</h3>
 					</div>
 				</div>
 				<div class="block__title d-f jc-c mobile">
 					<h2 class="main-title cl-main mb-40">
-						@Html.Raw(Model.InvestmentFields.Title)
+						@Html.Raw(Model.Section2.Title)
 					</h2>
 				</div>
 			</div>
@@ -47,15 +47,15 @@
 					<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
 					<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
 					<div class="swiper-wrapper">
-						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.InvestmentFields.Content))
-						{
+						@foreach (var item in JsonHelper.Deserialize<List<Category>>(Model.Section2.Content))
+                        {
 							<div class="swiper-slide">
 								<div class="bi__field-item">
-									<a class="item__link" href=@Item.ExternalUrl>
-										<div class="item__img"><img class="lazyload ofcv" data-src=@Item.ImageDefault alt=""></div>
+									<a class="item__link" href=@item.ExternalUrl>
+										<div class="item__img"><img class="lazyload ofcv" data-src=@item.ImageDefault alt=""></div>
 										<div class="item__description">
-											<h4 class="item__number">@Item.Order</h4>
-											<h3 class="item__title">@Item.Title</h3>
+											<h4 class="item__number">@item.Order</h4>
+											<h3 class="item__title">@item.Title</h3>
 											<p class="item__viewmore">
 												@Html.GetResource(TempResourceKeyCollection.View_More)
 												<img class="svg" src="/Content/resources/assets/icons/arrow_right_no_outline.svg">
@@ -77,7 +77,7 @@
 			<div class="row index-project-titles">
 				<div class="col-md-auto">
 					<div class="block__title wow fadeInLeft">
-						<h2 class="main-title cl-main">@Model.ProjectCategories.Title</h2>
+						<h2 class="main-title cl-main">@Model.ProjectCategory.Title</h2>
 					</div>
 				</div>
 				<div class="col-md-6 ml-at">
@@ -86,8 +86,8 @@
 						<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.ProjectCategories.Content))
-								{
+								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.ProjectCategory.Content))
+                                {
 									<div class="swiper-slide">
 										<a class="nav-link" href=@Item.ExternalUrl>@Item.Title</a>
 									</div>
@@ -125,12 +125,12 @@
 		<div class="container">
 			<div class="block__content-long pd-70">
 				<div class="block__title d-f jc-c wow fadeInUp">
-					<h2 class="main-title cl-white tagline">@Model.BrandPosition.Title</h2>
+					<h2 class="main-title cl-white tagline">@Model.Section3.Title</h2>
 				</div>
 				<div class="swiper-container wow fadeInUp">
 					<div class="swiper-wrapper">
-						@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.BrandPosition.Content))
-						{
+						@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.Section3.Content))
+                        {
 							<div class="swiper-slide">
 								<div class="brand-positioning__item">
 									<div class="item__description">
@@ -153,10 +153,10 @@
 		<div class="row no-gutters">
 			<div class="col-lg-4">
 				<div class="block__title">
-					<h2 class="main-title cl-main wow fadeInUp">@Model.NewsCategories.Title</h2>
+					<h2 class="main-title cl-main wow fadeInUp">@Model.NewsCateogry.Title</h2>
 					<nav class="index-news__nav desktop wow fadeInUp">
-						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCategories.Content))
-						{
+						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
+                        {
 							<div class="nav__item">
 								<a class="nav__link" href=@Item.ExternalUrl>@Item.Title</a>
 							</div>
@@ -166,8 +166,8 @@
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 
-								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCategories.Content))
-								{
+								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
+                                {
 									<div class="swiper-slide">
 										<a class="nav__link" href=@Item.ExternalUrl>@Item.Title</a>
 									</div>

@@ -11,7 +11,7 @@
 						<div class="contact__item">
 							<div class="item__img"><img class="svg" src="/Content/resources/assets/icons/marker.svg"></div>
 							<div class="item__description">
-								<p>@Html.Raw(Model.Branch.Address)</p>
+								<p>@Model.Branch.Address</p>
 							</div>
 						</div>
 					</div>
@@ -19,7 +19,7 @@
 						<div class="contact__item">
 							<div class="item__img"><img class="svg" src="/Content/resources/assets/icons/phone.svg"></div>
 							<div class="item__description">
-								<p>@Html.Raw(Model.Branch.Phone)</p>
+								<p>@Model.Branch.Phone</p>
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
 						<div class="contact__item">
 							<div class="item__img"><img class="svg" src="/Content/resources/assets/icons/envelope_2.svg"></div>
 							<div class="item__description">
-								<p>@Html.Raw(Model.Branch.Email)</p>
+								<p>@Model.Branch.Email</p>
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 					<div class="col-md-6 form__wrapper">
 						<h2 class="main-title cl-main">Liên hệ</h2>
 						@*Form Here*@
-						@Html.Partial("_FormContact", new MainProject.SBussiness.LandingPage.Models.FormContactViewModel.ContactFormManagement())
+						@Html.Partial("_Form", new MainProject.SBussiness.LandingPage.Models.FormContactViewModel.ContactFormManagement())
 					</div>
 				</div>
 			</div>

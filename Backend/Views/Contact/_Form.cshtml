@@ -8,12 +8,12 @@
 	<div class="row">
 		<div class="col-6 form__group">
 			@*<input class="form__control" type="text" placeholder="Họ tên*">*@
-			@Html.TextBoxFor(d => d.Fullname, new
-		{
-			@class = "form__control",
-			placeholder = "Họ tên*"
-		})
-			@Html.ValidationMessageFor(d => d.Fullname)
+			@Html.TextBoxFor(d => d.Name, new
+		   {
+			   @class = "form__control",
+			   placeholder = "Họ tên*"
+		   })
+			@Html.ValidationMessageFor(d => d.Name)
 		</div>
 		<div class="col-6 form__group">
 			@Html.TextBoxFor(d => d.Email, new
@@ -24,12 +24,12 @@
 			@Html.ValidationMessageFor(d => d.Email)
 		</div>
 		<div class="col-12 form__group">
-			@Html.TextBoxFor(d => d.Department, new
-			{
-				@class = "form__control",
-				placeholder = "Gửi đến văn phòng*"
-			})
-			@Html.ValidationMessageFor(d => d.Department)
+			@Html.TextBoxFor(d => d.Address, new
+		   {
+			   @class = "form__control",
+			   placeholder = "Gửi đến văn phòng*"
+		   })
+			@Html.ValidationMessageFor(d => d.Address)
 		</div>
 		<div class="col-12 form__group">
 			@Html.TextAreaFor(d => d.Content, new
@@ -40,7 +40,7 @@
 			@Html.ValidationMessageFor(d => d.Content)
 		</div>
 		<div class="col-6 form__group form__button">
-			<button class="btn btn__submit" data-url="#">Gửi</button>
+			<button class="btn btn__submit" data-url="/dang-ky">Gửi</button>
 		</div>
 		<div class="col-6 form__group form__logo"><img class="svg" data-src="/Content/resources/assets/logo.svg"></div>
 	</div>
