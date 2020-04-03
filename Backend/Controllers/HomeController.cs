@@ -42,6 +42,61 @@ namespace MainProject.Controllers
 			return PartialView("_Footer", new FooterViewModel());
 		}
 
+		public ActionResult Search()
+		{
+			return View("Search", new List<Article>
+			{
+				new Article
+				{
+					Title = "Test",
+					ImageDefault = "/Content/resources/assets/news/news_1.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,02,29),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+				new Article
+				{
+					Title = "2 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
+					ImageDefault = "/Content/resources/assets/news/news_2.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,03,01),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+				new Article
+				{
+					Title = "3 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
+					ImageDefault = "/Content/resources/assets/news/news_3.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,03,03),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+				new Article
+				{
+					Title = "4 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
+					ImageDefault = "/Content/resources/assets/news/news_4.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,03,05),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+				new Article
+				{
+					Title = "5 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
+					ImageDefault = "/Content/resources/assets/news/news_5.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,03,07),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+				new Article
+				{
+					Title = "6 An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac",
+					ImageDefault = "/Content/resources/assets/news/news_6.jpg",
+					Description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+					Order = new DateTime(2020,03,09),
+					ExternalUrl = "/Project/ProjectDetail"
+				},
+			});
+		}
+
 		public ActionResult GetProjects(long id)
 		{
 			return PartialView("_Project", new List<Article> {

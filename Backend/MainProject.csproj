@@ -368,6 +368,7 @@
     <Content Include="Views\Home\_Project.cshtml" />
     <Content Include="Views\Contact\_Form.cshtml" />
     <Content Include="Views\Home\_News.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
