@@ -3,20 +3,5 @@
 
 
 @Html.Action("ShowMenu", "About")
-<div class="about__company-structures ov-h">
-	<div class="container">
-		<div class="about__company-structures-wrapper pt-70 block__content-long">
-			<div class="block__title wow fadeInUp">
-				<h2 class="main-title cl-main ta-c">SƠ ĐỒ TỔ CHỨC AN TÍN GROUP</h2>
-			</div>
-			<div class="block__img wow fadeInUp"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_5.png"></div>
-		</div>
-		<div class="about__company-structures-wrapper pd-70 block__content-long">
-			<div class="block__title wow fadeInUp">
-				<h2 class="main-title cl-main ta-c">MÔ HÌNH AN TÍN GROUP</h2>
-			</div>
-			<div class="block__img wow fadeInUp"><img class="lazyload blur-up" data-src="/Content/resources/assets/about/about_6.png"></div>
-		</div>
-	</div>
-</div>
+@Html.Raw(Model.Category.Content)
 <div class="about-page" id="js-page-verify" hidden></div>

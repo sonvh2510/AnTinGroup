@@ -119,31 +119,37 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 					{
 						Title = "Bất động sản",
 						ExternalUrl = "/ProjectList",
+						Id = 1,
 					},
 					new Category
 					{
 						Title = "Giáo dục",
 						ExternalUrl = "/ProjectList",
+						Id = 2,
 					},
 					new Category
 					{
 						Title = "hàng Không",
 						ExternalUrl = "/ProjectList",
+						Id = 3,
 					},
 					new Category
 					{
 						Title = "Du lịch",
 						ExternalUrl = "/ProjectList",
+						Id = 4,
 					},
 					new Category
 					{
 						Title = "Đầu tư",
 						ExternalUrl = "/ProjectList",
+						Id = 5,
 					},
 					new Category
 					{
 						Title = "Công nghệ",
 						ExternalUrl = "/ProjectList",
+						Id = 6,
 					}
 				}
 			)
@@ -227,7 +233,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 			})
 		};
 
-		public Introduction NewsCateogry { get; set; } = new Introduction
+		public Introduction NewsCategory { get; set; } = new Introduction
 		{
 			Title = "Tin tức",
 			Content = JsonHelper.Serialize(new List<Category>
@@ -236,16 +242,19 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 					{
 						Title = "Tin An Tín Group",
 						ExternalUrl = "/NewsList",
+						Id = 1,
 					},
 					new Category
 					{
 						Title = "Thông tin báo chí",
 						ExternalUrl = "/NewsList",
+						Id = 2,
 					},
 					new Category
 					{
 						Title = "Thông tin hợp tác",
 						ExternalUrl = "/NewsList",
+						Id = 3,
 					},
 				}
 			)

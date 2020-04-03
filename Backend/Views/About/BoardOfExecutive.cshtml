@@ -1,5 +1,5 @@
 ﻿@using MainProject.Core
-@model MainProject.SBussiness.LandingPage.Models.About.AboutViewModel
+@model MainProject.SBussiness.LandingPage.Models.About.AboutBoardOfExecutiveViewModel
 
 
 
@@ -10,13 +10,13 @@
 		<div class="row ai-c">
 			<div class="col-xl-1"></div>
 			<div class="col-lg-5 col-xl-4 col-md-6 pd-70 wow fadeInUp">
-				@Html.Raw(Model.AboutBoardOfExecutive.Title)
+				@Html.Raw(Model.Category.Title)
 				<div class="block__content about__staffs-content">
-					@Html.Raw(Model.AboutBoardOfExecutive.Content)
+					@Html.Raw(Model.Category.Content)
 				</div>
 			</div>
 			<div class="col-lg-5 col-md-6 wow fadeInUp">
-				<div class="about__staffs-img ta-c"><img class="lazyload blur-up" data-src=@Html.Raw(Model.AboutBoardOfExecutive.Image)></div>
+				<div class="about__staffs-img ta-c"><img class="lazyload blur-up" data-src=@Html.Raw(Model.Category.ImageDefault)></div>
 			</div>
 		</div>
 	</div>
@@ -24,20 +24,20 @@
 <div class="about__staffs-slider pd-70 ov-h">
 	<div class="container">
 		<div class="block__title wow fadeInUp">
-			<h2 class="main-title ta-c cl-main">@Model.AboutBoardOfExecutiveBlock2.Title</h2>
+			<h2 class="main-title ta-c cl-main">@Model.BoardOfExecutive1.Title</h2>
 		</div>
 		<div class="about__staffs-slider__wrapper wow fadeInUp">
 			<div class="swiper__prev"><img class="svg" src="/Content/resources/assets/icons/arrow_left_2.svg"></div>
 			<div class="swiper__next"><img class="svg" src="/Content/resources/assets/icons/arrow_right_2.svg"></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					@foreach (var Item in JsonHelper.Deserialize<List<Introduction>>(Model.AboutBoardOfExecutiveBlock2.Content))
+					@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.BoardOfExecutive1.Content) ?? new List<Image>())
 					{
 						<div class="swiper-slide">
 							<div class="staff__item">
-								<div class="item__img"><img src=@Item.Image></div>
+								<div class="item__img"><img src=@Item.ImageDefault></div>
 								<div class="item__description">
-									@Html.Raw(@Item.Title)
+									@Html.Raw(@Item.Name)
 								</div>
 							</div>
 						</div>
@@ -50,20 +50,20 @@
 <div class="about__ceos-slider pd-70 ov-h">
 	<div class="container">
 		<div class="block__title d-f jc-c wow fadeInUp">
-			<h2 class="main-title cl-white tagline">@Model.AboutBoardOfExecutiveBlock3.Title</h2>
+			<h2 class="main-title cl-white tagline">@Model.BoardOfExecutive2.Title</h2>
 		</div>
 		<div class="about__ceos-slider__wrapper wow fadeInUp">
 			<div class="swiper__prev"><img class="svg" src="/Content/resources/assets/icons/arrow_left_2.svg"></div>
 			<div class="swiper__next"><img class="svg" src="/Content/resources/assets/icons/arrow_right_2.svg"></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					@foreach (var Item in JsonHelper.Deserialize<List<Introduction>>(Model.AboutBoardOfExecutiveBlock2.Content))
+					@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.BoardOfExecutive2.Content) ?? new List<Image>())
 					{
 						<div class="swiper-slide">
 							<div class="ceo__item">
-								<div class="item__img"><img src=@Item.Image></div>
+								<div class="item__img"><img src=@Item.ImageDefault></div>
 								<div class="item__description">
-									@Html.Raw(@Item.Title)
+									@Html.Raw(@Item.Name)
 								</div>
 							</div>
 						</div>

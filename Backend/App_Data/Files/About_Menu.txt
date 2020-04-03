@@ -1,7 +1,7 @@
 ﻿
-        <div class="nav__item"><a class="nav__link" href="/About/AboutMessage">Thông điệp CT HĐQT</a></div>
-        <div class="nav__item"><a class="nav__link" href="/About/AboutBoardOfExecutive">Ban lãnh đạo</a></div>
-        <div class="nav__item"><a class="nav__link" href="/About/AboutOrganizationChart">Sơ đồ tổ chức</a></div>
-        <div class="nav__item"><a class="nav__link" href="/About/AboutDepartment">Công ty thành viên</a></div>
-        <div class="nav__item"><a class="nav__link" href="/About/AboutCustomer">Khách hàng</a></div>
-        <div class="nav__item"><a class="nav__link" href="/About/AboutShareHolder">Cổ đông</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/Message">Thông điệp CT HĐQT</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/BoardOfExecutive">Ban lãnh đạo</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/OrganizationChart">Sơ đồ tổ chức</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/Department">Công ty thành viên</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/Customer">Khách hàng</a></div>
+        <div class="nav__item"><a class="nav__link" href="/About/ShareHolder">Cổ đông</a></div>

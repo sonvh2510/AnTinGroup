@@ -27,7 +27,7 @@ namespace MainProject.Controllers
 					Link = "/#",
 					ResourcePath = "/Content/resources/assets/banners/index_2.jpg"
 				}
-				
+
 			};
 			return View(new HomeViewModel());
 		}
@@ -80,6 +80,48 @@ namespace MainProject.Controllers
 					Title = "6 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
 					ExternalUrl = "/Project/ProjectDetail",
 					ImageDefault = "/Content/resources/assets/project/index_project_3.jpg"
+				}
+			});
+		}
+
+		public ActionResult GetNews(long id)
+		{
+			return PartialView("_Project", new List<Article> {
+				new Article
+				{
+					Title = "Ajax 1 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_1.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 2 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_2.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 3 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_3.jpg"
+				},
+				new Article
+				{
+					Title = "Ajax 4 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_1.jpg"
+				},
+				new Article
+				{
+					Title = "5 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_2.jpg"
+				},
+				new Article
+				{
+					Title = "6 Khu Du lịch nghỉ dưỡng và biệt thự sinh thái FLC Cù Lao Xanh, Quy Nhơn, Bình Định",
+					ExternalUrl = "/Project/ProjectDetail",
+					ImageDefault = "/Content/resources/assets/news/news_3.jpg"
 				}
 			});
 		}

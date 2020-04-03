@@ -7,7 +7,7 @@
 		<div class="about__company-members-wrapper">
 			<div class="row">
 				@foreach (var item in JsonHelper.Deserialize<List<NewImage>>(Model.Category.Images) ?? new List<NewImage>())
-                {
+				{
 					<div class="col-sm-6 wow fadeInUp">
 						<div class="about__company-member__item">
 							<a class="item__link" href=@item.ExternalUrl>

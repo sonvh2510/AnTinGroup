@@ -121,7 +121,6 @@
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\InvestController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
-    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Core\Enums\TempResourceKeyCollection.cs" />
     <Compile Include="Core\NewCategory.cs" />
     <Compile Include="Core\NewImage.cs" />
@@ -368,10 +367,10 @@
     <Content Include="Views\About\OrganizationChart.cshtml" />
     <Content Include="Views\About\Department.cshtml" />
     <Content Include="Views\About\Customer.cshtml" />
-    <Content Include="Views\About\ShareHolder.cshtml" />
     <Content Include="Views\About\_Menu.cshtml" />
     <Content Include="Views\Home\_Project.cshtml" />
     <Content Include="Views\Contact\_Form.cshtml" />
+    <Content Include="Views\Home\_News.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

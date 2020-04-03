@@ -47,8 +47,8 @@
 					<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
 					<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
 					<div class="swiper-wrapper">
-						@foreach (var item in JsonHelper.Deserialize<List<Category>>(Model.Section2.Content))
-                        {
+						@foreach (var item in JsonHelper.Deserialize<List<Category>>(Model.Section2.Content) ?? new List<Category>())
+						{
 							<div class="swiper-slide">
 								<div class="bi__field-item">
 									<a class="item__link" href=@item.GetPrefixUrl()>
@@ -86,8 +86,8 @@
 						<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.ProjectCategory.Content))
-                                {
+								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.ProjectCategory.Content) ?? new List<Category>())
+								{
 									<div class="swiper-slide">
 										<a class="nav-link" href="/Home/GetProjects?id=@Item.Id">@Item.Title</a>
 									</div>
@@ -117,8 +117,8 @@
 				</div>
 				<div class="swiper-container wow fadeInUp">
 					<div class="swiper-wrapper">
-						@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.Section3.Content))
-                        {
+						@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.Section3.Content) ?? new List<Image>())
+						{
 							<div class="swiper-slide">
 								<div class="brand-positioning__item">
 									<div class="item__description">
@@ -141,20 +141,20 @@
 		<div class="row no-gutters">
 			<div class="col-lg-4">
 				<div class="block__title">
-					<h2 class="main-title cl-main wow fadeInUp">@Model.NewsCateogry.Title</h2>
+					<h2 class="main-title cl-main wow fadeInUp">@Model.NewsCategory.Title</h2>
 					<nav class="index-news__nav desktop wow fadeInUp">
-						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
-                        {
+						@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCategory.Content) ?? new List<Category>())
+						{
 							<div class="nav__item">
-								<a class="nav__link" href=@Item.GetPrefixUrl()>@Item.Title</a>
+								<a class="nav__link" href="/Home/GetNews?id=@Item.Id">@Item.Title</a>
 							</div>
 						}
 					</nav>
 					<nav class="index-news__nav mobile wow fadeInUp">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCateogry.Content))
-                                {
+								@foreach (var Item in JsonHelper.Deserialize<List<Category>>(Model.NewsCategory.Content) ?? new List<Category>())
+								{
 									<div class="swiper-slide">
 										<a class="nav__link" href=@Item.ExternalUrl>@Item.Title</a>
 									</div>
