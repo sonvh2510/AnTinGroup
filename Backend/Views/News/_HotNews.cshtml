@@ -1,13 +1,9 @@
-﻿
-@using MainProject.Core
-@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
-
-
+﻿@model List<MainProject.Core.Article>
 
 <h2 class="main-title cl-main mb-40">@Html.GetResource(TempResourceKeyCollection.Hot_News)</h2>
 <div class="news-hot">
 	<div class="row">
-		@foreach (var Item in Model.HotNewsItems)
+		@foreach (var Item in Model)
 		{
 			<div class="col-6 col-md-4 col-lg-12">
 				<div class="news-hot__item">

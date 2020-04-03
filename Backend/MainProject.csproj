@@ -139,10 +139,8 @@
     <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Gallery\GalleryViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Home\HomeViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\Invest\InvestListViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsDetailViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\News\NewsViewModel.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\Invest\InvestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Files\FooterMenu.txt" />
@@ -352,11 +350,9 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\News\_Detail.cshtml" />
-    <Content Include="Views\News\_HotNews.cshtml" />
-    <Content Include="Views\News\_Category.cshtml" />
-    <Content Include="Views\Project\Index.cshtml" />
-    <Content Include="Views\Project\_Detail.cshtml" />
+    <Content Include="Views\News\Detail.cshtml" />
+    <Content Include="Views\News\Project.cshtml" />
+    <Content Include="Views\News\ProjectDetail.cshtml" />
     <Content Include="Views\Invest\_List.cshtml" />
     <Content Include="Views\Invest\Index.cshtml" />
     <Content Include="Views\Invest\_Detail.cshtml" />
@@ -369,6 +365,7 @@
     <Content Include="Views\Contact\_Form.cshtml" />
     <Content Include="Views\Home\_News.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\News\_HotNews.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

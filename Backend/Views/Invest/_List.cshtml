@@ -1,12 +1,12 @@
 ﻿@using MainProject.Core
-@model MainProject.SBussiness.LandingPage.Models.Invest.InvestListViewModel
+@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
 
 
 <div class="invest-list pd-70">
 	<div class="container">
 		<div class="invest-list__wrapper block__content-long">
 			<div class="row">
-				@foreach (var Item in Model.InvestItems)
+				@foreach (var Item in Model.Articles)
 				{
 					<div class="col-md-6">
 						<div class="invest__item">
