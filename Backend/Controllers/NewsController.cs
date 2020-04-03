@@ -29,7 +29,7 @@ namespace MainProject.Controllers
 		{
 			return View(new NewsViewModel()
 			{
-				Category = ResourceHelper.ReadFile("/App_Data/Files/Project_Menu.txt"),
+				Category = ResourceHelper.ReadFile("/App_Data/Files/News_Category.txt"),
 				NewsItems = new List<Article>
 				{
 
