@@ -8,6 +8,18 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 
     public class HeaderViewModel
     {
+        public List<MenuItem> TopMenus { get; set; } = new List<MenuItem>
+        {
+            new MenuItem
+            {
+                Title = "Tuyển Dụng",
+            },
+            new MenuItem
+            {
+                Title = "Liên Hệ",
+            },
+        };
+
         public string Menu { get; set; } = ResourceHelper.ReadFile("/App_Data/Files/Header_Menu.txt");
 
         public string MainMenu { get; set; }

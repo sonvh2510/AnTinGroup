@@ -1,48 +1,41 @@
 ﻿@model MainProject.SBussiness.LandingPage.Models.Home.HeaderViewModel
 
 <header>
-	<div class="container-fluid header__container">
-		<div class="row">
-			<div class="header__logo desktop"><a href="/"><img src="/Content/resources/assets/logo.svg"></a></div>
-			<nav class="header__widget-social d-f ai-c">
-				<div class="widget__item"><a class="widget__link" href="#"><img class="svg" src="/Content/resources/assets/icons/facebook.svg"></a></div>
-				<div class="widget__item"><a class="widget__link" href="#"><img class="svg" src="/Content/resources/assets/icons/instagram.svg"></a></div>
-				<div class="widget__item"><a class="widget__link" href="#"><img class="svg" src="/Content/resources/assets/icons/twitter.svg"></a></div>
-				<div class="widget__item"><a class="widget__link" href="#"><img class="svg" src="/Content/resources/assets/icons/envelope.svg"></a></div>
-			</nav>
-			<div class="header__menu-toggle mobile">
-				<div class="mdi mdi-menu"></div>
-			</div>
-			<div class="header__menu d-f fw-w">
-				<div class="header__menu-top d-f jc-fe ai-c">
-					<nav class="header__nav d-f">
-						<div class="nav__item"><a class="nav__link" href="/#">Tuyển Dụng</a></div>
-						<div class="nav__item"><a class="nav__link" href="/Contact">Liên Hệ</a></div>
-					</nav>
-					<nav class="header__language d-f">
-						<div class="language__item"><a class="language__link" href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/language/vi_VN.png"></a></div>
-						<div class="language__item"><a class="language__link" href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/language/en_US.png"></a></div>
-					</nav>
-					<div class="header__search">
-						<form action="">
-							<input type="text">
-							<button class="btn"><img class="svg" src="/Content/resources/assets/icons/icon_search.svg" alt=""></button>
-						</form>
-					</div>
-				</div>
-				<div class="header__menu-bottom">
-					@Html.Raw(Model.Menu)
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container-fluid header__container">
+        <div class="row">
+            <div class="header__logo desktop"><a href="/"><img src="/Content/resources/assets/logo.svg"></a></div>
+            <nav class="header__widget-social d-f ai-c">
+                <div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("FacebookPage")"><img class="svg" src="/Content/resources/assets/icons/facebook.svg"></a></div>
+                <div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("InstagramPage")"><img class="svg" src="/Content/resources/assets/icons/instagram.svg"></a></div>
+                <div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("ZaloPage")"><img class="svg" src="/Content/resources/assets/icons/twitter.svg"></a></div>
+                <div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("EmailPage")"><img class="svg" src="/Content/resources/assets/icons/envelope.svg"></a></div>
+            </nav>
+            <div class="header__menu-toggle mobile">
+                <div class="mdi mdi-menu"></div>
+            </div>
+            <div class="header__menu d-f fw-w">
+                <div class="header__menu-top d-f jc-fe ai-c">
+                    <nav class="header__nav d-f">
+                        @foreach (var item in Model.TopMenus)
+                        {
+                            <div class="nav__item"><a class="nav__link" href="@item.Link" target="@item.LinkTarget.ToString()">@item.Title</a></div>
+                        }
+                    </nav>
+                    <nav class="header__language d-f">
+                        <div class="language__item"><a class="language__link" href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/language/vi_VN.png"></a></div>
+                        <div class="language__item"><a class="language__link" href="#"><img class="lazyload blur-up" data-src="/Content/resources/assets/language/en_US.png"></a></div>
+                    </nav>
+                    <div class="header__search">
+                        <form action="">
+                            <input type="text">
+                            <button class="btn"><img class="svg" src="/Content/resources/assets/icons/icon_search.svg" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header__menu-bottom">
+                    @Html.Raw(Model.Menu)
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
-@*<div class="index__banner">
-	<div class="mobile logo"><a href="/"><img class="svg" src="/Content/resources/assets/logo.svg"></a></div>
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide"><a href="#"><img src="/Content/resources/assets/banners/index_1.jpg" alt=""></a></div>
-			<div class="swiper-slide"><a href="#"><img src="/Content/resources/assets/banners/index_2.jpg" alt=""></a></div>
-		</div>
-	</div>
-</div>*@
