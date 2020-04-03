@@ -7,6 +7,6 @@ namespace MainProject.Core
 {
 	public class NewImage : Image
 	{
-		public string ExternalUrl { get; set; }
+		public string Link { get; set; }
 	}
 }

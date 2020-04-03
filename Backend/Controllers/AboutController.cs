@@ -1,6 +1,6 @@
 ﻿using MainProject.Core;
 using MainProject.Framework.Helpers;
-using MainProject.SBussiness.LandingPage.Models.About;
+using MainProject.SBussiness.LandingPage.Models.News;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +30,7 @@ namespace MainProject.Controllers
 
 		public ActionResult Message()
 		{
-			return View("Message", new AboutViewModel()
+			return View("Index", new AboutViewModel()
 			{
 				Category = new NewCategory
 				{
@@ -45,7 +45,7 @@ namespace MainProject.Controllers
 			{
 				Category = new NewCategory
 				{
-					Content = "<p>…\"Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam It has survived not only five centuries, but also the leap into.\"</p>",
+					Content = ResourceHelper.ReadFile("/App_Data/Files/About_BoardOfExecutive.txt"),
 					Title = "<h2 class=\"main - title tagline\">TS Nguyễn Đức Thọ</h2><p>Chủ tịch HĐQT - TGĐ</p>",
 					ImageDefault = "/Content/resources/assets/about/about_staff_1.png"
 				},
@@ -119,7 +119,7 @@ namespace MainProject.Controllers
 		public ActionResult OrganizationChart()
 		{
 			{
-				return View("OrganizationChart", new AboutViewModel()
+				return View("Index", new AboutViewModel()
 				{
 					Category = new NewCategory
 					{
@@ -129,9 +129,9 @@ namespace MainProject.Controllers
 			}
 		}
 
-		public ActionResult Department()
+		public ActionResult Member()
 		{
-			return View("Department", new AboutViewModel()
+			return View("Member", new AboutViewModel()
 			{
 				Category = new NewCategory
 				{
@@ -141,37 +141,37 @@ namespace MainProject.Controllers
 						{
 							Name = "1 công ty cổ phần du lịch an tín travel",
 							ImageDefault = "/Content/resources/assets/about/about_member_1.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "2 công ty cổ phần du lịch an tín travel",
 							ImageDefault= "/Content/resources/assets/about/about_member_2.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "3 công ty cổ phần du lịch an tín travel",
 							ImageDefault= "/Content/resources/assets/about/about_member_3.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "4 công ty cổ phần du lịch an tín travel",
 							ImageDefault= "/Content/resources/assets/about/about_member_4.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "5 công ty cổ phần du lịch an tín travel",
 							ImageDefault= "/Content/resources/assets/about/about_member_5.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "6 công ty cổ phần du lịch an tín travel",
 							ImageDefault= "/Content/resources/assets/about/about_member_6.jpg",
-							ExternalUrl = "/#"
+							Link = "/#"
 						},
 					})
 				}
@@ -188,37 +188,37 @@ namespace MainProject.Controllers
 					{
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/cocacola.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/namesonholding.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/novaland.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/pvinvest.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/swancity.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/tanhoangminh.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/vinamilk.png"
 						},
 					})
@@ -236,37 +236,37 @@ namespace MainProject.Controllers
 					{
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/pvinvest.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/swancity.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/tanhoangminh.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/vinamilk.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/cocacola.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/namesonholding.png"
 						},
 						new NewImage
 						{
-							ExternalUrl = "#",
+							Link = "#",
 							ImageDefault = "/Content/resources/assets/about/partners/novaland.png"
 						},
 					})

@@ -1,4 +1,0 @@
-﻿<div class="nav__item"><a class="nav__link" href="/Gallery">Sự Kiện An Tín</a></div>
-<div class="nav__item"><a class="nav__link" href="/#">Tuyển Dụng</a></div>
-<div class="nav__item"><a class="nav__link" href="/#">Cơ Hội Nghề Nghiệp</a></div>
-<div class="nav__item"><a class="nav__link" href="/Contact">Liên Hệ</a></div>
