@@ -41,7 +41,7 @@ namespace MainProject.Controllers
 
 		public ActionResult BoardOfExecutive()
 		{
-			return View("BoardOfExecutive", new AboutBoardOfExecutiveViewModel()
+			return View("BoardOfExecutive", new AboutViewModel()
 			{
 				Category = new NewCategory
 				{
@@ -49,7 +49,7 @@ namespace MainProject.Controllers
 					Title = "<h2 class=\"main - title tagline\">TS Nguyễn Đức Thọ</h2><p>Chủ tịch HĐQT - TGĐ</p>",
 					ImageDefault = "/Content/resources/assets/about/about_staff_1.png"
 				},
-				BoardOfExecutive1 = new Introduction
+				Section1 = new Introduction
 				{
 					Title = "Thành viên hội đồng quản trị",
 					Content = JsonHelper.Serialize(new List<Image>
@@ -81,7 +81,7 @@ namespace MainProject.Controllers
 						}
 					})
 				},
-				BoardOfExecutive2 = new Introduction
+				Section2 = new Introduction
 				{
 					Title = "Ban tổng giám đốc",
 					Content = JsonHelper.Serialize(new List<Image>
@@ -133,9 +133,9 @@ namespace MainProject.Controllers
 		{
 			return View("Member", new AboutViewModel()
 			{
-				Category = new NewCategory
+				Section1 = new Introduction
 				{
-					Images = JsonHelper.Serialize(new List<NewImage>
+					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{
@@ -182,9 +182,9 @@ namespace MainProject.Controllers
 		{
 			return View("Customer", new AboutViewModel()
 			{
-				Category = new NewCategory
+				Section1 = new Introduction
 				{
-					Content = JsonHelper.Serialize(new List<NewImage>
+					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{
@@ -230,9 +230,9 @@ namespace MainProject.Controllers
 		{
 			return View("Customer", new AboutViewModel()
 			{
-				Category = new NewCategory
+				Section1 = new Introduction
 				{
-					Content = JsonHelper.Serialize(new List<NewImage>
+					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{

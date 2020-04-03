@@ -1,5 +1,5 @@
 ﻿@using MainProject.Core
-@model MainProject.SBussiness.LandingPage.Models.News.AboutBoardOfExecutiveViewModel
+@model MainProject.SBussiness.LandingPage.Models.News.AboutViewModel
 
 @Html.Action("ShowMenu", "About")
 
@@ -14,14 +14,14 @@
 <div class="about__staffs-slider pd-70 ov-h">
     <div class="container">
         <div class="block__title wow fadeInUp">
-            <h2 class="main-title ta-c cl-main">@Model.BoardOfExecutive1.Title</h2>
+            <h2 class="main-title ta-c cl-main">@Model.Section1.Title</h2>
         </div>
         <div class="about__staffs-slider__wrapper wow fadeInUp">
             <div class="swiper__prev"><img class="svg" src="/Content/resources/assets/icons/arrow_left_2.svg"></div>
             <div class="swiper__next"><img class="svg" src="/Content/resources/assets/icons/arrow_right_2.svg"></div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.BoardOfExecutive1.Image) ?? new List<Image>())
+                    @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section1.Image) ?? new List<Image>())
                     {
                         <div class="swiper-slide">
                             <div class="staff__item">
@@ -40,14 +40,14 @@
 <div class="about__ceos-slider pd-70 ov-h">
     <div class="container">
         <div class="block__title d-f jc-c wow fadeInUp">
-            <h2 class="main-title cl-white tagline">@Model.BoardOfExecutive2.Title</h2>
+            <h2 class="main-title cl-white tagline">@Model.Section2.Title</h2>
         </div>
         <div class="about__ceos-slider__wrapper wow fadeInUp">
             <div class="swiper__prev"><img class="svg" src="/Content/resources/assets/icons/arrow_left_2.svg"></div>
             <div class="swiper__next"><img class="svg" src="/Content/resources/assets/icons/arrow_right_2.svg"></div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.BoardOfExecutive2.Image) ?? new List<Image>())
+                    @foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section2.Image) ?? new List<Image>())
                     {
                         <div class="swiper-slide">
                             <div class="ceo__item">

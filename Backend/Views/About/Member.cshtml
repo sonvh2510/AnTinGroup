@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="about__company-members-wrapper">
 			<div class="row">
-				@foreach (var item in (JsonHelper.Deserialize<List<NewImage>>(Model.Section.Image) ?? new List<NewImage>()).OrderBy(x => x.Order))
+				@foreach (var item in (JsonHelper.Deserialize<List<NewImage>>(Model.Section1.Image) ?? new List<NewImage>()).OrderBy(x => x.Order))
 				{
 					<div class="col-sm-6 wow fadeInUp">
 						<div class="about__company-member__item">

@@ -11,13 +11,8 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 	{
 		public NewCategory Category { get; set; }
 
-		public Introduction Section { get; set; }
-	}
+		public Introduction Section1 { get; set; }
 
-	public class AboutBoardOfExecutiveViewModel
-	{
-		public NewCategory Category { get; set; }
-		public Introduction BoardOfExecutive1 { get; set; }
-		public Introduction BoardOfExecutive2 { get; set; }
+		public Introduction Section2 { get; set; }
 	}
 }
