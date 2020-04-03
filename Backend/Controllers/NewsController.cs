@@ -19,7 +19,7 @@ namespace MainProject.Controllers
 		
         public ActionResult Detail()
         {
-            return View(new NewsDetailViewModel());
+            return View(new NewsDetailViewModel() { IsNews = true });
         }
 		
         public ActionResult ShowHotNews()
@@ -149,7 +149,7 @@ namespace MainProject.Controllers
 
         public ActionResult ProjectDetail()
         {
-            return View(new NewsDetailViewModel());
+            return View("Detail", new NewsDetailViewModel());
         }
     }
 }

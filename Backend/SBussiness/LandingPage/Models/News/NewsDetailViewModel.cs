@@ -33,5 +33,9 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 				Title = "Thôn tin hợp tác"
 			},
 		};
+
+		// 3 page Invest, Project, News use the same model
+		// This property will be enable show right menu
+		public bool IsNews { get; set; }
 	}
 }

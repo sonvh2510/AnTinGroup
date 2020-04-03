@@ -349,13 +349,6 @@
     <Content Include="Views\Home\_Subscribe.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\News\Detail.cshtml" />
-    <Content Include="Views\News\Project.cshtml" />
-    <Content Include="Views\News\ProjectDetail.cshtml" />
-    <Content Include="Views\Invest\_List.cshtml" />
-    <Content Include="Views\Invest\Index.cshtml" />
-    <Content Include="Views\Invest\_Detail.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\BoardOfExecutive.cshtml" />
     <Content Include="Views\About\Member.cshtml" />
@@ -365,6 +358,11 @@
     <Content Include="Views\Contact\_Form.cshtml" />
     <Content Include="Views\Home\_News.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Invest\Index.cshtml" />
+    <Content Include="Views\Invest\List.cshtml" />
+    <Content Include="Views\News\Detail.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\Project.cshtml" />
     <Content Include="Views\News\_HotNews.cshtml" />
   </ItemGroup>
   <ItemGroup />

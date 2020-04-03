@@ -18,7 +18,7 @@ namespace MainProject.Controllers
 						Order = 1,
 						Title= "Bất động sản",
 						ImageDefault = "/Content/resources/assets/invest/invest_1.jpg",
-						ExternalUrl = "/Invest/InvestList",
+						ExternalUrl = "/Invest/List",
 						Description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 					},
 					new Category
@@ -26,7 +26,7 @@ namespace MainProject.Controllers
 						Order = 2,
 						Title= "Bất động sản",
 						ImageDefault = "/Content/resources/assets/invest/invest_1.jpg",
-						ExternalUrl = "/Invest/InvestList",
+						ExternalUrl = "/Invest/List",
 						Description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 					},
 					new Category
@@ -34,7 +34,7 @@ namespace MainProject.Controllers
 						Order = 3,
 						Title= "Bất động sản",
 						ImageDefault = "/Content/resources/assets/invest/invest_1.jpg",
-						ExternalUrl = "/Invest/InvestList",
+						ExternalUrl = "/Invest/List",
 						Description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 					},
 					new Category
@@ -42,45 +42,45 @@ namespace MainProject.Controllers
 						Order = 4,
 						Title= "Bất động sản",
 						ImageDefault = "/Content/resources/assets/invest/invest_1.jpg",
-						ExternalUrl = "/Invest/InvestList",
+						ExternalUrl = "/Invest/List",
 						Description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
 					}
 				},
 				Articles = null,
 			});
 		}
-		public ActionResult InvestList()
+		public ActionResult List()
 		{
-			return View("_List", new NewsViewModel() { 
+			return View(new NewsViewModel() { 
 				Categories = null,
 				Articles = new List<Article>
 				{
 					new Article{
-						ExternalUrl = "/Invest/InvestDetail",
+						ExternalUrl = "/Invest/Detail",
 						ImageDefault = "/Content/resources/assets/invest/invest_item_1.jpg",
 						Title = "1 TGĐ An Tín Group: “ Dự án bất động sản An Tín Group ”",
 						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
 					},
 					new Article{
-						ExternalUrl = "/Invest/InvestDetail",
+						ExternalUrl = "/Invest/Detail",
 						ImageDefault = "/Content/resources/assets/invest/invest_item_2.jpg",
 						Title = "2 TGĐ An Tín Group: “ Dự án bất động sản An Tín Group ”",
 						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
 					},
 					new Article{
-						ExternalUrl = "/Invest/InvestDetail",
+						ExternalUrl = "/Invest/Detail",
 						ImageDefault = "/Content/resources/assets/invest/invest_item_3.jpg",
 						Title = "3 TGĐ An Tín Group: “ Dự án bất động sản An Tín Group ”",
 						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
 					},
 					new Article{
-						ExternalUrl = "/Invest/InvestDetail",
+						ExternalUrl = "/Invest/Detail",
 						ImageDefault = "/Content/resources/assets/invest/invest_item_4.jpg",
 						Title = "4 TGĐ An Tín Group: “ Dự án bất động sản An Tín Group ”",
 						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
 					},
 					new Article{
-						ExternalUrl = "/Invest/InvestDetail",
+						ExternalUrl = "/Invest/Detail",
 						ImageDefault = "/Content/resources/assets/invest/invest_item_5.jpg",
 						Title = "5 TGĐ An Tín Group: “ Dự án bất động sản An Tín Group ”",
 						Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, and mad consectetur elit sed do eiusmod tempor incididunt ut labore et dolore magna..."
@@ -88,9 +88,9 @@ namespace MainProject.Controllers
 				}
 			});
 		}
-		public ActionResult InvestDetail()
+		public ActionResult Detail()
 		{
-			return View("_Detail", new NewsDetailViewModel());
+			return View("/Views/News/Detail.cshtml", new NewsDetailViewModel() { Categories = null });
 		}
 	}
 }
