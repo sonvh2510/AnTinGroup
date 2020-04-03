@@ -134,7 +134,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SBussiness\LandingPage\Models\About\AboutViewModel.cs" />
+    <Compile Include="SBussiness\LandingPage\Models\News\AboutViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Contact\ContactViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Contact\FormContactViewModel.cs" />
     <Compile Include="SBussiness\LandingPage\Models\Gallery\GalleryViewModel.cs" />
@@ -145,8 +145,7 @@
     <Compile Include="SBussiness\LandingPage\Models\Invest\InvestViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Files\News_Menu.txt" />
-    <Content Include="App_Data\Files\Invest_Menu.txt" />
+    <Content Include="App_Data\Files\FooterMenu.txt" />
     <Content Include="App_Data\Files\About_Menu.txt" />
     <Content Include="App_Data\Files\About_AnTin.txt" />
     <Content Include="App_Data\Files\About_Category.txt" />
@@ -155,7 +154,7 @@
     <Content Include="App_Data\Files\Header_Menu.txt" />
     <Content Include="App_Data\Files\News_Category.txt" />
     <Content Include="App_Data\Files\News_Detail.txt" />
-    <Content Include="App_Data\Files\Project_Menu.txt" />
+    <Content Include="App_Data\Files\About_BoardOfExecutive.txt" />
     <Content Include="App_Data\MainProject.Core.dll" />
     <Content Include="Content\resources\assets\about\about_1.jpg" />
     <Content Include="Content\resources\assets\about\about_2.jpg" />
@@ -350,7 +349,6 @@
     <Content Include="ViewsReadMe\Home\_Header.cshtml" />
     <Content Include="ViewsReadMe\Home\_Subscribe.cshtml" />
     <Content Include="Views\Home\_Subscribe.cshtml" />
-    <Content Include="Views\About\Message.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
@@ -364,8 +362,7 @@
     <Content Include="Views\Invest\_Detail.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\BoardOfExecutive.cshtml" />
-    <Content Include="Views\About\OrganizationChart.cshtml" />
-    <Content Include="Views\About\Department.cshtml" />
+    <Content Include="Views\About\Member.cshtml" />
     <Content Include="Views\About\Customer.cshtml" />
     <Content Include="Views\About\_Menu.cshtml" />
     <Content Include="Views\Home\_Project.cshtml" />
