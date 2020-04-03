@@ -36,9 +36,8 @@
 						</div>
 						<div class="col-12 col-xl-4">
 							<h4 class="footer__title">ĐĂNG KÍ NHẬN TIN</h4>
-							<form class="footer__subscribe">
-								@*<p class="subscribe__description">Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức quan trọng của An Tín Group tới quý khách</p>*@
-								<p class="subscribe__description">@Html.GetResource(TempResourceKeyCollection.Subscribe_Text)</p>
+							<p class="subscribe__description">@Html.GetResource(TempResourceKeyCollection.Subscribe_Text)</p>
+							<form class="footer__subscribe form-ajax">
 								@Html.Partial("_Subscribe", new MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel())
 							</form>
 							<div class="footer__social">
