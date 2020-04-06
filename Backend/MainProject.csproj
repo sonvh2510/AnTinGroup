@@ -144,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Files\FooterMenu.txt" />
-    <Content Include="App_Data\Files\About_Menu.txt" />
     <Content Include="App_Data\Files\About_AnTin.txt" />
     <Content Include="App_Data\Files\About_Category.txt" />
     <Content Include="App_Data\Files\About_Chart.txt" />
@@ -358,12 +357,11 @@
     <Content Include="Views\Contact\_Form.cshtml" />
     <Content Include="Views\Home\_News.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
-    <Content Include="Views\Invest\Index.cshtml" />
-    <Content Include="Views\Invest\List.cshtml" />
     <Content Include="Views\News\Detail.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Project.cshtml" />
     <Content Include="Views\News\_HotNews.cshtml" />
+    <Content Include="Views\News\Invest.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

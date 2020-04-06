@@ -1,0 +1,70 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
+
+@if (Model.Category.Parent.IsSystem)
+{
+    <div class="invest-fields pd-70">
+        <div class="container">
+            <div class="invest-fields__wrapper block__content-short">
+                @foreach (var item in Model.Categories)
+                {
+                    <div class="invest-fields__item">
+                        <a class="item__link" href=@item.GetPrefixUrl()>
+                            <div class="item__img"><img class="lazyload blur-up ofcv" data-src=@item.ImageDefault></div>
+                            <div class="item__description">
+                                <h3 class="item__title d-f ai-c">
+                                    <b class="item__number">@item.Order</b>
+                                    <span class="item__field-name">@item.Title</span>
+                                </h3>
+                                <p class="item__text">@item.Description</p><span class="btn btn__viewmore">@Html.GetResource(TempResourceKeyCollection.View_More)</span>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="invest-page" id="js-page-verify" hidden></div>
+}
+else
+{
+    <div class="invest-list pd-70">
+        <div class="container">
+            <div class="invest-list__wrapper block__content-long">
+                <div class="row">
+                    @foreach (var Item in Model.Articles)
+                    {
+                        <div class="col-md-6">
+                            <div class="invest__item">
+                                <a class="item__link" href=@Item.GetUrl()>
+                                    <div class="item__img">
+                                        <img class="lazyload blur-up ofcv" data-src=@Item.ImageDefault>
+                                        <div class="item__title">
+                                            <h4>@Item.Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item__description">
+                                        <div class="item__text">@Item.Description</div>
+                                        <span class="btn btn__viewmore">@Html.GetResource(TempResourceKeyCollection.View_More)</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="pagination__wrapper">
+                    <div class="pagination">
+                        @Html.RenderPaging(Model.Pagingation, new MainProject.Framework.Models.PagingStyleModel
+                         {
+                             DivContainerStyle = "class=pagination__list",
+                             CurrentItemStyle = "class=pagination__item active",
+                             ItemStyle = "class=pagination__item",
+                             LinkStyle = "class=pagination__link"
+                         })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="invest-list-page" id="js-page-verify" hidden></div>
+}

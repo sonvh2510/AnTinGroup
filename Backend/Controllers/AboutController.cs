@@ -25,7 +25,28 @@ namespace MainProject.Controllers
 
 		public ActionResult ShowMenu()
 		{
-			return PartialView("_Menu", ResourceHelper.ReadFile("/App_Data/Files/About_Menu.txt"));
+			return PartialView("_Menu", new List<MenuItem>() { 
+				new MenuItem
+				{
+					Title = "Thông điệp CT HĐQT"
+				},
+				new MenuItem
+				{
+					Title = "Thông điệp CT HĐQT"
+				},
+				new MenuItem
+				{
+					Title = "Thông điệp CT HĐQT"
+				},
+				new MenuItem
+				{
+					Title = "Thông điệp CT HĐQT"
+				},
+				new MenuItem
+				{
+					Title = "Thông điệp CT HĐQT"
+				},
+			});
 		}
 
 		public ActionResult Message()
@@ -52,7 +73,7 @@ namespace MainProject.Controllers
 				Section1 = new Introduction
 				{
 					Title = "Thành viên hội đồng quản trị",
-					Content = JsonHelper.Serialize(new List<Image>
+					Image = JsonHelper.Serialize(new List<Image>
 					{
 						new Image
 						{
@@ -84,7 +105,7 @@ namespace MainProject.Controllers
 				Section2 = new Introduction
 				{
 					Title = "Ban tổng giám đốc",
-					Content = JsonHelper.Serialize(new List<Image>
+					Image = JsonHelper.Serialize(new List<Image>
 					{
 						new Image
 						{

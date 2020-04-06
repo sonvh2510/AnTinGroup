@@ -14,16 +14,16 @@
         </div>
     </div>
     <div class="nav__item">
-        <a class="nav__link" href="/Invest">Lĩnh vực đầu tư</a>
+        <a class="nav__link" href="/News/Invest">Lĩnh vực đầu tư</a>
         <div class="nav__sub--toggle mobile"><span class="lnr lnr-chevron-right"></span></div>
         <div class="nav__sub">
             <div class="nav__sub--close mobile"><span class="lnr lnr-chevron-left"></span><span>Quay lại</span></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Bất động sản</a></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Giáo dục</a></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Hàng không</a></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du lịch</a></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Du học</a></div>
-                <div class="nav__item"><a class="nav__link" href="/Invest/InvestList">Đào tạo</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Bất động sản</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Giáo dục</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Hàng không</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Du lịch</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Du học</a></div>
+                <div class="nav__item"><a class="nav__link" href="/News/InvestList">Đào tạo</a></div>
         </div>
     </div>
     <div class="nav__item"><a class="nav__link" href="/News/Project">Dự án</a></div>

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MainProject.SBussiness.LandingPage.Models.FormContactViewModel
+namespace MainProject.SBussiness.LandingPage.Models.Contact
 {
-	public class ContactFormManagement
+	public class ContactManageModel
 	{
 		[Required]
 		public string Name { get; set; }
