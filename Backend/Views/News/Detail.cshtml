@@ -26,7 +26,7 @@
                         <h1>@Model.Article.Title</h1>
                         <time>@Model.Article.Order.ToString("dd/MM/yyyy")</time>
                         <br>
-                        @Html.Raw(Model.Article.Body)
+                        @Html.Raw(Model.Article.Content)
                     </div>
                 </div>
                 <div class="col-md-auto news-hot__col">
@@ -44,7 +44,7 @@ else
             <div class="project-detail__wrapper block__content-short">
                 <div class="block__content project-detail__content">
                     <h1>@Model.Article.Title</h1><br>
-                    @Html.Raw(Model.Article.Body)
+                    @Html.Raw(Model.Article.Content)
                 </div>
             </div>
         </div>

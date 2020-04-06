@@ -22,18 +22,18 @@ namespace MainProject.Framework.Helpers
 
 		//    if (day.TotalHours <= 24) // Same date
 		//    {
-		//        return string.Format("{0} {1}", day.TotalHours < 1 ? 1 : (int)day.TotalHours, GetResource(helper, TempResourceKeyCollection.Post_Hours)); // Show hours
+		//        return string.Format("{0} {1}", day.TotalHours < 1 ? 1 : (int)day.TotalHours, GetResource(helper, TempTempResourceKeyCollection.Post_Hours)); // Show hours
 		//    }
 		//    else if (day.TotalDays <= DateTime.DaysInMonth(dateTime.Year, dateTime.Month)) // Same month
 		//    {
-		//        return string.Format("{0} {1}", (int)day.TotalDays, GetResource(helper, TempResourceKeyCollection.Post_Days)); // show days or 1 month
+		//        return string.Format("{0} {1}", (int)day.TotalDays, GetResource(helper, TempTempResourceKeyCollection.Post_Days)); // show days or 1 month
 		//    }
 		//    else if (day.TotalDays < daysOfYear) // Same year
 		//    {
-		//        return string.Format("{0} {1}", day.Days / (daysOfYear / 12), GetResource(helper, TempResourceKeyCollection.Post_Months)); // show months
+		//        return string.Format("{0} {1}", day.Days / (daysOfYear / 12), GetResource(helper, TempTempResourceKeyCollection.Post_Months)); // show months
 		//    }
 
-		//    return string.Format("{0} {1}", DateTime.Now.Year - dateTime.Year, GetResource(helper, TempResourceKeyCollection.Post_Years));
+		//    return string.Format("{0} {1}", DateTime.Now.Year - dateTime.Year, GetResource(helper, TempTempResourceKeyCollection.Post_Years));
 		//}
 
 		#region Paging

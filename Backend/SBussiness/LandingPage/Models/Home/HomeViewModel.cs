@@ -29,12 +29,12 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             new Banner
             {
                 Name = "Banner1",
-                ResourcePath = "http://web4gsolutions.com/Content/layout/resources/images/logo.png"
+                Path = "http://web4gsolutions.com/Content/layout/resources/images/logo.png"
             },
             new Banner
             {
                 Name = "Banner1",
-                ResourcePath = "http://web4gsolutions.com/Content/layout/resources/images/logo.png"
+                Path = "http://web4gsolutions.com/Content/layout/resources/images/logo.png"
             }
         };
     }
@@ -60,7 +60,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
 
     public class HomeViewModel
     {
-        public Introduction Section1 { get; set; } = new Introduction
+        public Section Section1 { get; set; } = new Section
         {
             Content = "<p><b>Phụng sự khách hàng, phụng sự Tổ quốc </b>và gắn kết bạn bè thế giới, góp phần kiến tạo cộng đồng thịnh vượng, nâng cao các giá trị văn hóa Việt Nam, giao lưu với các nền văn hóa trên thế giới</p>",
             Title = "<h3>TS Nguyễn Đức Thọ</h3><p>Chủ tịch HĐQT - TGĐ</p>",
@@ -178,7 +178,7 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             }
         };
 
-        public Introduction Section2 { get; set; } = new Introduction
+        public Section Section2 { get; set; } = new Section
         {
             Title = "Tuyên ngôn chiến lược",
             Content = JsonHelper.Serialize(new List<Image>
@@ -187,31 +187,31 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
                 {
                     Order = 0,
                     Name = "1 Mục tiêu 2020",
-                    AltImage = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
+                    Alt = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
                 },
                 new Image
                 {
                     Order = 1,
                     Name = "1 Mục tiêu 2020",
-                    AltImage = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
+                    Alt = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
                 },
                 new Image
                 {
                     Order = 2,
                     Name = "1 Mục tiêu 2020",
-                    AltImage = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
+                    Alt = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
                 },
                 new Image
                 {
                     Order = 3,
                     Name = "1 Mục tiêu 2020",
-                    AltImage = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
+                    Alt = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
                 },
                 new Image
                 {
                     Order = 4,
                     Name = "1 Mục tiêu 2020",
-                    AltImage = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
+                    Alt = "Độ nhận biết đầu tiên: 60% trong (nhóm khách hàng mục tiêu)"
                 }
             })
         };
@@ -266,38 +266,38 @@ namespace MainProject.SBussiness.LandingPage.Models.Home
             },
         };
 
-        public Introduction Partner { get; set; } = new Introduction
+        public Section Partner { get; set; } = new Section
         {
             Image = JsonHelper.Serialize(new List<NewImage>() {
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_1.png"
+                    Path = "/Content/resources/assets/partner/partner_1.png"
                 },
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_2.png"
+                    Path = "/Content/resources/assets/partner/partner_2.png"
                 },
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_3.png"
+                    Path = "/Content/resources/assets/partner/partner_3.png"
                 },
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_4.png"
+                    Path = "/Content/resources/assets/partner/partner_4.png"
                 },
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_5.png"
+                    Path = "/Content/resources/assets/partner/partner_5.png"
                 },
                 new NewImage
                 {
                     Link = "#",
-                    ImageDefault = "/Content/resources/assets/partner/partner_6.png"
+                    Path = "/Content/resources/assets/partner/partner_6.png"
                 }
             })
         };

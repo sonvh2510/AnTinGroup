@@ -11,8 +11,8 @@ namespace MainProject.SBussiness.LandingPage.Models.News
 	{
 		public NewCategory Category { get; set; }
 
-		public Introduction Section1 { get; set; }
+		public Section Section1 { get; set; }
 
-		public Introduction Section2 { get; set; }
+		public Section Section2 { get; set; }
 	}
 }

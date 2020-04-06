@@ -16,19 +16,6 @@ namespace MainProject.Controllers
 		public ActionResult Index()
 		{
 			ViewBag.ShowBreadCrumb = false;
-			ViewBag.Banners = new Banner[] {
-				new Banner
-				{
-					Link = "/#",
-					ResourcePath = "/Content/resources/assets/banners/index_1.jpg"
-				},
-				new Banner
-				{
-					Link = "/#",
-					ResourcePath = "/Content/resources/assets/banners/index_2.jpg"
-				}
-
-			};
 			return View(new HomeViewModel());
 		}
 
@@ -40,6 +27,23 @@ namespace MainProject.Controllers
 		public ActionResult ShowFooter()
 		{
 			return PartialView("_Footer", new FooterViewModel());
+		}
+
+		public ActionResult ShowBanner()
+		{
+			return PartialView("_Banner", new List<Banner> {
+				new Banner
+				{
+					Link = "/#",
+					Path = "/Content/resources/assets/banners/index_1.jpg"
+				},
+				new Banner
+				{
+					Link = "/#",
+					Path = "/Content/resources/assets/banners/index_2.jpg"
+				}
+
+			});
 		}
 
 		public ActionResult Search()
@@ -97,6 +101,7 @@ namespace MainProject.Controllers
 			});
 		}
 
+		[Route("get-projects")]
 		public ActionResult GetProjects(long id)
 		{
 			return PartialView("_Project", new List<Article> {
@@ -139,6 +144,7 @@ namespace MainProject.Controllers
 			});
 		}
 
+		[Route("get-news")]
 		public ActionResult GetNews(long id)
 		{
 			return PartialView("_Project", new List<Article> {

@@ -328,11 +328,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Breadcrumb.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\Maintainance.cshtml" />
     <Content Include="ViewsReadMe\_ViewStart.cshtml" />
     <Content Include="ViewsReadMe\Home\Index.cshtml" />
     <Content Include="ViewsReadMe\Shared\_Breadcrumb.cshtml" />
@@ -340,28 +335,34 @@
     <Content Include="ViewsReadMe\Shared\Error.cshtml" />
     <Content Include="ViewsReadMe\Shared\Maintainance.cshtml" />
     <Content Include="ViewsReadMe\Web.config" />
-    <Content Include="Views\Home\_Header.cshtml" />
-    <Content Include="Views\Home\_Footer.cshtml" />
     <Content Include="ViewsReadMe\Home\_Footer.cshtml" />
     <Content Include="ViewsReadMe\Home\_Header.cshtml" />
     <Content Include="ViewsReadMe\Home\_Subscribe.cshtml" />
-    <Content Include="Views\Home\_Subscribe.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
-    <Content Include="Views\Gallery\Index.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\About\BoardOfExecutive.cshtml" />
-    <Content Include="Views\About\Member.cshtml" />
     <Content Include="Views\About\Customer.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\Member.cshtml" />
     <Content Include="Views\About\_Menu.cshtml" />
-    <Content Include="Views\Home\_Project.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Contact\_Form.cshtml" />
-    <Content Include="Views\Home\_News.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\Home\_Banner.cshtml" />
+    <Content Include="Views\Home\_Footer.cshtml" />
+    <Content Include="Views\Home\_Header.cshtml" />
+    <Content Include="Views\Home\_News.cshtml" />
+    <Content Include="Views\Home\_Project.cshtml" />
+    <Content Include="Views\Home\_Subscribe.cshtml" />
     <Content Include="Views\News\Detail.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\News\Invest.cshtml" />
     <Content Include="Views\News\Project.cshtml" />
     <Content Include="Views\News\_HotNews.cshtml" />
-    <Content Include="Views\News\Invest.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Maintainance.cshtml" />
+    <Content Include="Views\Shared\_Breadcrumb.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

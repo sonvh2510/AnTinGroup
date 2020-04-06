@@ -1,32 +1,12 @@
-﻿@using MainProject.Core
-
-@{
+﻿@{
 	Layout = null;
 	bool isShow = ViewBag.ShowBreadCrumb ?? true;
-	Banner[] Banners = ViewBag.Banners ?? new Banner[] {
-		new Banner
-		{
-			Link = "/#",
-			ResourcePath = "/Content/resources/assets/banners/invest_2.jpg"
-		}
-	};
 }
 
 
 <div class="page__banner index__banner">
 	<div class="mobile logo"><a href="/"><img class="svg" src="/Content/resources/assets/logo.svg" /></a></div>
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			@foreach (var Banner in Banners)
-			{
-				<div class="swiper-slide">
-					<a href=@Banner.Link>
-						<img class="ofcv" src=@Banner.ResourcePath alt="" />
-					</a>
-				</div>
-			}
-		</div>
-	</div>
+	@Html.Action("ShowBanner", "Home")
 	@if (isShow)
 	{
 		<div class="page__breadcrumb">

@@ -16,15 +16,15 @@ namespace MainProject.SBussiness.LandingPage.Models.Gallery
 				Images = {
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
 					}
 				}
 			},
@@ -35,15 +35,15 @@ namespace MainProject.SBussiness.LandingPage.Models.Gallery
 				Images = {
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
 					}
 				}
 			},
@@ -54,15 +54,15 @@ namespace MainProject.SBussiness.LandingPage.Models.Gallery
 				Images = {
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
 					}
 				}
 			},
@@ -73,15 +73,15 @@ namespace MainProject.SBussiness.LandingPage.Models.Gallery
 				Images = {
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_2.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_3.jpg"
 					},
 					new Media
 					{
-						ImageDefault = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
+						Path = "/Content/resources/assets/gallery/gallery_img_thumb_1.jpg"
 					}
 				}
 			}

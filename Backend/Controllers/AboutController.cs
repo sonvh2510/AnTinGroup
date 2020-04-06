@@ -70,7 +70,7 @@ namespace MainProject.Controllers
 					Title = "<h2 class=\"main - title tagline\">TS Nguyễn Đức Thọ</h2><p>Chủ tịch HĐQT - TGĐ</p>",
 					ImageDefault = "/Content/resources/assets/about/about_staff_1.png"
 				},
-				Section1 = new Introduction
+				Section1 = new Section
 				{
 					Title = "Thành viên hội đồng quản trị",
 					Image = JsonHelper.Serialize(new List<Image>
@@ -78,31 +78,31 @@ namespace MainProject.Controllers
 						new Image
 						{
 							Name = "<h4>1 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>2 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>3 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>4 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>5 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						}
 					})
 				},
-				Section2 = new Introduction
+				Section2 = new Section
 				{
 					Title = "Ban tổng giám đốc",
 					Image = JsonHelper.Serialize(new List<Image>
@@ -110,27 +110,27 @@ namespace MainProject.Controllers
 						new Image
 						{
 							Name = "<h4>1 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>2 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>3 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>4 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						},
 						new Image
 						{
 							Name = "<h4>5 Mr . Hoang Viet Hung</h4><p>Phó chủ tịch HĐQT</p>",
-							ImageDefault = "/Content/resources/assets/about/about_staff_2.jpg"
+							Path = "/Content/resources/assets/about/about_staff_2.jpg"
 						}
 					})
 				},
@@ -154,44 +154,44 @@ namespace MainProject.Controllers
 		{
 			return View("Member", new AboutViewModel()
 			{
-				Section1 = new Introduction
+				Section1 = new Section
 				{
 					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{
 							Name = "1 công ty cổ phần du lịch an tín travel",
-							ImageDefault = "/Content/resources/assets/about/about_member_1.jpg",
+							Path = "/Content/resources/assets/about/about_member_1.jpg",
 							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "2 công ty cổ phần du lịch an tín travel",
-							ImageDefault= "/Content/resources/assets/about/about_member_2.jpg",
+							Path= "/Content/resources/assets/about/about_member_2.jpg",
 							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "3 công ty cổ phần du lịch an tín travel",
-							ImageDefault= "/Content/resources/assets/about/about_member_3.jpg",
+							Path= "/Content/resources/assets/about/about_member_3.jpg",
 							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "4 công ty cổ phần du lịch an tín travel",
-							ImageDefault= "/Content/resources/assets/about/about_member_4.jpg",
+							Path= "/Content/resources/assets/about/about_member_4.jpg",
 							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "5 công ty cổ phần du lịch an tín travel",
-							ImageDefault= "/Content/resources/assets/about/about_member_5.jpg",
+							Path= "/Content/resources/assets/about/about_member_5.jpg",
 							Link = "/#"
 						},
 						new NewImage
 						{
 							Name = "6 công ty cổ phần du lịch an tín travel",
-							ImageDefault= "/Content/resources/assets/about/about_member_6.jpg",
+							Path= "/Content/resources/assets/about/about_member_6.jpg",
 							Link = "/#"
 						},
 					})
@@ -203,44 +203,44 @@ namespace MainProject.Controllers
 		{
 			return View("Customer", new AboutViewModel()
 			{
-				Section1 = new Introduction
+				Section1 = new Section
 				{
 					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/cocacola.png"
+							Path = "/Content/resources/assets/about/partners/cocacola.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/namesonholding.png"
+							Path = "/Content/resources/assets/about/partners/namesonholding.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/novaland.png"
+							Path = "/Content/resources/assets/about/partners/novaland.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/pvinvest.png"
+							Path = "/Content/resources/assets/about/partners/pvinvest.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/swancity.png"
+							Path = "/Content/resources/assets/about/partners/swancity.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/tanhoangminh.png"
+							Path = "/Content/resources/assets/about/partners/tanhoangminh.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/vinamilk.png"
+							Path = "/Content/resources/assets/about/partners/vinamilk.png"
 						},
 					})
 				}
@@ -251,44 +251,44 @@ namespace MainProject.Controllers
 		{
 			return View("Customer", new AboutViewModel()
 			{
-				Section1 = new Introduction
+				Section1 = new Section
 				{
 					Image = JsonHelper.Serialize(new List<NewImage>
 					{
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/pvinvest.png"
+							Path = "/Content/resources/assets/about/partners/pvinvest.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/swancity.png"
+							Path = "/Content/resources/assets/about/partners/swancity.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/tanhoangminh.png"
+							Path = "/Content/resources/assets/about/partners/tanhoangminh.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/vinamilk.png"
+							Path = "/Content/resources/assets/about/partners/vinamilk.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/cocacola.png"
+							Path = "/Content/resources/assets/about/partners/cocacola.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/namesonholding.png"
+							Path = "/Content/resources/assets/about/partners/namesonholding.png"
 						},
 						new NewImage
 						{
 							Link = "#",
-							ImageDefault = "/Content/resources/assets/about/partners/novaland.png"
+							Path = "/Content/resources/assets/about/partners/novaland.png"
 						},
 					})
 				}

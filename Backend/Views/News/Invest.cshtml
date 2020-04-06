@@ -6,20 +6,24 @@
     <div class="invest-fields pd-70">
         <div class="container">
             <div class="invest-fields__wrapper block__content-short">
-                @foreach (var item in Model.Categories)
-                {
-                    <div class="invest-fields__item">
-                        <a class="item__link" href=@item.GetPrefixUrl()>
-                            <div class="item__img"><img class="lazyload blur-up ofcv" data-src=@item.ImageDefault></div>
-                            <div class="item__description">
-                                <h3 class="item__title d-f ai-c">
-                                    <b class="item__number">@item.Order</b>
-                                    <span class="item__field-name">@item.Title</span>
-                                </h3>
-                                <p class="item__text">@item.Description</p><span class="btn btn__viewmore">@Html.GetResource(TempResourceKeyCollection.View_More)</span>
-                            </div>
-                        </a>
-                    </div>
+                @{ 
+                    int i = 1;
+                    foreach (var item in Model.Categories)
+                    {
+                        <div class="invest-fields__item">
+                            <a class="item__link" href=@item.GetPrefixUrl()>
+                                <div class="item__img"><img class="lazyload blur-up ofcv" data-src=@item.ImageDefault></div>
+                                <div class="item__description">
+                                    <h3 class="item__title d-f ai-c">
+                                        <b class="item__number">@(i < 10 ? "0" + i : i.ToString())</b>
+                                        <span class="item__field-name">@item.Title</span>
+                                    </h3>
+                                    <p class="item__text">@item.Description</p><span class="btn btn__viewmore">@Html.GetResource(TempResourceKeyCollection.View_More)</span>
+                                </div>
+                            </a>
+                        </div>
+                        i++;
+                    }
                 }
             </div>
         </div>

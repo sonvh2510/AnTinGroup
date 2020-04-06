@@ -6,12 +6,12 @@
 	<div class="container">
 		<div class="about__company-members-wrapper">
 			<div class="row">
-				@foreach (var item in (JsonHelper.Deserialize<List<NewImage>>(Model.Section1.Image) ?? new List<NewImage>()).OrderBy(x => x.Order))
+				@foreach (var item in (JsonHelper.Deserialize<List<Image>>(Model.Section1.Image) ?? new List<Image>()).OrderBy(x => x.Order))
 				{
 					<div class="col-sm-6 wow fadeInUp">
 						<div class="about__company-member__item">
 							<a class="item__link" href=@item.Link>
-								<div class="item__img"><img class="ofcv lazyload blur-up" data-src=@item.ImageDefault></div>
+								<div class="item__img"><img class="ofcv lazyload blur-up" data-src=@item.Path></div>
 								<div class="item__description">
 									<div class="item__label"><img class="lazyload blur-up" data-src="/Content/resources/assets/icons/antin_label.svg"></div>
 									<h4 class="item__title tt-u">@item.Name</h4>

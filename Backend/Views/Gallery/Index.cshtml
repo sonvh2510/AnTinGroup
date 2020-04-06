@@ -23,8 +23,8 @@
 									<div class="item__list">
 										@foreach (var image in album.Images)
 										{
-											<a href="@image.ImageDefault">
-												<img src=@image.ImageDefault>
+											<a href="@image.Path">
+												<img src=@image.Path>
 											</a>
 										}
 									</div>
@@ -50,7 +50,7 @@
 						{
 							<div class="swiper-slide" type="video">
 								<div class="gallery-videos__item">
-									<a class="item__link" href="@album.Path">
+									<a class="item__link" href="https://www.youtube.com/watch?v=@album.Path">
 										<div class="item__img"><img src="@album.Image" alt=""></div>
 										<div class="item__play"><img class="svg" src="/Content/resources/assets/icons/video_play.svg"></div>
 									</a>

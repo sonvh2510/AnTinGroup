@@ -52,7 +52,7 @@
 							<div class="swiper-slide">
 								<div class="bi__field-item">
 									<a class="item__link" href=@item.GetPrefixUrl()>
-										<div class="item__img"><img class="lazyload ofcv" data-src=@item.ImageDefault alt=""></div>
+										<div class="item__img"><img class="lazyload ofcv" data-src="@item.ImageHome" alt=""></div>
 										<div class="item__description">
 											<h4 class="item__number">@item.Order</h4>
 											<h3 class="item__title">@item.Title</h3>
@@ -89,7 +89,7 @@
 								@foreach (var Item in Model.ProjectCategories)
                                 {
 									<div class="swiper-slide">
-										<a class="nav-link" href="/Home/GetProjects?id=@Item.Id">@Item.Title</a>
+										<a class="nav-link" href="/get-projects?id=@Item.Id">@Item.Title</a>
 									</div>
 								}
 							</div>
@@ -124,7 +124,7 @@
 									<div class="item__description">
 										<span class="item__number">@Item.Order</span>
 										<h4 class="item__title">@Item.Name</h4>
-										<p class="item__text">@Item.AltImage</p>
+										<p class="item__text">@Item.Alt</p>
 									</div>
 								</div>
 							</div>
@@ -146,7 +146,7 @@
 						@foreach (var Item in Model.NewsCategories)
                         {
 							<div class="nav__item">
-								<a class="nav__link" href="/Home/GetNews?id=@Item.Id">@Item.Title</a>
+								<a class="nav__link" href="/get-news?id=@Item.Id">@Item.Title</a>
 							</div>
 						}
 					</nav>
@@ -156,7 +156,7 @@
 								@foreach (var Item in Model.NewsCategories)
                                 {
 									<div class="swiper-slide">
-										<a class="nav__link" href=@Item.ExternalUrl>@Item.Title</a>
+										<a class="nav__link" href=@Item.GetPrefixUrl()>@Item.Title</a>
 									</div>
 								}
 							</div>
@@ -174,7 +174,7 @@
 							{
 								<div class="swiper-slide">
 									<div class="index-news__item">
-										<a class="item__link" href=@Item.ExternalUrl>
+										<a class="item__link" href=@Item.GetUrl()>
 											<div class="item__img"><img src=@Item.ImageDefault></div>
 											<div class="item__description">
 												<h4 class="item__title">@Item.Title</h4>
@@ -198,12 +198,12 @@
 			<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					@foreach (var item in (JsonHelper.Deserialize<List<NewImage>>(Model.Partner.Image) ?? new List<NewImage>()).OrderBy(x => x.Order))
+					@foreach (var item in (JsonHelper.Deserialize<List<Image>>(Model.Partner.Image) ?? new List<Image>()).OrderBy(x => x.Order))
                     {
 						<div class="swiper-slide">
 							<div class="index-partner__item">
 								<a class="item__link" href=@item.Link>
-									<div class="item__img"><img src=@item.ImageDefault alt=""></div>
+									<div class="item__img"><img src=@item.Path alt=""></div>
 								</a>
 							</div>
 						</div>
