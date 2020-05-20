@@ -16,6 +16,7 @@
 
 @media (min-width: 768px) {
 	.about__customers__item {
+
 		.item__link {
 			height: 175px;
 			padding: 35px;
@@ -37,12 +38,15 @@
 	}
 
 	.about__customers__item {
+		margin-bottom: 60px;
+
 		.item__link {
 			height: 200px;
 			padding: 40px;
 		}
 	}
 }
+
 @media (min-width: 1440px) {
 	.about__customers-wrapper {
 		padding-left: 100px;

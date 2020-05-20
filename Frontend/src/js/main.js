@@ -11,10 +11,29 @@ const headerMenu = document.querySelector(".header__menu");
 
 const getScrollYPosition = () => window.scrollY;
 
-const getFormData = Form => {
+
+// SHOW BACK TO TOP
+const showBackToTop = () => {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 800) {
+			$('#go-top').addClass('active');
+		} else {
+			$('#go-top').removeClass('active');
+		}
+	});
+
+	$("#go-top").on("click", function(e) {
+		e.preventDefault();
+		$("html,body").animate({
+			scrollTop: 0
+		})
+	})
+}
+
+const getFormData = (Form) => {
 	if (Form) {
 		const Data = new FormData();
-		Array.from(Form.querySelectorAll("[name]")).forEach(Field => {
+		Array.from(Form.querySelectorAll("[name]")).forEach((Field) => {
 			const FieldName = Field.getAttribute("name");
 			const FieldValue = Field.value;
 			Data.append(FieldName, FieldValue);
@@ -26,7 +45,7 @@ const getFormData = Form => {
 const SubmitAjaxForm = () => {
 	const FormSelector = ".form-ajax";
 	const Forms = Array.from(document.querySelectorAll(FormSelector));
-	Forms.forEach(Form => {
+	Forms.forEach((Form) => {
 		const ButtonSubmit = Form.querySelector(".form-ajax__submit");
 		// $(Form).validate({
 		// 	rules: {
@@ -52,7 +71,7 @@ const SubmitAjaxForm = () => {
 					},
 					complete: function(res) {
 						ButtonSubmit.removeAttribute("disabled");
-					}
+					},
 				});
 			}
 		});
@@ -62,15 +81,18 @@ const SubmitAjaxForm = () => {
 const pageTitle = () => {
 	const breadcrumb = document.querySelector(".page__breadcrumb");
 	if (breadcrumb) {
-		const breadcrumbItems = Array.from(breadcrumb.querySelectorAll(".breadcrumb__link"));
+		const breadcrumbItems = Array.from(
+			breadcrumb.querySelectorAll(".breadcrumb__link")
+		);
 		const finalBreadcrumbItem = breadcrumbItems.pop();
-		breadcrumb.querySelector(".page__title").innerHTML = finalBreadcrumbItem.textContent;
+		breadcrumb.querySelector(".page__title").innerHTML =
+			finalBreadcrumbItem.textContent;
 	}
 };
 
 const setSizeByRatio = () => {
 	const items = Array.from(document.querySelectorAll("[data-ratio]"));
-	items.forEach(item => {
+	items.forEach((item) => {
 		const ratio = Number(item.getAttribute("data-ratio"));
 		const width = item.clientWidth;
 		item.style.height = `${width / ratio}px`;
@@ -80,7 +102,7 @@ const setSizeByRatio = () => {
 const setSizeFullScreen = (slides) => {
 	const windowWidth = window.innerWidth;
 	const windowHeight = window.innerHeight;
-	slides.forEach(slide => {
+	slides.forEach((slide) => {
 		slide.style.display = "block";
 		slide.style.width = windowWidth + "px";
 		if (window.innerWidth <= 1024) {
@@ -107,7 +129,9 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	const bannerElement = Array.from(document.querySelector("#js-page-verify").classList);
+	const bannerElement = Array.from(
+		document.querySelector("#js-page-verify").classList
+	);
 	let banner = new Swiper(".page__banner .swiper-container", {
 		slidesPerView: 1,
 		speed: 1600,
@@ -124,17 +148,25 @@ const pageBanner = () => {
 		},
 		on: {
 			resize: function() {
-				const slides = Array.from(document.querySelectorAll(".page__banner .swiper-slide a"));
-				const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
+				const slides = Array.from(
+					document.querySelectorAll(".page__banner .swiper-slide a")
+				);
+				const pageClass = Array.from(
+					document.querySelector("#js-page-verify").classList
+				);
 				if (pageClass.includes("index-page")) {
 					setSizeFullScreen(slides);
 				}
-			}
-		}
+			},
+		},
 	});
 	banner.on("init", function() {
-		const slides = Array.from(document.querySelectorAll(".page__banner .swiper-slide a"));
-		const pageClass = Array.from(document.querySelector("#js-page-verify").classList);
+		const slides = Array.from(
+			document.querySelectorAll(".page__banner .swiper-slide a")
+		);
+		const pageClass = Array.from(
+			document.querySelector("#js-page-verify").classList
+		);
 		if (pageClass.includes("index-page")) {
 			setSizeFullScreen(slides);
 		}
@@ -142,7 +174,7 @@ const pageBanner = () => {
 	banner.init();
 };
 
-const addClassHeader = currentScrollPosition => {
+const addClassHeader = (currentScrollPosition) => {
 	if (currentScrollPosition > 0) {
 		header.classList.add("scrolled");
 	} else {
@@ -158,11 +190,13 @@ const addClassHeader = currentScrollPosition => {
 };
 
 const indexProjectNavAjax = () => {
-	const items = Array.from(document.querySelectorAll(".index-project__nav .swiper-slide .nav-link"));
-	items.forEach(item => {
+	const items = Array.from(
+		document.querySelectorAll(".index-project__nav .swiper-slide .nav-link")
+	);
+	items.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			e.preventDefault();
-			items.forEach(item => {
+			items.forEach((item) => {
 				item.classList.remove("active");
 			});
 			item.classList.add("active");
@@ -170,9 +204,11 @@ const indexProjectNavAjax = () => {
 			const request = new XMLHttpRequest();
 			request.open("GET", urlRequest, true);
 			request.send();
-			request.onload = res => {
+			request.onload = (res) => {
 				if (res.target.status === 200) {
-					document.querySelector(".index-project .index-project-list").innerHTML = res.target.response;
+					document.querySelector(
+						".index-project .index-project-list"
+					).innerHTML = res.target.response;
 					indexProjectSlider();
 				}
 			};
@@ -191,13 +227,15 @@ const indexProjectNavSlider = () => {
 		simulateTouch: false,
 		navigation: {
 			prevEl: ".index-project__nav .swiper-prev",
-			nextEl: ".index-project__nav .swiper-next"
+			nextEl: ".index-project__nav .swiper-next",
 		},
 		on: {
 			init: function() {
-				document.querySelector(".index-project__nav .swiper-slide .nav-link").click();
-			}
-		}
+				document
+					.querySelector(".index-project__nav .swiper-slide .nav-link")
+					.click();
+			},
+		},
 	});
 };
 
@@ -221,11 +259,10 @@ const indexProjectSlider = () => {
 				slidesPerView: 1.8,
 			},
 			1025: {
-
 				spaceBetween: 10,
 				slidesPerView: 3,
-			}
-		}
+			},
+		},
 	});
 };
 
@@ -234,7 +271,7 @@ const indexBusinessInvestFieldsSlider = () => {
 		slidesPerView: 2,
 		navigation: {
 			prevEl: ".bi__fields .swiper-prev",
-			nextEl: ".bi__fields .swiper-next"
+			nextEl: ".bi__fields .swiper-next",
 		},
 		breakpoints: {
 			768: {
@@ -242,8 +279,8 @@ const indexBusinessInvestFieldsSlider = () => {
 			},
 			1025: {
 				slidesPerView: 4,
-			}
-		}
+			},
+		},
 	});
 };
 
@@ -262,8 +299,8 @@ const indexBrandPositioningSlider = () => {
 			},
 			1025: {
 				slidesPerView: 4,
-			}
-		}
+			},
+		},
 	});
 };
 
@@ -273,7 +310,7 @@ const indexPartnerSlider = () => {
 		spaceBetween: 15,
 		navigation: {
 			prevEl: ".index-partner .swiper-prev",
-			nextEl: ".index-partner .swiper-next"
+			nextEl: ".index-partner .swiper-next",
 		},
 		breakpoints: {
 			576: {
@@ -288,16 +325,18 @@ const indexPartnerSlider = () => {
 			1200: {
 				slidesPerView: 7,
 			},
-		}
+		},
 	});
 };
 
 const indexNewsNavAjax = () => {
-	const items = Array.from(document.querySelectorAll(".index-news__nav .nav__link"));
-	items.forEach(item => {
+	const items = Array.from(
+		document.querySelectorAll(".index-news__nav .nav__link")
+	);
+	items.forEach((item) => {
 		item.addEventListener("click", (e) => {
 			e.preventDefault();
-			items.forEach(item => {
+			items.forEach((item) => {
 				item.classList.remove("active");
 			});
 			item.classList.add("active");
@@ -305,9 +344,10 @@ const indexNewsNavAjax = () => {
 			const request = new XMLHttpRequest();
 			request.open("GET", urlRequest, true);
 			request.send();
-			request.onload = res => {
+			request.onload = (res) => {
 				if (res.target.status === 200) {
-					document.querySelector(".index-news__list").innerHTML = res.target.response;
+					document.querySelector(".index-news__list").innerHTML =
+						res.target.response;
 					indexNewsSlider();
 				}
 			};
@@ -335,7 +375,7 @@ const indexNewsSlider = () => {
 			1025: {
 				slidesPerView: 2.5,
 			},
-		}
+		},
 	});
 };
 
@@ -351,48 +391,56 @@ const indexNewsNavSlider = () => {
 			},
 			on: {
 				init: function() {
-					document.querySelector(".index-news__nav .swiper-slide .nav__link").click();
-				}
-			}
+					document
+						.querySelector(".index-news__nav .swiper-slide .nav__link")
+						.click();
+				},
+			},
 		});
 	}
 };
 
 const aboutStaffsSlider = () => {
-	const staffsSlider = new Swiper(".about__staffs-slider__wrapper .swiper-container", {
-		slidesPerView: 1,
-		centeredSlides: true,
-		spaceBetween: 20,
-		loop: true,
-		navigation: {
-			prevEl: ".about__staffs-slider__wrapper .swiper__prev",
-			nextEl: ".about__staffs-slider__wrapper .swiper__next"
-		},
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
+	const staffsSlider = new Swiper(
+		".about__staffs-slider__wrapper .swiper-container", {
+			slidesPerView: 1,
+			centeredSlides: true,
+			spaceBetween: 20,
+			loop: true,
+			navigation: {
+				prevEl: ".about__staffs-slider__wrapper .swiper__prev",
+				nextEl: ".about__staffs-slider__wrapper .swiper__next",
 			},
-			1025: {
-				slidesPerView: 3,
-			}
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+				},
+				1025: {
+					slidesPerView: 3,
+				},
+			},
 		}
-	});
-	const ceoSlider = new Swiper(".about__ceos-slider__wrapper .swiper-container", {
-		slidesPerView: 1,
-		centeredSlides: true,
-		spaceBetween: 20,
-		loop: true,
-		navigation: {
-			prevEl: ".about__ceos-slider__wrapper .swiper__prev",
-			nextEl: ".about__ceos-slider__wrapper .swiper__next"
+	);
+	const ceoSlider = new Swiper(
+		".about__ceos-slider__wrapper .swiper-container", {
+			slidesPerView: 1,
+			centeredSlides: true,
+			spaceBetween: 20,
+			loop: true,
+			navigation: {
+				prevEl: ".about__ceos-slider__wrapper .swiper__prev",
+				nextEl: ".about__ceos-slider__wrapper .swiper__next",
+			},
 		}
-	});
+	);
 };
 
 const setSizeAboutCompanyMemberItem = () => {
 	const RATIO = 1.72;
-	const items = Array.from(document.querySelectorAll(".about__company-member__item .item__img"));
-	items.forEach(item => {
+	const items = Array.from(
+		document.querySelectorAll(".about__company-member__item .item__img")
+	);
+	items.forEach((item) => {
 		const width = item.clientWidth;
 		item.style.height = width / RATIO + "px";
 	});
@@ -400,8 +448,10 @@ const setSizeAboutCompanyMemberItem = () => {
 
 const setSizeInvestItem = () => {
 	const RATIO = 1.98;
-	const items = Array.from(document.querySelectorAll(".invest__item .item__img"));
-	items.forEach(item => {
+	const items = Array.from(
+		document.querySelectorAll(".invest__item .item__img")
+	);
+	items.forEach((item) => {
 		const width = item.clientWidth;
 		item.style.height = width / RATIO + "px";
 	});
@@ -409,8 +459,10 @@ const setSizeInvestItem = () => {
 
 const setSizeProjectCategoryItem = () => {
 	const RATIO = 2;
-	const items = Array.from(document.querySelectorAll(".project-category__item .item__img"));
-	items.forEach(item => {
+	const items = Array.from(
+		document.querySelectorAll(".project-category__item .item__img")
+	);
+	items.forEach((item) => {
 		const width = item.clientWidth;
 		item.style.height = width / RATIO + "px";
 	});
@@ -432,8 +484,8 @@ const gallerySlider = () => {
 			},
 			1200: {
 				slidesPerView: 2.8,
-			}
-		}
+			},
+		},
 	});
 
 	const videoSlider = new Swiper(".gallery-videos__slider .swiper-container", {
@@ -452,8 +504,8 @@ const gallerySlider = () => {
 			1200: {
 				slidesPerView: 2.8,
 				spaceBetween: -25,
-			}
-		}
+			},
+		},
 	});
 
 	const autoStart = () => window.innerWidth >= 768;
@@ -469,7 +521,7 @@ const gallerySlider = () => {
 				autoStart: autoStart(),
 				hideOnClose: true,
 				parentEl: ".fancybox-container",
-				axis: "y"
+				axis: "y",
 			},
 		});
 	});
@@ -491,20 +543,21 @@ const setPaddingTopNewsNav = () => {
 	const breakpointPadding = {
 		mobile: 30,
 		tablet: 50,
-		desktop: 70
+		desktop: 70,
 	};
 	if (newsHotElement) {
 		let pageNavPaddingTop;
 
 		if (window.innerWidth < 768) {
-			pageNavPaddingTop = pageNavElement.clientHeight - breakpointPadding.mobile;
-
+			pageNavPaddingTop =
+				pageNavElement.clientHeight - breakpointPadding.mobile;
 		}
 		if (window.innerWidth < 1025) {
 			pageNavPaddingTop = breakpointPadding.tablet;
 		}
 		if (window.innerWidth >= 1025) {
-			pageNavPaddingTop = pageNavElement.clientHeight - breakpointPadding.desktop;
+			pageNavPaddingTop =
+				pageNavElement.clientHeight - breakpointPadding.desktop;
 		}
 		newsHotElement.style.paddingTop = pageNavPaddingTop + "px";
 	}
@@ -520,8 +573,10 @@ const toggleHeaderMenuMobile = () => {
 					document.body.style.height = window.innerHeight + "px";
 				} else {
 					document.body.removeAttribute("style");
-					const navItems = Array.from(document.querySelectorAll(".header__main-nav>.nav__item"));
-					navItems.forEach(item => {
+					const navItems = Array.from(
+						document.querySelectorAll(".header__main-nav>.nav__item")
+					);
+					navItems.forEach((item) => {
 						item.classList.remove("active");
 					});
 				}
@@ -546,8 +601,10 @@ const pageNavToggle = () => {
 };
 
 const headerActiveSubmenu = () => {
-	const navItems = Array.from(document.querySelectorAll(".header__main-nav>.nav__item"));
-	navItems.forEach(item => {
+	const navItems = Array.from(
+		document.querySelectorAll(".header__main-nav>.nav__item")
+	);
+	navItems.forEach((item) => {
 		item.addEventListener("click", () => {
 			item.classList.toggle("active");
 		});
@@ -577,7 +634,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	GetSVG();
 	Loading();
 	// Initialize Script
-	// Set size 
+	// Set size
 	setSizeByRatio();
 	setSize({
 		src: ".about__1 .block__img img",
@@ -620,6 +677,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// 	offset: 75,
 	// });
 	animationWow();
+	showBackToTop();
 });
 
 // Call functions after images were lazyloaded
