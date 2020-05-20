@@ -105,6 +105,12 @@
 				opacity: 1;
 			}
 		}
+
+		.item__description {
+			h4 {
+				color: map-get($mau, main);
+			}
+		}
 	}
 }
 
@@ -115,11 +121,12 @@
 
 		h4 {
 			font-size: 13px;
-			color: map-get($mau, main);
+			color: #707070;
 		}
 
 		p {
 			font-size: 11px;
+			color: #707070;
 		}
 	}
 }

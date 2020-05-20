@@ -17,6 +17,14 @@
 		.content {
 			@extend .scrollbar;
 			max-height: 100%;
+
+			h2 {
+				font-size: 32px;
+			}
+
+			h3 {
+				font-size: 32px;
+			}
 		}
 	}
 }
