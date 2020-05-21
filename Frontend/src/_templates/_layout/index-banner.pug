@@ -2,7 +2,7 @@
 	.mobile.logo
 		a(href="/")
 			img.svg(src="./assets/logo.svg")
-	.swiper-container
+	.swiper-container.main__banner
 		.swiper-wrapper
 			.swiper-slide
 				a(href="#")
@@ -10,3 +10,27 @@
 			.swiper-slide
 				a(href="#")
 					img(src="./assets/banners/index_2.jpg", alt="")
+	.banner-news-block.desktop
+		.news-title-banner
+			.label Tin Tức
+		.news-desc-banner
+			#js-slide-banner-news.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						.item
+							a(href='#') Y án sơ thẩm: Tạp chí điện tử Giáo dục Việt Nam phải bồi thường và xin lỗi Tập đoàn FLC
+					.swiper-slide
+						.item
+							a(href='#') Doanh nghiệp du lịch, hàng không gặp gỡ tại Sầm Sơn bàn kích cầu nội địa
+					.swiper-slide
+						.item
+							a(href='#') Động thổ tòa nhà 72 tầng do Tập đoàn FLC làm chủ đầu tư tại Hải Phòng
+					.swiper-slide
+						.item
+							a(href='#') “Không kiến nghị Nhà nước hỗ trợ tiền, chỉ kiến nghị môi trường kinh doanh cải cách mạnh mẽ thời hậu Covid”
+					.swiper-slide
+						.item
+							a(href='#') Ông Trịnh Văn Quyết tài trợ xây hội trường – nhà văn hóa xã và đường giao thông tại vùng đất quê hương
+
+	#js-scroll-down.scroll-down.desktop
+		img(src='./assets/icon-scroll.png')

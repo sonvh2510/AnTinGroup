@@ -1,67 +1,43 @@
 .invest__item {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 
-	.item__img {
-		position: relative;
-	}
+  .item__img {
+    position: relative;
+  }
 
-	.item__description {
-		padding-top: 10px;
-		font-size: 13px;
-	}
+  .item__description {
+    padding-top: 10px;
+    font-size: 13px;
+  }
 
-	.item__title {
-		position: absolute;
-		background-color: #878787;
-		padding: 7px 10px;
-		color: white;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		font-size: 13px;
+  .item__title {
+    position: absolute;
+    background-color: #878787;
+    padding: 7px 10px;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 13px;
 
-		h4 {
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2;
-			font-size: inherit;
-		}
-	}
+    h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      font-size: inherit;
+    }
+  }
 
-	.item__text {
-		margin-bottom: 15px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 3;
-		color: #707070;
-		font-weight: 300;
-	}
-}
-
-@media (min-width: 768px) {
-	.invest__item {
-		.item__title {
-			font-size: 15px;
-		}
-
-		.item__description {
-			font-size: 15px;
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.invest__item {
-		.item__title {
-			font-size: 17px;
-		}
-
-		.item__description {
-			font-size: 17px;
-		}
-	}
+  .item__text {
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: #707070;
+    font-weight: 300;
+  }
 }

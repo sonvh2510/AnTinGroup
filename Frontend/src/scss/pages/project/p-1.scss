@@ -1,43 +1,32 @@
 .project-category__item {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 
-	.item__link {
-		display: block;
-	}
+  .item__link {
+    display: block;
+  }
 
-	.item__description {
-		background-color: map-get($mau, main);
-		padding: 10px;
-	}
+  .item__description {
+    background-color: map-get($mau, main);
+    padding: 10px;
+  }
 
-	.item__title {
-		color: white;
-		text-transform: uppercase;
-		font-size: 13px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		height: 39px;
-	}
+  .item__title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
 
 @media (min-width: 768px) {
-	.project-category__item {
-		.item__title {
-			font-size: 14px;
-			height: 42px;
-
-		}
-	}
+  .project-category__item {
+    .item__title {
+      font-size: 13px;
+    }
+  }
 }
 
-@media (min-width: 1200px) {
-	.project-category__item {
-		.item__title {
-			font-size: 15px;
-			height: 45px;
-		}
-	}
-}

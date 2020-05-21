@@ -51,7 +51,7 @@
 						</div>
 						<div class="header__menu-bottom">
 							<nav class="header__main-nav d-f jc-fe">
-								<div class="nav__item"><a class="nav__link" href="index.html">Trang chủ</a></div>
+								<div class="nav__item active"><a class="nav__link" href="index.html">Trang chủ</a></div>
 								<div class="nav__item"><a class="nav__link" href="about-veantin.html">Giới thiệu</a>
 									<div class="nav__sub--toggle mobile"><span class="lnr lnr-chevron-right"></span></div>
 									<div class="nav__sub">
@@ -76,12 +76,39 @@
 		</header>
 		<div class="page__banner">
 			<div class="mobile logo"><a href="/"><img class="svg" src="./assets/logo.svg"></a></div>
-			<div class="swiper-container">
+			<div class="swiper-container main__banner">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><a href="#"><img src="./assets/banners/index_1.jpg" alt=""></a></div>
 					<div class="swiper-slide"><a href="#"><img src="./assets/banners/index_2.jpg" alt=""></a></div>
 				</div>
 			</div>
+			<div class="banner-news-block desktop">
+				<div class="news-title-banner">
+					<div class="label">Tin Tức</div>
+				</div>
+				<div class="news-desc-banner">
+					<div class="swiper-container" id="js-slide-banner-news">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="item"><a href="#">Y án sơ thẩm: Tạp chí điện tử Giáo dục Việt Nam phải bồi thường và xin lỗi Tập đoàn FLC</a></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item"><a href="#">Doanh nghiệp du lịch, hàng không gặp gỡ tại Sầm Sơn bàn kích cầu nội địa</a></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item"><a href="#">Động thổ tòa nhà 72 tầng do Tập đoàn FLC làm chủ đầu tư tại Hải Phòng</a></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item"><a href="#">“Không kiến nghị Nhà nước hỗ trợ tiền, chỉ kiến nghị môi trường kinh doanh cải cách mạnh mẽ thời hậu Covid”</a></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="item"><a href="#">Ông Trịnh Văn Quyết tài trợ xây hội trường – nhà văn hóa xã và đường giao thông tại vùng đất quê hương</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll-down desktop" id="js-scroll-down"><img src="./assets/icon-scroll.png"></div>
 		</div>
 		<main>
 			<div class="index-business-investment">
@@ -296,7 +323,7 @@
 			<div class="index-news pd-70">
 				<div class="container-fluid">
 					<div class="row no-gutters">
-						<div class="col-lg-4">
+						<div class="col-lg-4 col-xl-3">
 							<div class="block__title">
 								<h2 class="main-title cl-main wow fadeInUp">Tin tức</h2>
 								<nav class="index-news__nav desktop wow fadeInUp">
@@ -317,7 +344,7 @@
 								</nav>
 							</div>
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-8 col-xl-9">
 							<div class="index-news__list wow fadeInUp">
 								<div class="swiper-container">
 									<div class="swiper-wrapper">
@@ -326,6 +353,8 @@
 													<div class="item__img"><img src="./assets/news/news_1.jpg"></div>
 													<div class="item__description">
 														<h4 class="item__title">An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac</h4>
+														<time>25/10/2010</time>
+														<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, quam minima? Similique incidunt adipisci architecto vitae dolores quae, quos consectetur, praesentium perspiciatis id qui libero quisquam odio est velit optio!</p>
 													</div></a></div>
 										</div>
 										<div class="swiper-slide">
@@ -333,6 +362,8 @@
 													<div class="item__img"><img src="./assets/news/news_2.jpg"></div>
 													<div class="item__description">
 														<h4 class="item__title">An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac</h4>
+														<time>25/10/2010</time>
+														<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, quam minima? Similique incidunt adipisci architecto vitae dolores quae, quos consectetur, praesentium perspiciatis id qui libero quisquam odio est velit optio!</p>
 													</div></a></div>
 										</div>
 										<div class="swiper-slide">
@@ -340,6 +371,8 @@
 													<div class="item__img"><img src="./assets/news/news_3.jpg"></div>
 													<div class="item__description">
 														<h4 class="item__title">An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac</h4>
+														<time>25/10/2010</time>
+														<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, quam minima? Similique incidunt adipisci architecto vitae dolores quae, quos consectetur, praesentium perspiciatis id qui libero quisquam odio est velit optio!</p>
 													</div></a></div>
 										</div>
 										<div class="swiper-slide">
@@ -347,6 +380,8 @@
 													<div class="item__img"><img src="./assets/news/news_4.jpg"></div>
 													<div class="item__description">
 														<h4 class="item__title">An Tín Ký Kết Hợp Tác Cùng Ủy Ban Thương Hiệu Xuất Sắc Châu Á Thái Bình Dương Và Vifolac</h4>
+														<time>25/10/2010</time>
+														<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, quam minima? Similique incidunt adipisci architecto vitae dolores quae, quos consectetur, praesentium perspiciatis id qui libero quisquam odio est velit optio!</p>
 													</div></a></div>
 										</div>
 									</div>
