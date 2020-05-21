@@ -130,8 +130,8 @@
       content: "";
       background: linear-gradient(
         0deg,
-        rgba(112, 173, 58, 0.5) 0%,
-        rgba(112, 173, 58, 0) 100%
+        rgba(112, 173, 58, 0.75) 0%,
+        rgba(112, 173, 58, 0.25) 100%
       );
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70ad3a", endColorstr="#70ad3a", GradientType=1);
       transition: all 0.3s ease;
@@ -290,7 +290,7 @@
     }
 
     .item__title {
-      font-size: 19px;
+      font-size: 20px;
     }
 
     .item__number {
@@ -311,10 +311,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      padding: 5px;
+      padding: 50px 20px;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .item__title {
@@ -322,6 +322,8 @@
       color: white;
       text-transform: uppercase;
       position: relative;
+      align-self: flex-start;
+      padding-right: 30px;
 
       &:after {
         content: "";
@@ -333,6 +335,30 @@
         top: 50%;
         transform: translateY(-50%) rotate(30deg);
         transform-origin: 50% 50%;
+      }
+    }
+
+    .item__viewmore {
+      color: white;
+      align-self: flex-start;
+      font-weight: 700;
+      position: relative;
+      padding-right: 20px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        background-color: white;
+        height: 2px;
+        width: 30px;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        &:before {
+          margin-left: 10px;
+        }
       }
     }
 
@@ -399,11 +425,10 @@
 
   .bi__field-item {
     .item__description {
-      padding: 10px;
+      padding: 25px 10px;
     }
 
     .item__number {
-      font-size: 27px;
       color: white;
       line-height: 1.1;
     }
@@ -417,6 +442,7 @@
 
     .item__title {
       color: map-get($mau, main);
+      font-size: 25px;
     }
 
     &:hover {
@@ -486,15 +512,11 @@
 
   .bi__field-item {
     .item__description {
-      padding: 12px 18px;
+      padding: 35px 18px;
     }
 
     .item__title {
-      font-size: 23px;
-    }
-
-    .item__number {
-      font-size: 31px;
+      font-size: 30px;
     }
   }
 
@@ -532,11 +554,7 @@
 
   .bi__field-item {
     .item__description {
-      padding: 15px 20px;
-    }
-
-    .item__number {
-      font-size: 35px;
+      padding: 50px 20px;
     }
   }
 
@@ -553,14 +571,6 @@
       span {
         font-size: 23px;
       }
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-  .bi__field-item {
-    .item__number {
-      font-size: 38px;
     }
   }
 }
