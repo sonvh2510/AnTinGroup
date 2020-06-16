@@ -11,6 +11,11 @@ const headerMenu = document.querySelector(".header__menu");
 
 const getScrollYPosition = () => window.scrollY;
 
+const addClassBody = () => {
+	const pageClassname = $('#js-page-verify').attr('class')
+	$('body').addClass(pageClassname)
+}
+
 // SHOW BACK TO TOP
 const showBackToTop = () => {
   $(window).scroll(function () {
@@ -621,6 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Cookie();
   GetSVG();
   Loading();
+  addClassBody();
   // Initialize Script
   // Set size
   setSizeByRatio();
