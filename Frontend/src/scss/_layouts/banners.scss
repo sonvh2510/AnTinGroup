@@ -5,7 +5,7 @@
       background-color: black;
       overflow: hidden;
       a {
-        height: 280px;
+        height: 100%;
         display: block;
         opacity: 0.7;
         animation: zoomInOut linear 8s infinite forwards;
@@ -86,7 +86,9 @@
 @media (min-width: 1025px) {
   .page__banner {
     .main__banner {
+		height: 100%;
       .swiper-slide {
+		  height: 100%;
         a {
           height: 100vh;
           img {
@@ -196,3 +198,24 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 1024.98px) {
+
+	body.index-page{
+		.page__banner{
+			height: 100vh;
+			.swiper-container{
+				height: 100%
+			}
+		}
+	}
+	body{
+		&:not(.index-page){
+			.page__banner{
+				height: 50vh;
+				.swiper-container{
+					height: 100%
+				}
+			}}
+	}
+  }
