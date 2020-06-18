@@ -531,7 +531,7 @@ header {
 	.header__widget-social {
 		position: fixed;
 		z-index: 99;
-		bottom: 80px;
+		bottom: 130px;
 		flex-direction: column;
 		transition: all 0.3s ease;
 		right: 15px;
@@ -572,13 +572,12 @@ header {
 		&.scrolled {
 			right: 0;
 
+			&:before {
+				content: none;
+			}
+
 			.widget__link {
 				background-color: map-get($mau, main);
-
-				&:before {
-					content: none;
-				}
-
 				svg {
 					path {
 						fill: white;
