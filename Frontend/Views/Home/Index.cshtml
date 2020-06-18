@@ -1,0 +1,208 @@
+﻿@using MainProject.Core
+@using MainProject.Framework.Helpers
+@model MainProject.SBussiness.LandingPage.Models.Home.HomeViewModel
+
+
+
+<div id="loading-container">
+	<div class="loading-wrapper">
+		<div id="loading-logo"><img src="/Content/resources/assets/logo.svg"></div>
+		<div class="progress">
+			<div id="progress-bar"></div>
+		</div>
+		<div class="progress-status">Loading: <span id="progress-percentage">0</span>%</div>
+	</div>
+</div>
+<div class="index-business-investment ov-h">
+	<div class="bi__contents">
+		<div class="bi__content-wrapper">
+			<div class="bi__logo"><img src="/Content/resources/assets/logo.svg"></div>
+			<div class="bi__sentences wow fadeInUp">
+				@Html.Raw(Model.Section1.Content)
+			</div>
+			<div class="bi__author wow fadeInUp" data-wow-delay="0.2s">
+				@Html.Raw(Model.Section1.Title)
+			</div>
+		</div>
+	</div>
+	<div class="bi__fields">
+		<div class="row no-gutters">
+			<div class="col-lg-20 wow fadeInLeft">
+				<div class="bi__field-item--title desktop">
+					<div class="item__img"><img class="lazyload ofcv" data-src="/Content/resources/assets/invest/invest_index_title.jpg" alt=""></div>
+					<div class="item__description">
+						<h3 class="item__title">
+							@Html.GetResource(ResourceKeyCollection.Home_Invest)
+						</h3>
+						<a class="item__viewmore desktop" href="#">Xem tất cả</a>
+					</div>
+				</div>
+				<div class="block__title d-f jc-c mobile">
+					<h2 class="main-title cl-main mb-40">
+						@Html.GetResource(ResourceKeyCollection.Home_Invest)
+					</h2>
+				</div>
+			</div>
+			<div class="col-lg-80 wow fadeInRight">
+				<div class="swiper-container">
+					<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
+					<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
+					<div class="swiper-wrapper">
+						@{
+							int i = 1;
+							foreach (var item in Model.Invests)
+							{
+								<div class="swiper-slide">
+									<div class="bi__field-item">
+										<a class="item__link" href=@item.GetPrefixUrl()>
+											<div class="item__img"><img class="lazyload ofcv" data-src="@item.ImageHome" alt=""></div>
+											<div class="item__description">
+												<h4 class="item__number">0@(i++)</h4>
+												<h3 class="item__title">@item.Title</h3>
+												<p class="item__viewmore">
+													@Html.GetResource(ResourceKeyCollection.View_More)
+													<img class="svg" src="/Content/resources/assets/icons/arrow_right_no_outline.svg">
+												</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							}
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-project pb-70 ov-h">
+	<div class="container">
+		<div class="block__content-long">
+			<div class="row index-project-titles">
+				<div class="col-md-auto">
+					<div class="block__title wow fadeInLeft">
+						<h2 class="main-title cl-main">@Html.GetResource(ResourceKeyCollection.Home_Project)</h2>
+					</div>
+				</div>
+				<div class="col-md-6 ml-at">
+					<nav class="index-project__nav wow fadeInRight">
+						<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
+						<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								@foreach (var Item in Model.ProjectCategories)
+                                {
+									<div class="swiper-slide">
+										<a class="nav-link" href="/get-projects?id=@Item.Id">@Item.Title</a>
+									</div>
+								}
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="index-project-list wow fadeInUp">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						@Html.Partial("_Project", Model.Projects)
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-brand-positioning ov-h">
+	<div class="brand-positioning__wrapper">
+		<div class="container">
+			<div class="block__content-long pd-70">
+				<div class="block__title d-f jc-c wow fadeInUp">
+					<h2 class="main-title cl-white tagline">@Model.Section2.Title</h2>
+				</div>
+				<div class="swiper-container wow fadeInUp">
+					<div class="swiper-wrapper">
+						@foreach (var Item in JsonHelper.Deserialize<List<Image>>(Model.Section2.Content) ?? new List<Image>())
+                        {
+							<div class="swiper-slide">
+								<div class="brand-positioning__item">
+									<div class="item__description">
+										<span class="item__number">@Item.Order</span>
+										<h4 class="item__title">@Item.Name</h4>
+										<p class="item__text">@Item.Alt</p>
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-news pd-70 ov-h">
+	<div class="container-fluid">
+		<div class="row no-gutters">
+			<div class="col-lg-4 col-xl-3">
+				<div class="block__title">
+					<h2 class="main-title cl-main wow fadeInUp">@Html.GetResource(ResourceKeyCollection.Home_News)</h2>
+					<nav class="index-news__nav desktop wow fadeInUp">
+						@foreach (var Item in Model.NewsCategories)
+                        {
+							<div class="nav__item">
+								<a class="nav__link" href="/get-news?id=@Item.Id">@Item.Title</a>
+							</div>
+						}
+					</nav>
+					<nav class="index-news__nav mobile wow fadeInUp">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								@foreach (var Item in Model.NewsCategories)
+                                {
+									<div class="swiper-slide">
+										<a class="nav__link" href="/get-news?id=@Item.Id">@Item.Title</a>
+									</div>
+								}
+							</div>
+						</div>
+						<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
+						<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
+					</nav>
+				</div>
+			</div>
+			<div class="col-lg-8 col-xl-9">
+				<div class="index-news__list wow fadeInUp">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							@Html.Partial("_News", Model.News)
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-partner">
+	<div class="container">
+		<div class="block__content-long">
+			<div class="swiper-prev fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_prev_1.svg"></div>
+			<div class="swiper-next fcc"><img class="svg" src="/Content/resources/assets/icons/swiper_next_1.svg"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					@foreach (var item in (JsonHelper.Deserialize<List<Image>>(Model.Partner.Image) ?? new List<Image>()).OrderBy(x => x.Order))
+                    {
+						<div class="swiper-slide">
+							<div class="index-partner__item">
+								<a class="item__link" href=@item.Link>
+									<div class="item__img"><img src=@item.Path alt=""></div>
+								</a>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-page" id="js-page-verify" hidden></div>

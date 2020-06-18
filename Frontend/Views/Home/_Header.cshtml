@@ -1,0 +1,43 @@
+﻿@model MainProject.SBussiness.LandingPage.Models.Home.HeaderViewModel
+
+<header>
+	<div class="container-fluid header__container">
+		<div class="row">
+			<div class="header__logo desktop"><a href="/"><img src="/Content/resources/assets/logo.svg"></a></div>
+			<nav class="header__widget-social d-f ai-c">
+				<div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("FacebookPage")"><img class="svg" src="/Content/resources/assets/icons/facebook.svg"></a></div>
+				<div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("InstagramPage")"><img class="svg" src="/Content/resources/assets/icons/instagram.svg"></a></div>
+				<div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("TwitterPage")"><img class="svg" src="/Content/resources/assets/icons/twitter.svg"></a></div>
+				<div class="widget__item"><a class="widget__link" href="@SettingHelper.GetValueSetting("EmailPage")"><img class="svg" src="/Content/resources/assets/icons/envelope.svg"></a></div>
+			</nav>
+			<div class="header__menu-toggle mobile">
+				<div class="mdi mdi-menu"></div>
+			</div>
+			<div class="header__menu d-f fw-w">
+				<div class="header__menu-top d-f jc-fe ai-c">
+					<nav class="header__nav d-f">
+						@foreach (var item in Model.TopMenus)
+						{
+							<div class="nav__item"><a class="nav__link" href="@item.Link" target="@item.LinkTarget.ToString()">@item.Title</a></div>
+						}
+					</nav>
+					<nav class="header__language language d-f">
+						<div class="language__item item" data-language="vi" @(CultureHelper.GetCurrentLanguage().Equals("vi") ? "active" : "")><a class="language__link" ><img class="lazyload blur-up" data-src="/Content/resources/assets/language/vi_VN.png"></a></div>
+						<div class="language__item item" data-language="en" @(CultureHelper.GetCurrentLanguage().Equals("en") ? "active" : "")><a class="language__link"><img class="lazyload blur-up" data-src="/Content/resources/assets/language/en_US.png"></a></div>
+					</nav>
+					<div class="header__search">
+						<form action="/search">
+							<input type="text" name="text">
+							<button class="btn"><img class="svg" src="/Content/resources/assets/icons/icon_search.svg" alt=""></button>
+						</form>
+					</div>
+				</div>
+				<div class="header__menu-bottom">
+					<div class="header__main-nav d-f jc-fe">
+						@Html.Raw(Model.Menu)
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,22 @@
+﻿@using MainProject.Core.Enums
+@model MainProject.SBussiness.LandingPage.Models.Home.SubscribeModel
+
+@using (Ajax.BeginForm("Subscribe", "Home", new AjaxOptions() { HttpMethod = "POST", OnSuccess = "subscribeSuccess" }))
+{
+	<div class="subscribe__input">
+		@Html.TextBoxFor(d => d.Email, new { placeholder = "Email" })
+		@Html.ValidationMessageFor(d => d.Email)
+	</div>
+	<div class="subscribe__button">
+		<button class="btn btn__submit form-ajax__submit" data-url="/test">Xác nhận</button>
+	</div>
+}
+
+<script>
+	function subscribeSuccess(response) {
+		alert(response.Message);
+		if (response.Code == 200) {
+			window.location.href = window.location;
+		}
+	}
+</script>

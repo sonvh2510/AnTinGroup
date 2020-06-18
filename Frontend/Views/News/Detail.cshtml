@@ -1,0 +1,53 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.News.NewsDetailViewModel
+
+@if (Model.IsNews)
+{
+    <div class="page__nav-container">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-auto page__nav">
+                    <h2>@Model.Article.Category.Title</h2>
+                    <ul class="nav__list lst-n">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <li class="nav__item"><a class="nav__link" href="@item.GetPrefixUrl()">@item.Title</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news pd-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="news-detail__content block__content">
+                        <h1>@Model.Article.Title</h1>
+                        <time>@Model.Article.Order.ToString("dd/MM/yyyy")</time>
+                        <br>
+                        @Html.Raw(Model.Article.Content)
+                    </div>
+                </div>
+                <div class="col-md-auto news-hot__col">
+                    @Html.Action("ShowHotNews", "News")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news-page" id="js-page-verify" hidden></div>
+}
+else
+{
+    <div class="project-detail pd-70">
+        <div class="container">
+            <div class="project-detail__wrapper block__content-short">
+                <div class="block__content project-detail__content">
+                    <h1>@Model.Article.Title</h1><br>
+                    @Html.Raw(Model.Article.Content)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-detail-page" id="js-page-verify" hidden></div>
+}
