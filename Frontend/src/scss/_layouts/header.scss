@@ -90,7 +90,7 @@ header {
 		cursor: pointer;
 		opacity: .5;
 
-		&.active {
+		&[active] {
 			opacity: 1;
 		}
 
