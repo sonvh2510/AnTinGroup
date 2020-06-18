@@ -305,6 +305,8 @@ const indexPartnerSlider = () => {
 	});
 };
 
+
+
 const indexNewsNavAjax = () => {
 	const items = Array.from(
 		document.querySelectorAll(".index-news__nav .nav__link")
@@ -642,6 +644,15 @@ const indexNewsBanner = () => {
 	});
 };
 
+const BiFieldsTitleEdit = () => {
+	console.log(
+		$('.bi__fields .col-lg-20 .item__title').html($('.bi__fields .col-lg-20 .item__title').html().replace(' - ','<br>&nbsp;&nbsp;&nbsp;&nbsp;'))
+		
+	);
+	$('.bi__fields .col-lg-20 .main-title').html($('.bi__fields .col-lg-20 .main-title').html().replace(' - ',' '))
+	
+}
+
 // Call functons in events
 document.addEventListener("DOMContentLoaded", () => {
 	Cookie();
@@ -649,6 +660,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	Loading();
 	addClassBody();
 	// Initialize Script
+	BiFieldsTitleEdit();
 	// Set size
 	setSizeByRatio();
 	setSize({
