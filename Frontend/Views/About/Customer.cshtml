@@ -1,0 +1,25 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.News.AboutViewModel
+
+
+@Html.Action("ShowMenu", "About")
+<div class="about__customers pd-70 ov-h">
+	<div class="container">
+		<div class="about__customers-wrapper">
+			<div class="row">
+				@foreach (var item in JsonHelper.Deserialize<List<Image>>(Model.Section1.Image) ?? new List<Image>())
+                {
+
+					<div class="col-6 col-md-4 wow fadeInUp">
+						<div class="about__customers__item">
+							<a class="item__link fcc" href=@item.Link>
+								<img class="lazyload blur-up" data-src=@item.Path>
+							</a>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="about-page" id="js-page-verify" hidden></div>

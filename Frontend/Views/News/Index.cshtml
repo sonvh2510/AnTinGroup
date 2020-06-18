@@ -1,0 +1,63 @@
+﻿@using MainProject.Core
+@model MainProject.SBussiness.LandingPage.Models.News.NewsViewModel
+
+<div class="page__nav-container">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-auto page__nav">
+                <h2>@Model.Category.Title</h2>
+                <ul class="nav__list lst-n">
+                    @foreach (var item in Model.Categories)
+                    {
+                        <li class="nav__item"><a class="nav__link" href="@item.GetPrefixUrl()">@item.Title</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="news pd-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <h2 class="main-title cl-main mobile mb-40">Tin tức</h2>
+                <div class="news-list row">
+                    @foreach (var Item in Model.Articles)
+                    {
+                        <div class="col-md-4">
+                            <div class="news__item">
+                                <a class="item__link" href=@Item.GetUrl()>
+                                    <div class="item__img">
+                                        <img class="lazyload blur-up" data-src=@Item.ImageDefault>
+                                        <div class="item__title">
+                                            <h4>@Item.Title</h4>
+                                        </div>
+                                    </div>
+                                    <div class="item__description">
+                                        <time class="item__time">@Item.Order.ToString("dd/MM/yyyy")</time>
+                                        <p class="item__text">@Item.Description</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="pagination__wrapper">
+                    <div class="pagination">
+                        @Html.RenderPaging(Model.Pagingation, new MainProject.Framework.Models.PagingStyleModel
+                         {
+                             DivContainerStyle = "class=pagination__list",
+                             CurrentItemStyle = "class=pagination__item active",
+                             ItemStyle = "class=pagination__item",
+                             LinkStyle = "class=pagination__link"
+                         })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto news-hot__col">
+                @Html.Action("ShowHotNews", "News")
+            </div>
+        </div>
+    </div>
+</div>
+<div class="news-page" id="js-page-verify" hidden></div>

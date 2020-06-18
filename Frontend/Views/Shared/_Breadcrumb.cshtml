@@ -1,0 +1,19 @@
+﻿@{
+	Layout = null;
+	bool isShow = ViewBag.ShowBreadCrumb ?? true;
+}
+
+
+<div class="page__banner index__banner">
+	<div class="mobile logo"><a href="/"><img class="svg" src="/Content/resources/assets/logo.svg" /></a></div>
+	@Html.Action("ShowBanner", "Home")
+	@if (isShow)
+	{
+		<div class="page__breadcrumb">
+			<div class="container">
+				@Html.GenerateBreadCrumb(Request.RawUrl)
+				<h1 class="page__title"></h1>
+			</div>
+		</div>
+	}
+</div>

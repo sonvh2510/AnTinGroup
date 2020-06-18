@@ -1,0 +1,20 @@
+﻿@model List<MainProject.Core.Article>
+
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+    @foreach (var Item in Model)
+    {
+        <div class="swiper-slide">
+            <div class="index-news__item">
+                <a class="item__link" href=@Item.GetUrl()>
+                    <div class="item__img"><img src=@Item.ImageDefault></div>
+                    <div class="item__description">
+                        <h4 class="item__title">@Item.Title</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+	</div>
+	<div class="swiper-pagination"></div>
+</div>

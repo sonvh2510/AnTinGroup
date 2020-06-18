@@ -380,6 +380,13 @@ const indexNewsNavSlider = () => {
 };
 
 const aboutStaffsSlider = () => {
+	$('.about__staffs-slider__wrapper .staff__item .item__description').each(
+		function () {
+			const oldHtml = $(this).html().split(' - ');
+			const newHtml = `<h4>${oldHtml[0]}</h4><p>${oldHtml[1]}</p>`;
+			$(this).html(newHtml);
+		},
+	);
 	const staffsSlider = new Swiper(
 		".about__staffs-slider__wrapper .swiper-container", {
 			slidesPerView: 1,
@@ -577,6 +584,20 @@ const pageNavToggle = () => {
 			pageNavElement2.find(".nav__list").slideToggle();
 		});
 	}
+
+	const pathname = document.location.pathname;
+	$('.page__nav-2 .nav__list .nav__item').each(function () {
+		const href = $(this).find('.nav__link').attr('href');
+		if (href == pathname) {
+			$(this).addClass('active');
+		}
+	});
+	$('.page__nav-container .nav__list .nav__item').each(function () {
+		const href = $(this).find('.nav__link').attr('href');
+		if (href == pathname) {
+			$(this).addClass('active');
+		}
+	});
 };
 
 const headerActiveSubmenu = () => {
