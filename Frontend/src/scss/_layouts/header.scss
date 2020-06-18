@@ -84,6 +84,7 @@ header {
   }
 
   .language__item {
+	  cursor: pointer;
     + .language__item {
       margin-left: 10px;
     }
