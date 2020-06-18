@@ -332,6 +332,7 @@ const indexNewsNavAjax = () => {
 			};
 		});
 	});
+	items[0].click()
 };
 
 const indexNewsSlider = () => {
