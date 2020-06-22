@@ -137,12 +137,10 @@ const setSize = (opts) => {
 const pageBanner = () => {
 	(function() {
 		// type code here
-		setTimeout(() => {
-			const indexPage = document.querySelector('.index-page');
-			if (indexPage) {
-				indexPage.querySelector('.page__banner .swiper-container').classList.add('main__banner')
-			}
-		}, 2000);
+		const indexPage = document.querySelector('.index-page');
+		if (indexPage) {
+			indexPage.querySelector('.page__banner .swiper-container').classList.add('main__banner')
+		}
 		asyncCall()
 	})()
 
