@@ -163,12 +163,12 @@ const pageBanner = () => {
 };
 
 const addClassHeader = (currentScrollPosition) => {
-	if (currentScrollPosition > 0) {
+	if (currentScrollPosition > 0 && window.innerWidth > 1025) {
 		header.classList.add("scrolled");
 	} else {
 		header.classList.remove("scrolled");
 	}
-	if (widgetSocial) {
+	if (widgetSocial && window.innerWidth > 1025) {
 		if (currentScrollPosition > 0) {
 			widgetSocial.classList.add("scrolled");
 		} else {
