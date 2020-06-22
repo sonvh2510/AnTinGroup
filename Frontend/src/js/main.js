@@ -47,6 +47,7 @@ const getFormData = (Form) => {
 	}
 	return;
 };
+
 const SubmitAjaxForm = () => {
 	const FormSelector = ".form-ajax";
 	const Forms = Array.from(document.querySelectorAll(FormSelector));
@@ -134,20 +135,33 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	let banner = new Swiper(".page__banner .main__banner", {
-		slidesPerView: 1,
-		speed: 1600,
-		loop: true,
-		simulateTouch: true,
-		autoplay: {
-			disableOnInteraction: false,
-			delay: 4000,
-		},
-		effect: "fade",
-		fadeEffect: {
-			crossFade: true,
-		},
-	});
+	(function() {
+		// type code here
+		setTimeout(() => {
+			const indexPage = document.querySelector('.index-page');
+			if (indexPage) {
+				indexPage.querySelector('.page__banner .swiper-container').classList.add('main__banner')
+			}
+		}, 2000);
+		asyncCall()
+	})()
+
+	function asyncCall() {
+		let banner = new Swiper(".page__banner .main__banner", {
+			slidesPerView: 1,
+			speed: 1600,
+			loop: true,
+			simulateTouch: true,
+			autoplay: {
+				disableOnInteraction: false,
+				delay: 4000,
+			},
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true,
+			},
+		});
+	}
 };
 
 const addClassHeader = (currentScrollPosition) => {
