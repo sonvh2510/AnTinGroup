@@ -134,7 +134,7 @@ const setSize = (opts) => {
 };
 
 const pageBanner = () => {
-	let banner = new Swiper(".page__banner .main__banner .swiper-container", {
+	let banner = new Swiper(".page__banner .main__banner", {
 		slidesPerView: 1,
 		speed: 1600,
 		loop: true,
@@ -306,7 +306,6 @@ const indexPartnerSlider = () => {
 };
 
 
-
 const indexNewsNavAjax = () => {
 	const items = Array.from(
 		document.querySelectorAll(".index-news__nav .nav__link")
@@ -334,7 +333,7 @@ const indexNewsNavAjax = () => {
 			};
 		});
 	});
-	if(items.length > 0){
+	if (items.length > 0) {
 		items[0].click()
 	}
 };
@@ -386,7 +385,7 @@ const indexNewsNavSlider = () => {
 
 const aboutStaffsSlider = () => {
 	$('.about__staffs-slider__wrapper .staff__item .item__description').each(
-		function () {
+		function() {
 			const oldHtml = $(this).html().split(' - ');
 			const newHtml = `<h4>${oldHtml[0]}</h4><p>${oldHtml[1]}</p>`;
 			$(this).html(newHtml);
@@ -591,13 +590,13 @@ const pageNavToggle = () => {
 	}
 
 	const pathname = document.location.pathname;
-	$('.page__nav-2 .nav__list .nav__item').each(function () {
+	$('.page__nav-2 .nav__list .nav__item').each(function() {
 		const href = $(this).find('.nav__link').attr('href');
 		if (href == pathname) {
 			$(this).addClass('active');
 		}
 	});
-	$('.page__nav-container .nav__list .nav__item').each(function () {
+	$('.page__nav-container .nav__list .nav__item').each(function() {
 		const href = $(this).find('.nav__link').attr('href');
 		if (href == pathname) {
 			$(this).addClass('active');
@@ -647,13 +646,13 @@ const indexNewsBanner = () => {
 };
 
 const BiFieldsTitleEdit = () => {
-	if($('.bi__fields .col-lg-20 .item__title').length>0){
-		$('.bi__fields .col-lg-20 .item__title').html($('.bi__fields .col-lg-20 .item__title').html().replace(' - ','<br>&nbsp;&nbsp;&nbsp;&nbsp;'))
+	if ($('.bi__fields .col-lg-20 .item__title').length > 0) {
+		$('.bi__fields .col-lg-20 .item__title').html($('.bi__fields .col-lg-20 .item__title').html().replace(' - ', '<br>&nbsp;&nbsp;&nbsp;&nbsp;'))
 	}
-	if($('.bi__fields .col-lg-20 .main-title').length>0){
-		$('.bi__fields .col-lg-20 .main-title').html($('.bi__fields .col-lg-20 .main-title').html().replace(' - ',' '))
-	}	
-	
+	if ($('.bi__fields .col-lg-20 .main-title').length > 0) {
+		$('.bi__fields .col-lg-20 .main-title').html($('.bi__fields .col-lg-20 .main-title').html().replace(' - ', ' '))
+	}
+
 }
 
 // Call functons in events
