@@ -1,9 +1,0 @@
-﻿<div class="col-lg-5 col-xl-4 col-md-6 pd-70 wow fadeInUp">
-	<h2 class="main - title tagline">TS Nguyễn Đức Thọ</h2><p>Chủ tịch HĐQT - TGĐ</p>
-<div class="block__content about__staffs-content">
-	<p>…"Lorem ipsum dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam It has survived not only five centuries, but also the leap into."</p>
-</div>
-</div>
-<div class="col-lg-5 col-md-6 wow fadeInUp">
-	<div class="about__staffs-img ta-c"><img class="lazyload blur-up" data-src=/Content/resources/assets/about/about_staff_1.png></div>
-</div>

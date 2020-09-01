@@ -1,3 +1,0 @@
-﻿<li class="nav__item"><a class="nav__link" href="/News">Tin An Tín Group</a></li>
-<li class="nav__item"><a class="nav__link" href="/News">Thông tin báo chí</a></li>
-<li class="nav__item"><a class="nav__link" href="/News">Thông tin hợp tác</a></li>
