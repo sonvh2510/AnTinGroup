@@ -74,7 +74,7 @@
 		"@mdi/font": "^5.0.45",
 		"animate.css": "^3.7.2",
 		"jquery": "^3.4.1",
-		"jquery-validation": "^1.19.1",
+		"jquery-validation": "^1.19.3",
 		"lazysizes": "^5.2.0",
 		"linearicons": "^1.0.2",
 		"object-fit-images": "^3.2.4",
